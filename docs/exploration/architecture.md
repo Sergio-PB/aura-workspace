@@ -34,3 +34,30 @@ A: Not yet answered.
 ---
 
 **→ Next question:** How does a Farm instance know which Card holder is in front of the camera?
+
+---
+
+## 2. Visual Input & Gesture Recognition
+
+**Q: How does a Farm instance know which Card holder is in front of the camera?**
+
+A: Visual computing — face and hand tracking. Open source library, specific choice TBD. Same foundation reads hand movement and matches it against a "move" library (e.g., "seesaw" = alternating up/down hands), measuring velocity vectors.
+
+<new fact>Face tracking identifies who is in front of the camera — ties detected face to a Card identity.</new fact>
+<new fact>Hand tracking detects gestures and measures movement.</new fact>
+<new fact>Visual computing is open source — specific library not yet chosen.</new fact>
+<new fact>Move library: named gestures defined by hand movement patterns (e.g., "seesaw" = alternating up/down hands).</new fact>
+<new fact>Velocity vectors are measured from hand movement — speed and direction matter.</new fact>
+<new fact>Same visual foundation handles both face ID and gesture recognition — one pipeline, two outputs.</new fact>
+
+**Q: How does a detected face map to a specific Card identity?**
+
+A: Not yet answered.
+
+**Q: Is the move library pre-defined (shipped with the app) or user-created?**
+
+A: Not yet answered.
+
+---
+
+**→ Next question:** How does the Farm decide which move is "notable" enough to attribute aura points?
