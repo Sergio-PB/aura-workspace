@@ -21,6 +21,7 @@ Launch a social reputation network at `ifarm.club` with two products: **The Farm
 
 | Prefix | Track | Scope |
 |--------|-------|-------|
+| **W** | Workspace | Agent autonomy, tooling, cron jobs, self-improvement, infrastructure |
 | **C** | Company | Legal, funding, brand, infrastructure, team, operations |
 | **P** | Product | The Farm, The Card, backend, shared packages |
 | **N** | Network | Community, users, governance, content, growth |
@@ -42,6 +43,23 @@ Launch a social reputation network at `ifarm.club` with two products: **The Farm
 ---
 
 ## Roadmap
+
+### W-1: Autonomous Agent Kickoff
+
+**Goal:** The Aura Agent runs autonomously on a 30-minute cadence, self-improving and advancing the roadmap without manual prompting.
+
+- [ ] **Claude Code auth** — authenticate `claude` CLI with Anthropic (OAuth or API key) so the cron can delegate coding tasks
+- [ ] **Cron job: `aura-pulse`** — runs every 30 minutes. Picks the highest-priority unblocked milestone, works on it via Claude Code (`claude -p`), commits results, reports to founder
+- [ ] **Cron job: `aura-watchdog`** — monitors system health (disk, memory, git state, agent liveness), alerts on anomalies
+- [ ] **Cron job: `aura-daily`** — daily briefing to founder: what was done, what's blocked, what's next
+- [ ] **Self-improvement loop** — after each pulse run, the agent evaluates its own performance and patches skills/memories
+- [ ] **Workspace health baseline** — disk usage, memory pressure, git cleanliness, cron job health all tracked
+
+**Depends on:** Nothing. This is the agent's own foundation — it must run before it can build anything else.
+
+**Runtime:** Hermes Agent (DeepSeek v4 Pro via ollama-cloud) orchestrating Claude Code v2.x for coding tasks. Runs on M1 Pro (16 GB RAM, macOS 14.8.7).
+
+---
 
 ### C-1: Company Foundation
 
@@ -274,14 +292,14 @@ Launch a social reputation network at `ifarm.club` with two products: **The Farm
 ## Dependency Graph
 
 ```
-C-1 ──→ P-1 ──→ P-2 ──→ P-3 ──┐
-                  │       P-4 ──┤
-                  │       P-5 ──┤
-                  │             ↓
-                  │          P-6 ──→ N-1 ──→ P-7 ──→ P-8 ──┐
-                  │                          P-9 ────────────┤
-                  │                                           ↓
-                  │                                        N-2 ──→ C-2 ──→ P-10 ──→ N-3
+W-1 ──→ C-1 ──→ P-1 ──→ P-2 ──→ P-3 ──┐
+                         │       P-4 ──┤
+                         │       P-5 ──┤
+                         │             ↓
+                         │          P-6 ──→ N-1 ──→ P-7 ──→ P-8 ──┐
+                         │                          P-9 ────────────┤
+                         │                                           ↓
+                         │                                        N-2 ──→ C-2 ──→ P-10 ──→ N-3
 ```
 
 ---
