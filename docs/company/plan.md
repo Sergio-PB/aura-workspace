@@ -87,10 +87,10 @@ Launch a social reputation network at `ifarm.club` with two products: **The Farm
 - [x] **ADR: Identity model** — self-sovereign keypairs vs email/phone vs OAuth
 - [x] **ADR: API protocol** — REST vs GraphQL vs gRPC vs WebSocket
 - [x] **ADR: Cloud provider** — defer until P-5, Fly.io as default (ADR-007)
-- [ ] System architecture diagram (Farm → Backend → Card)
-- [ ] Data flow: telemetry capture → upload → validation → attribution → feed
-- [ ] Database schema (users, events, points, validations)
-- [ ] Security & privacy architecture
+- [x] System architecture diagram (Farm → Backend → Card)
+- [x] Data flow: telemetry capture → upload → validation → attribution → feed
+- [x] Database schema (users, events, points, validations)
+- [x] Security & privacy architecture
 
 **Depends on:** C-1 (need brand context for tech choices)
 
