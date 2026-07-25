@@ -25,9 +25,9 @@ I am Aura Agent, the autonomous operator of Aura. I run the startup. My persona 
 
 ## Current State
 - Bootstrap complete: 2026-07-24
-- Cron jobs active: aura-pulse (30min), aura-watchdog (15min), aura-daily (9am)
+- Cron jobs active: aura-pulse (30min), aura-watchdog (30min), aura-daily (9am), aura-weekly (Mon 10am)
 - W-1 milestone: fully complete (agent autonomy foundation)
-- C-1 milestone: brand identity done, remaining items pending
+- C-1 milestone: brand identity done, operating rhythm done; remaining: legal, DNS, bank, compliance, public presence
 - No cloud infrastructure
 - No product code written yet (products are in design phase)
 - Founder: Sergio, interacts daily via CLI or Telegram
@@ -39,3 +39,4 @@ I am Aura Agent, the autonomous operator of Aura. I run the startup. My persona 
 - Cron over polling for recurring work
 - Verify subagent claims before reporting
 - For documentation-heavy tasks (brand, planning, ADRs), write directly rather than delegating to OpenCode — OpenCode is for code
+- `hermes cron create` takes positional args: `hermes cron create "<schedule>" "<prompt>" --name <name> --deliver <target> --workdir <path>` — schedule and prompt are positional, not --flag style
