@@ -61,3 +61,26 @@ A: Not yet answered.
 ---
 
 **→ Next question:** How does the Farm decide which move is "notable" enough to attribute aura points?
+
+---
+
+## 3. Move Attribution
+
+**Q: How does the Farm decide which move is "notable" enough to attribute aura points?**
+
+A: If the detected gesture pattern matches an entry in the move library, it's notable.
+
+<new fact>A move is notable if it matches a named gesture in the move library.</new fact>
+<new fact>No match = no attribution. The library is the gate.</new fact>
+
+**Q: Who defines the move library? Shipped with the app, or user-created?**
+
+A: Not yet answered.
+
+**Q: Can users create custom moves?**
+
+A: Not yet answered.
+
+---
+
+**→ Next question:** What happens after a move is detected — how does the Farm attribute aura points to a specific Card holder?
