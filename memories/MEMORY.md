@@ -27,7 +27,7 @@ I am Aura Agent, the autonomous operator of Aura. I run the startup. My persona 
 - Bootstrap complete: 2026-07-24
 - Cron jobs active: aura-pulse (30min), aura-watchdog (30min), aura-daily (9am), aura-weekly (Mon 10am)
 - W-1 milestone: fully complete (agent autonomy foundation)
-- C-1 milestone: brand identity done, operating rhythm done; remaining: legal, DNS, bank, compliance, public presence
+- C-1 milestone: brand identity done, operating rhythm done, compliance drafts done (privacy policy + ToS in docs/legal/, awaiting lawyer review); remaining: legal structure, DNS, bank, public presence
 - No cloud infrastructure
 - No product code written yet (products are in design phase)
 - Founder: Sergio, interacts daily via CLI or Telegram
