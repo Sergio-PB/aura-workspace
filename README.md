@@ -11,7 +11,7 @@ The backend validates and attributes aura by triangulating and correlating input
 
 This repository is the company brain for Aura. Product code lives in the [aura-apps](https://github.com/Sergio-PB/aura-apps) monorepo. This repo contains:
 
-- `docs/` — architecture, ADRs, company culture
+- `docs/` — architecture, ADRs, company culture, plan & roadmap
 - `resources/` — design assets, legal documents, brand materials
 - `scripts/` — one-off automation scripts
 - `skills/` — custom Hermes Agent skills
