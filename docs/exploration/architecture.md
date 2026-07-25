@@ -112,3 +112,27 @@ A: Not yet answered.
 ---
 
 **→ Next question:** After particles are generated locally, how do they become recorded aura points — what's the upload flow from Farm to backend?
+
+---
+
+## 5. Data Transmission
+
+**Q: After particles are generated locally, how do they become recorded aura points — what's the upload flow from Farm to backend?**
+
+A: All detection data and optionally detected moves are continuously transmitted via UDP and/or WebSockets.
+
+<new fact>Detection data is transmitted continuously — not batched, not polled.</new fact>
+<new fact>Transport: UDP and/or WebSockets.</new fact>
+<new fact>Detected moves are optionally included in the transmission stream.</new fact>
+
+**Q: UDP vs WebSocket — when is each used? Is UDP for real-time telemetry and WebSocket for move events?**
+
+A: Not yet answered.
+
+**Q: What exactly is in the transmission payload? Face IDs, hand positions, move names, particle counts, timestamps?**
+
+A: Not yet answered.
+
+---
+
+**→ Next question:** What does the backend do with the incoming stream — how does it validate and record aura points?

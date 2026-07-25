@@ -28,6 +28,11 @@
 - All UI is mobile-first.
 - All UI supports light/dark theme via a configurable flag.
 
+## Data Transmission
+- Detection data is transmitted continuously — not batched, not polled.
+- Transport: UDP and/or WebSockets.
+- Detected moves are optionally included in the transmission stream.
+
 ## Stack
 - All software is written in TypeScript.
 - pnpm is the package manager for all projects.
