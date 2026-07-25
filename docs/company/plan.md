@@ -83,7 +83,7 @@ Launch a social reputation network at `ifarm.club` with two products: **The Farm
 
 - [x] **ADR: Farm platform** — native (Swift/Kotlin) vs React Native vs Flutter vs PWA
 - [x] **ADR: Backend stack** — language, framework, runtime
-- [ ] **ADR: Database & sync** — PostgreSQL vs SQLite vs hybrid local-first
+- [x] **ADR: Database & sync** — PostgreSQL vs SQLite vs hybrid local-first
 - [ ] **ADR: Identity model** — self-sovereign keypairs vs email/phone vs OAuth
 - [ ] **ADR: API protocol** — REST vs GraphQL vs gRPC vs WebSocket
 - [ ] **ADR: Cloud provider** — defer or choose now
