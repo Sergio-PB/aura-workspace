@@ -102,7 +102,7 @@ Launch a social reputation network at `ifarm.club` with two products: **The Farm
 
 - [x] Monorepo tooling (Turborepo, Nx, or manual workspaces)
 - [x] CI/CD pipelines (GitHub Actions): lint, test, build
-- [ ] Local dev environment (one-command setup)
+- [x] Local dev environment (one-command setup)
 - [x] Testing framework + strategy (unit, integration, e2e)
 - [x] Code quality: linting, formatting, type checking, pre-commit hooks
 - [x] Shared packages: types, API contracts, auth client, telemetry models
