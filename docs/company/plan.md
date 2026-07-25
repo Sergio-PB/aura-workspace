@@ -48,12 +48,12 @@ Launch a social reputation network at `ifarm.club` with two products: **The Farm
 
 **Goal:** The Aura Agent runs autonomously on a 30-minute cadence, self-improving and advancing the roadmap without manual prompting.
 
-- [ ] **OpenCode auth** — authenticate `opencode` CLI with provider credentials so the cron can delegate coding tasks
-- [ ] **Cron job: `aura-pulse`** — runs every 30 minutes. Picks the highest-priority unblocked milestone, works on it via OpenCode (`opencode run`), commits results, reports to founder
-- [ ] **Cron job: `aura-watchdog`** — monitors system health (disk, memory, git state, agent liveness), alerts on anomalies
-- [ ] **Cron job: `aura-daily`** — daily briefing to founder: what was done, what's blocked, what's next
-- [ ] **Self-improvement loop** — after each pulse run, the agent evaluates its own performance and patches skills/memories
-- [ ] **Workspace health baseline** — disk usage, memory pressure, git cleanliness, cron job health all tracked
+- [x] **OpenCode auth** — authenticate `opencode` CLI with provider credentials so the cron can delegate coding tasks
+- [x] **Cron job: `aura-pulse`** — runs every 30 minutes. Picks the highest-priority unblocked milestone, works on it via OpenCode (`opencode run`), commits results, reports to founder
+- [x] **Cron job: `aura-watchdog`** — monitors system health (disk, memory, git state, agent liveness), alerts on anomalies
+- [x] **Cron job: `aura-daily`** — daily briefing to founder: what was done, what's blocked, what's next
+- [x] **Self-improvement loop** — after each pulse run, the agent evaluates its own performance and patches skills/memories
+- [x] **Workspace health baseline** — disk usage, memory pressure, git cleanliness, cron job health all tracked
 
 **Depends on:** Nothing. This is the agent's own foundation — it must run before it can build anything else.
 
