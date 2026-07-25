@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aura — Earn your glow.</title>
+<meta name="description" content="A fair community where social reputation is earned through real-world actions, not manufactured online personas.">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=Inter:wght@400;600&display=swap');
+
+  :root {
+    --purple: #6C5CE7;
+    --purple-dark: #4834D4;
+    --green: #00D2A0;
+    --amber: #FFA502;
+    --midnight: #1E1E2E;
+    --stone: #6B7280;
+    --cloud: #F3F4F6;
+    --white: #FFFFFF;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    background: var(--midnight);
+    color: var(--cloud);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── Hero ── */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: 50%; left: 50%;
+    width: 600px; height: 600px;
+    background: radial-gradient(circle, rgba(108,92,231,0.15) 0%, transparent 70%);
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+  }
+
+  .aura-mark {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 2rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .aura-mark svg { width: 100%; height: 100%; }
+
+  .hero h1 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(2.5rem, 8vw, 5rem);
+    font-weight: 700;
+    color: var(--white);
+    letter-spacing: -0.02em;
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero h1 span {
+    background: linear-gradient(135deg, var(--purple), var(--green));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .hero .tagline {
+    font-size: 1.25rem;
+    color: var(--stone);
+    margin-top: 1rem;
+    max-width: 480px;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* ── Products ── */
+  .products {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .product-card {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 16px;
+    padding: 2.5rem 2rem;
+    transition: border-color 0.3s, transform 0.3s;
+  }
+
+  .product-card:hover {
+    border-color: rgba(108,92,231,0.4);
+    transform: translateY(-2px);
+  }
+
+  .product-card .icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .product-card h2 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.5rem;
+    color: var(--white);
+    margin-bottom: 0.5rem;
+  }
+
+  .product-card .label {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 0.25rem 0.75rem;
+    border-radius: 100px;
+    margin-bottom: 1rem;
+  }
+
+  .product-card.farm .label {
+    background: rgba(108,92,231,0.2);
+    color: var(--purple);
+  }
+
+  .product-card.card .label {
+    background: rgba(0,210,160,0.2);
+    color: var(--green);
+  }
+
+  .product-card p {
+    color: var(--stone);
+    font-size: 0.95rem;
+  }
+
+  /* ── How It Works ── */
+  .how {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+    text-align: center;
+  }
+
+  .how h2 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 2rem;
+    color: var(--white);
+    margin-bottom: 3rem;
+  }
+
+  .steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+
+  .step {
+    position: relative;
+  }
+
+  .step .num {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--purple), var(--purple-dark));
+    color: var(--white);
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+  }
+
+  .step h3 {
+    color: var(--white);
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .step p {
+    color: var(--stone);
+    font-size: 0.9rem;
+  }
+
+  /* ── Footer ── */
+  footer {
+    text-align: center;
+    padding: 4rem 2rem;
+    color: var(--stone);
+    font-size: 0.85rem;
+    border-top: 1px solid rgba(255,255,255,0.06);
+  }
+
+  footer a {
+    color: var(--purple);
+    text-decoration: none;
+  }
+
+  footer a:hover { color: var(--green); }
+
+  /* ── Responsive ── */
+  @media (max-width: 640px) {
+    .products { grid-template-columns: 1fr; }
+    .steps { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="aura-mark">
+    <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="auraGrad" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#6C5CE7"/>
+          <stop offset="100%" stop-color="#00D2A0"/>
+        </linearGradient>
+      </defs>
+      <circle cx="42" cy="42" r="28" fill="#6C5CE7" opacity="0.9"/>
+      <circle cx="78" cy="78" r="28" fill="url(#auraGrad)" opacity="0.5"/>
+      <text x="60" y="72" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="48" fill="white">A</text>
+    </svg>
+  </div>
+  <h1>Earn your <span>glow</span>.</h1>
+  <p class="tagline">Real reputation, earned through real-world actions — witnessed by people who were actually there. No algorithms. No bots. Just people recognizing people.</p>
+</section>
+
+<section class="products">
+  <div class="product-card farm">
+    <div class="icon">📸</div>
+    <span class="label">The Farm</span>
+    <h2>Capture the moment.</h2>
+    <p>A local media studio that records what happens and lets you attribute aura points to the people who earned them. Works offline. Privacy-first. Your device, your data.</p>
+  </div>
+  <div class="product-card card">
+    <div class="icon">🪪</div>
+    <span class="label">The Card</span>
+    <h2>Carry your reputation.</h2>
+    <p>Your identity beacon and social feed. Claim points others attribute to you. See your reputation grow. Quick reactions. One tap to confirm or challenge.</p>
+  </div>
+</section>
+
+<section class="how">
+  <h2>How it works</h2>
+  <div class="steps">
+    <div class="step">
+      <div class="num">1</div>
+      <h3>Record</h3>
+      <p>Capture a moment on The Farm. Someone did something notable — record it.</p>
+    </div>
+    <div class="step">
+      <div class="num">2</div>
+      <h3>Attribute</h3>
+      <p>Give them aura points. Others at the same event confirm or challenge.</p>
+    </div>
+    <div class="step">
+      <div class="num">3</div>
+      <h3>Glow</h3>
+      <p>Points appear on their Card. Real recognition, visible to the community.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>Aura &copy; 2026 &mdash; <a href="https://ifarm.club">ifarm.club</a></p>
+  <p style="margin-top:0.5rem">Built in the open. <a href="https://github.com/Sergio-PB/aura-workspace">See the code</a>.</p>
+</footer>
+
+</body>
+</html>
