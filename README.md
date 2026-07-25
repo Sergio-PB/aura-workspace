@@ -9,14 +9,20 @@ The backend validates and attributes aura by triangulating and correlating input
 
 ## Workspace
 
-This repository is the single source of truth for Aura. It contains:
+This repository is the company brain for Aura. Product code lives in the [aura-apps](https://github.com/Sergio-PB/aura-apps) monorepo. This repo contains:
 
-- `src/` — in-house code (Farm, Card, backend)
 - `docs/` — architecture, ADRs, company culture
 - `scripts/` — one-off automation scripts
 - `skills/` — custom Hermes Agent skills
 - `memories/` — persistent agent memories exported from Hermes
 - `.github/` — CI/CD workflows
+
+## Repos
+
+| Repo | Purpose |
+|------|---------|
+| [aura-workspace](https://github.com/Sergio-PB/aura-workspace) | Company brain: docs, ADRs, culture, memories, scripts |
+| [aura-apps](https://github.com/Sergio-PB/aura-apps) | Monorepo: The Farm + The Card source code |
 
 ## Operator
 
