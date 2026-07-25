@@ -82,7 +82,7 @@ Launch a social reputation network at `ifarm.club` with two products: **The Farm
 **Goal:** Every technical decision is made, documented, and justified before code is written.
 
 - [x] **ADR: Farm platform** — native (Swift/Kotlin) vs React Native vs Flutter vs PWA
-- [ ] **ADR: Backend stack** — language, framework, runtime
+- [x] **ADR: Backend stack** — language, framework, runtime
 - [ ] **ADR: Database & sync** — PostgreSQL vs SQLite vs hybrid local-first
 - [ ] **ADR: Identity model** — self-sovereign keypairs vs email/phone vs OAuth
 - [ ] **ADR: API protocol** — REST vs GraphQL vs gRPC vs WebSocket
