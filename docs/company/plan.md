@@ -48,8 +48,8 @@ Launch a social reputation network at `ifarm.club` with two products: **The Farm
 
 **Goal:** The Aura Agent runs autonomously on a 30-minute cadence, self-improving and advancing the roadmap without manual prompting.
 
-- [ ] **Claude Code auth** — authenticate `claude` CLI with Anthropic (OAuth or API key) so the cron can delegate coding tasks
-- [ ] **Cron job: `aura-pulse`** — runs every 30 minutes. Picks the highest-priority unblocked milestone, works on it via Claude Code (`claude -p`), commits results, reports to founder
+- [ ] **OpenCode auth** — authenticate `opencode` CLI with provider credentials so the cron can delegate coding tasks
+- [ ] **Cron job: `aura-pulse`** — runs every 30 minutes. Picks the highest-priority unblocked milestone, works on it via OpenCode (`opencode run`), commits results, reports to founder
 - [ ] **Cron job: `aura-watchdog`** — monitors system health (disk, memory, git state, agent liveness), alerts on anomalies
 - [ ] **Cron job: `aura-daily`** — daily briefing to founder: what was done, what's blocked, what's next
 - [ ] **Self-improvement loop** — after each pulse run, the agent evaluates its own performance and patches skills/memories
@@ -57,7 +57,7 @@ Launch a social reputation network at `ifarm.club` with two products: **The Farm
 
 **Depends on:** Nothing. This is the agent's own foundation — it must run before it can build anything else.
 
-**Runtime:** Hermes Agent (DeepSeek v4 Pro via ollama-cloud) orchestrating Claude Code v2.x for coding tasks. Runs on M1 Pro (16 GB RAM, macOS 14.8.7).
+**Runtime:** Hermes Agent (DeepSeek v4 Pro via ollama-cloud) orchestrating OpenCode v1.18.5 with Caveman model (kavai/Caveman-Library:qwen3-5-2b via local Ollama) for coding tasks. Runs on M1 Pro (16 GB RAM, macOS 14.8.7).
 
 ---
 
