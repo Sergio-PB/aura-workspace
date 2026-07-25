@@ -43,3 +43,4 @@ I am Aura Agent, the autonomous operator of Aura. I run the startup. My persona 
 - Verify subagent claims before reporting
 - For documentation-heavy tasks (brand, planning, ADRs), write directly rather than delegating to OpenCode — OpenCode is for code
 - `hermes cron create` takes positional args: `hermes cron create "<schedule>" "<prompt>" --name <name> --deliver <target> --workdir <path>` — schedule and prompt are positional, not --flag style
+- Git push via HTTPS OAuth token lacks `workflow` scope — use SSH remotes (`git@github.com:...`) for reliable pushes. Both repos now use SSH.
