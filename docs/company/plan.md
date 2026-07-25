@@ -70,7 +70,7 @@ Launch a social reputation network at `ifarm.club` with two products: **The Farm
 - [x] Brand identity (logo, colors, typography, voice)
 - [ ] Company bank account + payment infrastructure
 - [x] Operating rhythm: daily agent briefings, weekly founder review
-- [ ] Compliance baseline: privacy policy, terms of service drafts
+- [x] Compliance baseline: privacy policy, terms of service drafts
 - [ ] Public presence: GitHub org (or keep private), social accounts, domain email
 
 **Depends on:** Nothing. This is the starting line.
