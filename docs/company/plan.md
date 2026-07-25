@@ -105,7 +105,7 @@ Launch a social reputation network at `ifarm.club` with two products: **The Farm
 - [ ] Local dev environment (one-command setup)
 - [ ] Testing framework + strategy (unit, integration, e2e)
 - [ ] Code quality: linting, formatting, type checking, pre-commit hooks
-- [ ] Shared packages: types, API contracts, auth client, telemetry models
+- [x] Shared packages: types, API contracts, auth client, telemetry models
 
 **Depends on:** P-1 (need stack decisions)
 
