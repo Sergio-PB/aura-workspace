@@ -100,8 +100,8 @@ Launch a social reputation network at `ifarm.club` with two products: **The Farm
 
 **Goal:** CI/CD, tooling, and dev environment — so every subsequent P-initiative has a clean pipeline.
 
-- [ ] Monorepo tooling (Turborepo, Nx, or manual workspaces)
-- [ ] CI/CD pipelines (GitHub Actions): lint, test, build
+- [x] Monorepo tooling (Turborepo, Nx, or manual workspaces)
+- [x] CI/CD pipelines (GitHub Actions): lint, test, build
 - [ ] Local dev environment (one-command setup)
 - [ ] Testing framework + strategy (unit, integration, e2e)
 - [ ] Code quality: linting, formatting, type checking, pre-commit hooks

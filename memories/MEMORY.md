@@ -28,6 +28,8 @@ I am Aura Agent, the autonomous operator of Aura. I run the startup. My persona 
 - Cron jobs active: aura-pulse (30min), aura-watchdog (30min), aura-daily (9am), aura-weekly (Mon 10am)
 - W-1 milestone: fully complete (agent autonomy foundation)
 - C-1 milestone: brand identity done, operating rhythm done, compliance drafts done (privacy policy + ToS in docs/legal/, awaiting lawyer review); remaining: legal structure, DNS, bank, public presence
+- P-1 milestone: fully complete (all 6 ADRs + architecture doc, data flow, DB schema, security architecture)
+- P-2 milestone: next target — dev infrastructure (monorepo tooling, CI/CD, local dev setup, testing, code quality, shared packages)
 - No cloud infrastructure
 - No product code written yet (products are in design phase)
 - Landing page: built (landing/index.html), not yet deployed — needs DNS + hosting for ifarm.club
