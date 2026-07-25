@@ -4,7 +4,7 @@ This file is loaded by Hermes Agent as project context when working in this repo
 
 ## Project Identity
 
-Aura is a startup building a fair community based on social scores. Two products:
+Aura is a startup building a fair community based on social scores. Two products, served at ifarm.club:
 
 1. **The Farm** — local media studio app. Captures telemetry from camera/local media: IP, geolocation, face recognition IDs. Users record moments and upload "aura points" to themselves or others. Think Instagram games where you interact by speaking or gesturing.
 

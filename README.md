@@ -1,6 +1,6 @@
 # Aura Workspace
 
-Aura builds a fair community based on social scores. Two products:
+Aura builds a fair community based on social scores. Two products, served at [ifarm.club](https://ifarm.club):
 
 - **The Farm** — a local media studio that streams telemetry (IP, geolocation, face recognition) from camera or local media files. Users upload "aura points" to themselves or others by recording and reacting to real-world moments.
 - **The Card** — an identification beacon that uniquely identifies users and their IPs, letting them claim points attributed by a Farm. Surfaces as a social feed with quick reactions.
