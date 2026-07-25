@@ -19,6 +19,15 @@
 - A move is notable if it matches a named gesture in the move library.
 - No match = no attribution. The library is the gate.
 
+## Particle Generation & UI
+- Move = particle generator ("spell"). Active while the gesture is continuously detected.
+- Each particle = aura points attributed to the user performing the move.
+- Points are earned per time unit while the move is active (e.g., 2 aura/second for seesaw).
+- UI renders particles as a visual overlay on the camera feed using a game engine.
+- The game engine is responsible for particle rendering — not the visual computing pipeline.
+- All UI is mobile-first.
+- All UI supports light/dark theme via a configurable flag.
+
 ## Stack
 - All software is written in TypeScript.
 - pnpm is the package manager for all projects.
