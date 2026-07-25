@@ -1,21 +1,29 @@
 # Aura — Company Plan & Roadmap
 
-> **Date:** 2026-07-24
-> **Status:** Draft v1
+> **Status:** Draft v2
 > **Author:** Aura Agent (autonomous operator)
+>
+> Aura does not use deadlines or due dates. Milestones are sequenced by dependency, not by calendar. We ship when the work is done.
 
 ---
 
 ## Vision
 
-Aura builds a fair community where social reputation is earned through real-world actions, not manufactured online personas. Points are attributed by people who were actually there — recorded, verified, and validated by community consensus. No algorithms optimizing for engagement. No bots. Just people recognizing people.
+A fair community where social reputation is earned through real-world actions, not manufactured online personas. Points are attributed by people who were actually there — recorded, verified, and validated by community consensus. No algorithms optimizing for engagement. No bots. Just people recognizing people.
 
 ## Mission
 
-Launch two products at `ifarm.club` that make social scoring transparent, local, and community-governed:
+Launch a social reputation network at `ifarm.club` with two products: **The Farm** (capture the moment) and **The Card** (carry your reputation).
 
-1. **The Farm** — capture the moment (local media studio with telemetry)
-2. **The Card** — carry your reputation (identity beacon + social feed)
+---
+
+## Initiative Tracks
+
+| Prefix | Track | Scope |
+|--------|-------|-------|
+| **C** | Company | Legal, funding, brand, infrastructure, team, operations |
+| **P** | Product | The Farm, The Card, backend, shared packages |
+| **N** | Network | Community, users, governance, content, growth |
 
 ---
 
@@ -23,11 +31,11 @@ Launch two products at `ifarm.club` that make social scoring transparent, local,
 
 | Area | Status |
 |------|--------|
-| Company formation | Bootstrapped (2026-07-24) |
+| Company formation | Bootstrapped |
 | Product code | None — design phase |
-| Infrastructure | None — local dev only |
+| Infrastructure | Local dev only (M1 Pro) |
 | Team | Founder (Sergio) + Aura Agent (autonomous operator) |
-| Domain | `ifarm.club` — registered, no DNS configured |
+| Domain | `ifarm.club` — registered, no DNS |
 | Repos | `aura-workspace` (company brain), `aura-apps` (monorepo) |
 | Funding | Bootstrapped |
 
@@ -35,174 +43,282 @@ Launch two products at `ifarm.club` that make social scoring transparent, local,
 
 ## Roadmap
 
-### Phase 0: Foundation (Q3 2026 — Now)
+### C-1: Company Foundation
 
-**Goal:** Make all architectural and technical decisions. Set up development infrastructure. Nothing is built yet — this phase is about choosing right.
+**Goal:** Aura exists as a real entity with infrastructure, brand, and operating rhythm.
 
-#### 0.1 Tech Stack Decision
-- **Farm:** Native mobile (Swift/Kotlin) vs cross-platform (React Native/Flutter) vs PWA
-- **Card:** Mobile app + web companion
-- **Backend:** Language, framework, database
-- **Shared:** Types, API contracts, auth model
-- **Decision criteria:** Time-to-MVP, local processing capability, camera/ML access, single-developer maintainability
+- [ ] Legal structure (LLC, incorporation, or sole proprietorship — decide)
+- [ ] `ifarm.club` DNS + hosting + landing page
+- [ ] Brand identity (logo, colors, typography, voice)
+- [ ] Company bank account + payment infrastructure
+- [ ] Operating rhythm: daily agent briefings, weekly founder review
+- [ ] Compliance baseline: privacy policy, terms of service drafts
+- [ ] Public presence: GitHub org (or keep private), social accounts, domain email
 
-#### 0.2 Architecture Design
-- System architecture diagram (Farm → Backend → Card)
-- Data flow: telemetry capture → upload → validation → attribution → feed
-- API design: REST vs GraphQL vs WebSocket
-- Database schema: users, events, points, validations
-- Security model: identity, authentication, privacy
-
-#### 0.3 Development Infrastructure
-- CI/CD pipelines (GitHub Actions)
-- Local dev environment setup scripts
-- Testing framework and strategy
-- Code quality tooling (linting, formatting, type checking)
-
-#### 0.4 ifarm.club Landing Page
-- Static landing page at `ifarm.club`
-- Product descriptions, waitlist signup
-- DNS + hosting setup
-
-**Deliverables:** ADRs for tech stack and architecture, CI/CD running, landing page live.
+**Depends on:** Nothing. This is the starting line.
 
 ---
 
-### Phase 1: Core Prototype (Q3–Q4 2026)
+### P-1: Architecture & Tech Stack
 
-**Goal:** Build the minimum end-to-end flow: record → attribute → claim → validate. Working on a single device, no network yet.
+**Goal:** Every technical decision is made, documented, and justified before code is written.
 
-#### 1.1 The Farm — MVP
-- Camera capture with basic telemetry (IP, geolocation)
-- Local face detection (no recognition yet — just detect faces)
-- Simple recording UI (start/stop, preview)
-- Aura point attribution UI (select person, assign points)
-- Local storage of recordings + attributions
+- [ ] **ADR: Farm platform** — native (Swift/Kotlin) vs React Native vs Flutter vs PWA
+- [ ] **ADR: Backend stack** — language, framework, runtime
+- [ ] **ADR: Database & sync** — PostgreSQL vs SQLite vs hybrid local-first
+- [ ] **ADR: Identity model** — self-sovereign keypairs vs email/phone vs OAuth
+- [ ] **ADR: API protocol** — REST vs GraphQL vs gRPC vs WebSocket
+- [ ] **ADR: Cloud provider** — defer or choose now
+- [ ] System architecture diagram (Farm → Backend → Card)
+- [ ] Data flow: telemetry capture → upload → validation → attribution → feed
+- [ ] Database schema (users, events, points, validations)
+- [ ] Security & privacy architecture
 
-#### 1.2 The Card — MVP
-- Local identity generation (keypair)
-- Basic profile (display name, avatar)
-- Point claim flow (receive attribution → accept/reject)
-- Minimal social feed (chronological list of claimed points)
-
-#### 1.3 Backend — MVP
-- User registration + authentication
-- Event/recording storage
-- Point attribution API
-- Basic validation (same-IP correlation)
-- Feed aggregation
-
-#### 1.4 Integration
-- Farm → Backend upload flow
-- Backend → Card feed delivery
-- End-to-end test: record, upload, claim, view in feed
-
-**Deliverables:** Working prototype on a single device, all three components talking to each other.
+**Depends on:** C-1 (need brand context for tech choices)
 
 ---
 
-### Phase 2: Network & Validation (Q4 2026 – Q1 2027)
+### P-2: Development Infrastructure
 
-**Goal:** Multi-user, multi-device. Community validation mechanics. Real telemetry correlation.
+**Goal:** CI/CD, tooling, and dev environment — so every subsequent P-initiative has a clean pipeline.
 
-#### 2.1 Multi-Device Farm
-- Multiple Farm instances at same event
-- Cross-device event correlation (time + location)
-- Duplicate detection and merging
+- [ ] Monorepo tooling (Turborepo, Nx, or manual workspaces)
+- [ ] CI/CD pipelines (GitHub Actions): lint, test, build
+- [ ] Local dev environment (one-command setup)
+- [ ] Testing framework + strategy (unit, integration, e2e)
+- [ ] Code quality: linting, formatting, type checking, pre-commit hooks
+- [ ] Shared packages: types, API contracts, auth client, telemetry models
 
-#### 2.2 Community Validation
-- Confirm/challenge attribution UI
-- Consensus algorithm (threshold-based)
-- Reputation weighting for validators
-- Dispute resolution flow
-
-#### 2.3 Enhanced Telemetry
-- Face recognition (match faces across recordings)
-- Audio fingerprinting for event matching
-- Bluetooth proximity for same-room detection
-
-#### 2.4 The Card — Social Features
-- Quick reactions (emoji, short responses)
-- Activity feed with filters
-- Point history and analytics
-- Share card/profile externally
-
-**Deliverables:** Multi-user alpha, community validation working, enhanced telemetry.
+**Depends on:** P-1 (need stack decisions)
 
 ---
 
-### Phase 3: Beta & Launch (Q2 2027)
+### P-3: The Farm — Core
 
-**Goal:** Public beta. Polish, security, scale. Go to market.
+**Goal:** Local media studio that captures telemetry and attributes aura points. Works on a single device, no network required.
 
-#### 3.1 Security Hardening
-- Cryptographic identity verification
-- Anti-gaming measures (prevent point farming)
-- Privacy controls (what telemetry is shared)
-- Data retention policies
+- [ ] Camera capture with telemetry (IP, geolocation)
+- [ ] Local face detection (detect faces, no recognition yet)
+- [ ] Recording UI (start/stop, preview, retake)
+- [ ] Aura point attribution UI (select person, assign points, add note)
+- [ ] Local storage: recordings + attributions persisted on-device
+- [ ] Playback and review of past recordings
 
-#### 3.2 Scale & Performance
-- Backend scaling (from single dev machine to cloud)
-- Media storage and delivery (CDN)
-- Real-time feed performance
-- Offline support for Farm
-
-#### 3.3 Public Beta
-- Invite-only beta program
-- Feedback collection and iteration
-- Community guidelines and moderation
-- Terms of service, privacy policy
-
-#### 3.4 Launch
-- App Store / Play Store submission
-- Public launch at `ifarm.club`
-- Marketing and community building
-- Monetization strategy (if applicable)
-
-**Deliverables:** Live products, real users, community growing.
+**Depends on:** P-2
 
 ---
 
-## Key Decisions Pending
+### P-4: The Card — Core
 
-These need ADRs before Phase 1 begins:
+**Goal:** Identity beacon and social feed. Users claim points and see their reputation.
 
-| # | Decision | Options | Impact |
-|---|----------|---------|--------|
-| 1 | Farm platform | Native (Swift/Kotlin) vs React Native vs Flutter vs PWA | Camera access, ML perf, dev speed |
-| 2 | Backend stack | Node/TypeScript vs Python vs Go vs Rust | Dev speed, ecosystem, hiring |
-| 3 | Database | PostgreSQL vs SQLite (local-first) vs hybrid | Offline support, sync complexity |
-| 4 | Identity model | Self-sovereign (keypairs) vs email/phone vs OAuth | Privacy, UX, security |
-| 5 | API protocol | REST vs GraphQL vs gRPC | Real-time needs, client complexity |
-| 6 | Cloud provider | None yet — decide before Phase 2 | Cost, scale, region |
+- [ ] Local identity generation (cryptographic keypair)
+- [ ] Basic profile (display name, avatar)
+- [ ] Point claim flow (receive attribution → accept/reject)
+- [ ] Chronological social feed of claimed points
+- [ ] Quick reactions on feed items
+- [ ] Point history and basic stats
+
+**Depends on:** P-2 (can be built in parallel with P-3)
 
 ---
 
-## Risks & Mitigations
+### P-5: Backend — Core
+
+**Goal:** Server that connects Farms to Cards. Validates attributions, delivers feeds.
+
+- [ ] User registration + authentication
+- [ ] Event/recording storage
+- [ ] Point attribution API (Farm uploads, Card claims)
+- [ ] Basic validation (same-IP correlation, temporal proximity)
+- [ ] Feed aggregation and delivery
+- [ ] Admin dashboard (minimal)
+
+**Depends on:** P-1, P-2
+
+---
+
+### P-6: End-to-End Integration
+
+**Goal:** First complete flow: record on Farm → upload → validate → claim on Card → view in feed.
+
+- [ ] Farm → Backend upload pipeline
+- [ ] Backend → Card feed delivery
+- [ ] End-to-end test suite
+- [ ] Error handling: offline queue, retry, conflict resolution
+- [ ] Performance baseline (latency, payload sizes)
+
+**Depends on:** P-3, P-4, P-5
+
+---
+
+### N-1: Founding Community
+
+**Goal:** First real users. Bootstrap the network with a trusted circle.
+
+- [ ] Invite founding members (friends, early adopters)
+- [ ] First real-world event with multiple Farm instances
+- [ ] Gather feedback on core flow
+- [ ] Community guidelines draft
+- [ ] Moderation and dispute resolution process
+
+**Depends on:** P-6 (need working product)
+
+---
+
+### P-7: Multi-Device & Event Correlation
+
+**Goal:** Multiple Farms at the same event. Cross-device telemetry correlation.
+
+- [ ] Event creation and joining (create event → others join)
+- [ ] Cross-device time + location correlation
+- [ ] Duplicate detection and merging
+- [ ] Bluetooth proximity for same-room detection
+- [ ] Audio fingerprinting for event matching
+
+**Depends on:** P-6, N-1
+
+---
+
+### P-8: Community Validation
+
+**Goal:** Points aren't just claimed — they're confirmed or challenged by others who were there.
+
+- [ ] Confirm/challenge attribution UI
+- [ ] Consensus algorithm (threshold-based, configurable)
+- [ ] Reputation weighting for validators
+- [ ] Dispute resolution flow
+- [ ] Validation transparency (who confirmed, who challenged, why)
+
+**Depends on:** P-7
+
+---
+
+### P-9: Enhanced Telemetry
+
+**Goal:** Richer data for better attribution and validation.
+
+- [ ] Face recognition (match faces across recordings)
+- [ ] Activity/gesture recognition
+- [ ] Audio event detection (applause, laughter, etc.)
+- [ ] Location precision improvements
+- [ ] Telemetry privacy controls (user-configurable)
+
+**Depends on:** P-7
+
+---
+
+### N-2: Public Beta
+
+**Goal:** Open the doors. Real users, real events, real reputation.
+
+- [ ] Invite system (member invites member)
+- [ ] Onboarding flow for new users
+- [ ] Public community guidelines
+- [ ] Terms of service, privacy policy (final)
+- [ ] Feedback collection and iteration loop
+- [ ] Community moderation tools
+
+**Depends on:** P-8, P-9, N-1
+
+---
+
+### C-2: Go-to-Market
+
+**Goal:** Aura is a real company with real users and a path to sustainability.
+
+- [ ] App Store / Play Store submission
+- [ ] Public launch at `ifarm.club`
+- [ ] Marketing site and content
+- [ ] Social media presence
+- [ ] Monetization strategy (if applicable)
+- [ ] Metrics and analytics
+- [ ] Funding strategy (if applicable)
+
+**Depends on:** N-2
+
+---
+
+### P-10: Scale & Hardening
+
+**Goal:** Production-ready. Secure, performant, reliable.
+
+- [ ] Cryptographic identity verification (no spoofing)
+- [ ] Anti-gaming measures (prevent point farming, Sybil attacks)
+- [ ] Privacy controls (granular telemetry sharing)
+- [ ] Data retention and deletion policies
+- [ ] Backend scaling (single machine → cloud)
+- [ ] Media storage and CDN
+- [ ] Real-time feed performance
+- [ ] Offline support and sync resilience
+
+**Depends on:** N-2
+
+---
+
+### N-3: Network Effects
+
+**Goal:** The network grows on its own. Reputation becomes portable and valuable.
+
+- [ ] Public profiles and shareable cards
+- [ ] Cross-event reputation (points carry across events)
+- [ ] Community-led events and moderation
+- [ ] API for third-party integrations
+- [ ] Reputation portability (export, verify externally)
+- [ ] Network health metrics and transparency reports
+
+**Depends on:** C-2, P-10
+
+---
+
+## Dependency Graph
+
+```
+C-1 ──→ P-1 ──→ P-2 ──→ P-3 ──┐
+                  │       P-4 ──┤
+                  │       P-5 ──┤
+                  │             ↓
+                  │          P-6 ──→ N-1 ──→ P-7 ──→ P-8 ──┐
+                  │                          P-9 ────────────┤
+                  │                                           ↓
+                  │                                        N-2 ──→ C-2 ──→ P-10 ──→ N-3
+```
+
+---
+
+## Key Decisions (ADRs Needed)
+
+| # | Decision | Track | Options |
+|---|----------|-------|---------|
+| 1 | Farm platform | P-1 | Native (Swift/Kotlin) vs React Native vs Flutter vs PWA |
+| 2 | Backend stack | P-1 | Node/TypeScript vs Python vs Go vs Rust |
+| 3 | Database & sync | P-1 | PostgreSQL vs SQLite (local-first) vs hybrid |
+| 4 | Identity model | P-1 | Self-sovereign keypairs vs email/phone vs OAuth |
+| 5 | API protocol | P-1 | REST vs GraphQL vs gRPC |
+| 6 | Cloud provider | P-1 | AWS vs Fly.io vs Vercel vs defer |
+| 7 | Legal structure | C-1 | LLC vs C-Corp vs sole proprietorship |
+| 8 | Monorepo tooling | P-2 | Turborepo vs Nx vs pnpm workspaces |
+
+---
+
+## Risks
 
 | Risk | Severity | Mitigation |
 |------|----------|------------|
-| Privacy/regulatory (GDPR, face data) | High | Privacy-by-design, on-device processing, legal review in Phase 0 |
-| Gaming/manipulation of scores | High | Community consensus, anti-gaming heuristics, reputation weighting |
+| Privacy regulation (GDPR, biometric data) | High | On-device processing, user-controlled telemetry, legal review at C-1 |
+| Gaming/manipulation of scores | High | Community consensus (P-8), anti-gaming heuristics (P-10), reputation weighting |
 | Single-developer bottleneck | Medium | Agent automation, clean architecture, documentation-first |
-| No cloud infrastructure yet | Medium | Local-first design, defer cloud decisions until needed |
-| Cold start (no users → no validation) | Medium | Single-user mode works without network, bootstrap with trusted circle |
-| Platform risk (app store rejection) | High | PWA as fallback, clear privacy disclosures |
+| Cold start (no users → no validation) | Medium | Single-user mode works without network (P-3), bootstrap with trusted circle (N-1) |
+| Platform risk (app store rejection) | High | PWA as fallback, clear privacy disclosures, legal prep at C-1 |
+| No cloud infrastructure yet | Medium | Local-first design, defer cloud until P-5/P-10 |
 
 ---
 
-## Success Metrics
-
-- **Phase 1:** One end-to-end flow working (record → claim → view)
-- **Phase 2:** 10+ users at a single event, community validation functioning
-- **Phase 3:** 100+ active users, < 24h point dispute resolution
-
----
-
-## Operating Principles (How We Build)
+## Operating Principles
 
 1. **Local-first.** Everything works offline. Network is additive, not required.
-2. **Privacy-by-design.** Telemetry is processed on-device. Users control what's shared.
-3. **Transparent scoring.** Point attribution is public and challengeable. No black-box algorithms.
-4. **Community-governed.** Validation is by consensus, not by central authority.
-5. **Agent-built.** The autonomous agent is the primary builder. Code is committed, documented, and reviewable.
+2. **Privacy-by-design.** Telemetry processed on-device. Users control what's shared.
+3. **Transparent scoring.** Point attribution is public and challengeable. No black boxes.
+4. **Community-governed.** Validation by consensus, not central authority.
+5. **Agent-built.** The autonomous agent is the primary builder. Code is committed, documented, reviewable.
+6. **No deadlines.** Milestones are sequenced by dependency. We ship when the work is done.
