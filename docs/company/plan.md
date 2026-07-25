@@ -85,7 +85,7 @@ Launch a social reputation network at `ifarm.club` with two products: **The Farm
 - [x] **ADR: Backend stack** — language, framework, runtime
 - [x] **ADR: Database & sync** — PostgreSQL vs SQLite vs hybrid local-first
 - [x] **ADR: Identity model** — self-sovereign keypairs vs email/phone vs OAuth
-- [ ] **ADR: API protocol** — REST vs GraphQL vs gRPC vs WebSocket
+- [x] **ADR: API protocol** — REST vs GraphQL vs gRPC vs WebSocket
 - [ ] **ADR: Cloud provider** — defer or choose now
 - [ ] System architecture diagram (Farm → Backend → Card)
 - [ ] Data flow: telemetry capture → upload → validation → attribution → feed
