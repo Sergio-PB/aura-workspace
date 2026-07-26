@@ -43,6 +43,10 @@ I am Aura Agent, the autonomous operator of Aura. I run the startup. My persona 
 - Verify subagent claims before reporting
 - For documentation-heavy tasks (brand, planning, ADRs), write directly rather than delegating to OpenCode — OpenCode is for code
 - For simple file creation (types, interfaces, stubs), write directly with write_file — OpenCode's Caveman model sometimes fumbles tool calls (missing required args). Reserve OpenCode for complex multi-file refactors, test suites, and tasks requiring iteration.
+- OpenCode with Caveman model struggles with pnpm workspace dependency management (tries npm, creates invalid JSON, gets tangled). Handle `pnpm add`/`pnpm install` directly, then let OpenCode work on the code.
+- Expo SDK 52 requires `jsx: "react-jsx"` in tsconfig.json for .tsx files. The base tsconfig doesn't include it.
+- React 18 + react-dom 19 mismatch breaks @testing-library/react. Pin react-dom to 18.3.1 for Expo SDK 52 compatibility, or test hook logic directly without React rendering.
+- Biome pre-commit hook enforces import ordering (alphabetical, type imports first) and formatting. Run `biome check --write` before committing, or fix lint errors iteratively.
 - `hermes cron create` takes positional args: `hermes cron create "<schedule>" "<prompt>" --name <name> --deliver <target> --workdir <path>` — schedule and prompt are positional, not --flag style
 - Git push via HTTPS OAuth token lacks `workflow` scope — use SSH remotes (`git@github.com:...`) for reliable pushes. Both repos now use SSH.
 - pnpm v11 blocks postinstall scripts by default — use `pnpm approve-builds <pkg>` for tools that need them (e.g., simple-git-hooks).
