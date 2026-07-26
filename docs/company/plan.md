@@ -115,7 +115,7 @@ Launch a social reputation network at `ifarm.club` with two products: **The Farm
 
 **Goal:** Local media studio that captures telemetry and attributes aura points. Works on a single device, no network required.
 
-- [~] Camera capture with telemetry (IP, geolocation) — hooks + components scaffolded, tests pass; needs real vision-camera wiring + recording
+- [x] Camera capture with telemetry (IP, geolocation) — wired with react-native-vision-camera: useCameraDevice, useCameraPermission, <Camera> component, startRecording/stopRecording via ref
 - [ ] Local face detection (detect faces, no recognition yet)
 - [ ] Recording UI (start/stop, preview, retake)
 - [ ] Aura point attribution UI (select person, assign points, add note)
