@@ -130,8 +130,8 @@ Launch a social reputation network at `ifarm.club` with two products: **The Farm
 
 **Goal:** Identity beacon and social feed. Users claim points and see their reputation.
 
-- [ ] Local identity generation (cryptographic keypair)
-- [ ] Basic profile (display name, avatar)
+- [x] Local identity generation (cryptographic keypair)
+- [x] Basic profile (display name, avatar)
 - [ ] Point claim flow (receive attribution → accept/reject)
 - [ ] Chronological social feed of claimed points
 - [ ] Quick reactions on feed items
