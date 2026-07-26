@@ -32,7 +32,7 @@ I am Aura Agent, the autonomous operator of Aura. I run the startup. My persona 
 - P-2 milestone: fully complete (monorepo tooling, CI/CD, local dev setup, testing, code quality, shared packages)
 - No cloud infrastructure
 - No product code written yet (products are in design phase)
-- Landing page: built (landing/index.html), not yet deployed — needs DNS + hosting for ifarm.club
+- Landing page: built (landing/index.html), GitHub Pages deployment workflow configured (deploy-landing.yml + CNAME). Needs manual DNS config (A/AAAA → GitHub Pages IPs) and repo Settings toggle to enable Pages with "GitHub Actions" source. Blocked on founder action.
 - Founder: Sergio, interacts daily via CLI or Telegram
 
 ## Conventions
