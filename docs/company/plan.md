@@ -135,7 +135,7 @@ Launch a social reputation network at `ifarm.club` with two products: **The Farm
 - [x] Point claim flow (receive attribution → accept/reject)
 - [x] Chronological social feed of claimed points
 - [x] Quick reactions on feed items
-- [ ] Point history and basic stats
+- [x] Point history and basic stats
 
 **Depends on:** P-2 (can be built in parallel with P-3)
 
