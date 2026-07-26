@@ -117,8 +117,8 @@ Launch a social reputation network at `ifarm.club` with two products: **The Farm
 
 - [x] Camera capture with telemetry (IP, geolocation) — wired with react-native-vision-camera: useCameraDevice, useCameraPermission, <Camera> component, startRecording/stopRecording via ref
 - [x] Local face detection (detect faces, no recognition yet)
-- [ ] Recording UI (start/stop, preview, retake)
-- [ ] Aura point attribution UI (select person, assign points, add note)
+- [x] Recording UI (start/stop, preview, retake)
+- [x] Aura point attribution UI (select person, assign points, add note)
 - [ ] Local storage: recordings + attributions persisted on-device
 - [ ] Playback and review of past recordings
 
