@@ -119,7 +119,7 @@ Launch a social reputation network at `ifarm.club` with two products: **The Farm
 - [x] Local face detection (detect faces, no recognition yet)
 - [x] Recording UI (start/stop, preview, retake)
 - [x] Aura point attribution UI (select person, assign points, add note)
-- [ ] Local storage: recordings + attributions persisted on-device
+- [x] Local storage: recordings + attributions persisted on-device
 - [ ] Playback and review of past recordings
 
 **Depends on:** P-2
