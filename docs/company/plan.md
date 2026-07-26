@@ -150,7 +150,7 @@ Launch a social reputation network at `ifarm.club` with two products: **The Farm
 - [x] Point attribution API (Farm uploads, Card claims)
 - [x] Basic validation (same-IP correlation, temporal proximity)
 - [x] Feed aggregation and delivery
-- [ ] Admin dashboard (minimal)
+- [x] Admin dashboard (minimal)
 
 **Depends on:** P-1, P-2
 
