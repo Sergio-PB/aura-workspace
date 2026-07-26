@@ -132,9 +132,9 @@ Launch a social reputation network at `ifarm.club` with two products: **The Farm
 
 - [x] Local identity generation (cryptographic keypair)
 - [x] Basic profile (display name, avatar)
-- [ ] Point claim flow (receive attribution → accept/reject)
-- [ ] Chronological social feed of claimed points
-- [ ] Quick reactions on feed items
+- [x] Point claim flow (receive attribution → accept/reject)
+- [x] Chronological social feed of claimed points
+- [x] Quick reactions on feed items
 - [ ] Point history and basic stats
 
 **Depends on:** P-2 (can be built in parallel with P-3)
