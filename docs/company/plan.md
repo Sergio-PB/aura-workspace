@@ -148,7 +148,7 @@ Launch a social reputation network at `ifarm.club` with two products: **The Farm
 - [x] User registration + authentication
 - [x] Event/recording storage
 - [x] Point attribution API (Farm uploads, Card claims)
-- [ ] Basic validation (same-IP correlation, temporal proximity)
+- [x] Basic validation (same-IP correlation, temporal proximity)
 - [ ] Feed aggregation and delivery
 - [ ] Admin dashboard (minimal)
 
