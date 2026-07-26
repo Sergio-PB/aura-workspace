@@ -146,7 +146,7 @@ Launch a social reputation network at `ifarm.club` with two products: **The Farm
 **Goal:** Server that connects Farms to Cards. Validates attributions, delivers feeds.
 
 - [x] User registration + authentication
-- [ ] Event/recording storage
+- [x] Event/recording storage
 - [ ] Point attribution API (Farm uploads, Card claims)
 - [ ] Basic validation (same-IP correlation, temporal proximity)
 - [ ] Feed aggregation and delivery
