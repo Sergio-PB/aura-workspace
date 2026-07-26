@@ -120,7 +120,7 @@ Launch a social reputation network at `ifarm.club` with two products: **The Farm
 - [x] Recording UI (start/stop, preview, retake)
 - [x] Aura point attribution UI (select person, assign points, add note)
 - [x] Local storage: recordings + attributions persisted on-device
-- [ ] Playback and review of past recordings
+- [x] Playback and review of past recordings
 
 **Depends on:** P-2
 
