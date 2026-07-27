@@ -174,9 +174,9 @@ Launch a social reputation network at `ifarm.club` with two products: **The Farm
 
 **Goal:** First real users. Bootstrap the network with a trusted circle.
 
-- [ ] Invite founding members (friends, early adopters)
-- [ ] First real-world event with multiple Farm instances
-- [ ] Gather feedback on core flow
+- [~] Invite founding members (friends, early adopters) — prep kit ready: `docs/community/founding-members.md`
+- [~] First real-world event with multiple Farm instances — prep guide ready: `docs/community/first-event.md`
+- [~] Gather feedback on core flow — template ready: `docs/community/feedback-template.md`
 - [x] Community guidelines draft
 - [x] Moderation and dispute resolution process
 
