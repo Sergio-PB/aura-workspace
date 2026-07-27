@@ -190,8 +190,8 @@ Launch a social reputation network at `ifarm.club` with two products: **The Farm
 
 - [x] Event creation and joining (create event → others join)
 - [x] Cross-device time + location correlation
-- [ ] Duplicate detection and merging
-- [ ] Bluetooth proximity for same-room detection
+- [x] Duplicate detection and merging
+- [x] Bluetooth proximity for same-room detection
 - [ ] Audio fingerprinting for event matching
 
 **Depends on:** P-6, N-1
