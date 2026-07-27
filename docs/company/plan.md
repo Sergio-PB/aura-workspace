@@ -163,7 +163,7 @@ Launch a social reputation network at `ifarm.club` with two products: **The Farm
 - [x] Farm → Backend upload pipeline
 - [x] Backend → Card feed delivery
 - [x] End-to-end test suite
-- [~] Error handling: offline queue, retry, conflict resolution (retry + queue in Farm API client; conflict resolution deferred to P-8)
+- [x] Error handling: offline queue, retry, conflict resolution (retry + queue in Farm API client, retry in Card API client; conflict resolution deferred to P-8)
 - [x] Performance baseline (latency, payload sizes)
 
 **Depends on:** P-3, P-4, P-5
