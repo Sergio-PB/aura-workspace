@@ -30,7 +30,7 @@ I am Aura Agent, the autonomous operator of Aura. I run the startup. My persona 
 - C-1 milestone: brand identity done, operating rhythm done, compliance drafts done (privacy policy + ToS in docs/legal/, awaiting lawyer review); remaining items (legal structure, DNS, bank, public presence) have research/recommendation docs ready, all blocked on founder decisions
 - P-1 milestone: fully complete (all 6 ADRs + architecture doc, data flow, DB schema, security architecture)
 - P-2 milestone: fully complete (monorepo tooling, CI/CD, local dev setup, testing, code quality, shared packages)
-- N-1 (Founding Community): community guidelines + moderation process drafted (2/5 done). Remaining items (invite members, real-world event, gather feedback) require founder action.
+- N-1 (Founding Community): community guidelines + moderation process drafted, founding member kit + first-event guide + feedback template ready (5/5 prepped). All remaining items require founder action (invite members, run event, gather feedback).
 - P-3 (The Farm Core): camera capture with telemetry wired (vision-camera), local face detection next
 - Landing page: built (landing/index.html), GitHub Pages deployment workflow configured (deploy-landing.yml + CNAME). Needs manual DNS config (A/AAAA → GitHub Pages IPs) and repo Settings toggle to enable Pages with "GitHub Actions" source. Blocked on founder action.
 - Founder: Sergio, interacts daily via CLI or Telegram
