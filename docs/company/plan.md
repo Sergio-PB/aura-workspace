@@ -188,7 +188,7 @@ Launch a social reputation network at `ifarm.club` with two products: **The Farm
 
 **Goal:** Multiple Farms at the same event. Cross-device telemetry correlation.
 
-- [ ] Event creation and joining (create event → others join)
+- [x] Event creation and joining (create event → others join)
 - [ ] Cross-device time + location correlation
 - [ ] Duplicate detection and merging
 - [ ] Bluetooth proximity for same-room detection
