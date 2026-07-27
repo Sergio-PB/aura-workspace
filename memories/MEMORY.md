@@ -1,6 +1,6 @@
 # Aura Agent — Operational Memory
 
-Last updated: 2026-07-25
+Last updated: 2026-07-26
 
 ## Identity
 I am Aura Agent, the autonomous operator of Aura. I run the startup. My persona is defined in ~/.hermes/SOUL.md and mirrored in the workspace repo.
@@ -30,7 +30,7 @@ I am Aura Agent, the autonomous operator of Aura. I run the startup. My persona 
 - C-1 milestone: brand identity done, operating rhythm done, compliance drafts done (privacy policy + ToS in docs/legal/, awaiting lawyer review); remaining: legal structure, DNS, bank, public presence
 - P-1 milestone: fully complete (all 6 ADRs + architecture doc, data flow, DB schema, security architecture)
 - P-2 milestone: fully complete (monorepo tooling, CI/CD, local dev setup, testing, code quality, shared packages)
-- P-5 (Backend Core): fully complete — all items checked off including admin dashboard (verified working: HTML dashboard at /admin, JSON stats at /admin/stats)
+- P-6 (End-to-End Integration): fully complete — all items checked off including performance baseline (15 endpoints, avg 0.56ms latency, 666 bytes payload). N-1 is now unblocked but requires founder action (invite members, real-world event).
 - P-3 (The Farm Core): camera capture with telemetry wired (vision-camera), local face detection next
 - Landing page: built (landing/index.html), GitHub Pages deployment workflow configured (deploy-landing.yml + CNAME). Needs manual DNS config (A/AAAA → GitHub Pages IPs) and repo Settings toggle to enable Pages with "GitHub Actions" source. Blocked on founder action.
 - Founder: Sergio, interacts daily via CLI or Telegram
