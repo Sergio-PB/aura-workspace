@@ -177,8 +177,8 @@ Launch a social reputation network at `ifarm.club` with two products: **The Farm
 - [ ] Invite founding members (friends, early adopters)
 - [ ] First real-world event with multiple Farm instances
 - [ ] Gather feedback on core flow
-- [ ] Community guidelines draft
-- [ ] Moderation and dispute resolution process
+- [x] Community guidelines draft
+- [x] Moderation and dispute resolution process
 
 **Depends on:** P-6 (need working product)
 
