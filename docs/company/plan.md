@@ -202,9 +202,9 @@ Launch a social reputation network at `ifarm.club` with two products: **The Farm
 
 **Goal:** Points aren't just claimed — they're confirmed or challenged by others who were there.
 
-- [ ] Confirm/challenge attribution UI
-- [ ] Consensus algorithm (threshold-based, configurable)
-- [ ] Reputation weighting for validators
+- [~] Confirm/challenge attribution UI — Card validation module done (apps/card/src/validation.ts); visual UI pending
+- [x] Consensus algorithm (threshold-based, configurable) — backend validations.ts + Card client
+- [x] Reputation weighting for validators — backend validations.ts
 - [ ] Dispute resolution flow
 - [ ] Validation transparency (who confirmed, who challenged, why)
 
