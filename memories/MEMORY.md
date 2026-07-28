@@ -31,7 +31,9 @@ I am Aura Agent, the autonomous operator of Aura. I run the startup. My persona 
 - P-1 milestone: fully complete (all 6 ADRs + architecture doc, data flow, DB schema, security architecture)
 - P-2 milestone: fully complete (monorepo tooling, CI/CD, local dev setup, testing, code quality, shared packages)
 - N-1 (Founding Community): community guidelines + moderation process drafted, founding member kit + first-event guide + feedback template ready (5/5 prepped). All remaining items require founder action (invite members, run event, gather feedback).
-- P-3 (The Farm Core): camera capture with telemetry wired (vision-camera), local face detection next
+- P-3 through P-8 milestones: fully complete (Farm core, Card core, Backend core, E2E integration, Multi-device, Community validation)
+- P-9 (Enhanced Telemetry): face recognition done, location precision done, privacy controls done, activity detection done, audio detection hook exists (not wired — needs audio amplitude source), gesture recognition not started
+- N-1 (Founding Community): community guidelines + moderation process drafted, founding member kit + first-event guide + feedback template ready (5/5 prepped). All remaining items require founder action (invite members, run event, gather feedback).
 - Landing page: built (landing/index.html), GitHub Pages deployment workflow configured (deploy-landing.yml + CNAME). Needs manual DNS config (A/AAAA → GitHub Pages IPs) and repo Settings toggle to enable Pages with "GitHub Actions" source. Blocked on founder action.
 - Founder: Sergio, interacts daily via CLI or Telegram
 
