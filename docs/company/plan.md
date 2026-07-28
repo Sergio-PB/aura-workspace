@@ -205,8 +205,8 @@ Launch a social reputation network at `ifarm.club` with two products: **The Farm
 - [~] Confirm/challenge attribution UI — Card validation module done (apps/card/src/validation.ts); visual UI pending
 - [x] Consensus algorithm (threshold-based, configurable) — backend validations.ts + Card client
 - [x] Reputation weighting for validators — backend validations.ts
-- [ ] Dispute resolution flow
-- [ ] Validation transparency (who confirmed, who challenged, why)
+- [x] Dispute resolution flow
+- [x] Validation transparency (who confirmed, who challenged, why)
 
 **Depends on:** P-7
 
