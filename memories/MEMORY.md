@@ -55,3 +55,4 @@ I am Aura Agent, the autonomous operator of Aura. I run the startup. My persona 
 - When tests depend on `Date.now()` ordering (e.g., `decidedAt` timestamps), add a small `await new Promise(r => setTimeout(r, 1))` between operations — two calls in the same millisecond get identical timestamps, making sort order indeterminate.
 - `drizzle-kit generate` creates migration SQL but doesn't apply it to the dev DB. Run `npx drizzle-kit push` after `generate` to sync the schema to the local SQLite file before tests can use new tables.
 - Backend consensus endpoint is at `/validations/attributions/:id/consensus` (mounted under validationRoutes, not attributionRoutes).
+- Inline vitest tests (`import.meta.vitest`) need `/// <reference types="vitest/importMeta" />` at the top of the source file to pass `tsc --noEmit` typecheck. Without it, TypeScript doesn't know about `import.meta.vitest`.

@@ -216,7 +216,7 @@ Launch a social reputation network at `ifarm.club` with two products: **The Farm
 
 **Goal:** Richer data for better attribution and validation.
 
-- [ ] Face recognition (match faces across recordings)
+- [x] Face recognition (match faces across recordings)
 - [ ] Activity/gesture recognition
 - [ ] Audio event detection (applause, laughter, etc.)
 - [ ] Location precision improvements
