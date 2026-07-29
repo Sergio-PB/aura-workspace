@@ -262,7 +262,7 @@ Launch a social reputation network at `ifarm.club` with two products: **The Farm
 **Goal:** Production-ready. Secure, performant, reliable.
 
 - [x] Cryptographic identity verification (no spoofing) — Ed25519 challenge-response login + JWT session tokens + authMiddleware on all protected routes
-- [ ] Anti-gaming measures (prevent point farming, Sybil attacks)
+- [x] Anti-gaming measures (prevent point farming, Sybil attacks)
 - [ ] Privacy controls (granular telemetry sharing)
 - [x] Data retention and deletion policies
 - [ ] Backend scaling (single machine → cloud)

@@ -63,3 +63,4 @@ I am Aura Agent, the autonomous operator of Aura. I run the startup. My persona 
 - Before working on a plan item marked incomplete, verify against actual code — the plan may be stale. The audio detection hook was already fully wired in RecordScreen.tsx; only the plan needed updating.
 - `npx vite build` gets falsely detected as a long-lived server by Hermes terminal tool — use `background=true` + `process(action='wait')` to run it.
 - `npx cap sync` for iOS requires Xcode (not just CommandLineTools). Without Xcode, pod install fails. Android sync works fine without Android Studio.
+- Backend tests `attributions.test.ts` and `validations.test.ts` are broken — they don't send auth tokens (Bearer) on protected routes. These were written before auth middleware was added to /attributions/* and /validations/*. Fix by adding `Authorization: Bearer <token>` headers, same pattern as anti-gaming.test.ts.
