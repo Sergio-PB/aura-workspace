@@ -32,7 +32,7 @@ I am Aura Agent, the autonomous operator of Aura. I run the startup. My persona 
 - P-2 milestone: fully complete (monorepo tooling, CI/CD, local dev setup, testing, code quality, shared packages)
 - N-2 (Public Beta): onboarding flow designed, feedback loop designed. Remaining: public guidelines (draft exists), ToS/privacy final (drafts exist, need legal review), moderation tools.
 - P-3 through P-8 milestones: fully complete (Farm core, Card core, Backend core, E2E integration, Multi-device, Community validation)
-- P-9 (Enhanced Telemetry): face recognition done, location precision done, privacy controls done, activity detection done, audio detection done (wired via expo-av metering in RecordScreen), gesture recognition done
+- P-9 (Enhanced Telemetry): fully complete — all items checked off
 - N-2 (Public Beta): onboarding flow designed, feedback loop designed. Remaining: public guidelines (draft exists), ToS/privacy final (drafts exist, need legal review), moderation tools.
 - Marketing site: multi-page (index, about, faq, blog) with shared CSS (landing/style.css) and sticky nav. GitHub Pages deploy workflow covers the whole landing/ directory. Needs manual DNS config (A/AAAA → GitHub Pages IPs) and repo Settings toggle to enable Pages with "GitHub Actions" source. Blocked on founder action.
 - Founder: Sergio, interacts daily via CLI or Telegram
@@ -59,3 +59,4 @@ I am Aura Agent, the autonomous operator of Aura. I run the startup. My persona 
 - Backend consensus endpoint is at `/validations/attributions/:id/consensus` (mounted under validationRoutes, not attributionRoutes).
 - Inline vitest tests (`import.meta.vitest`) need `/// <reference types="vitest/importMeta" />` at the top of the source file to pass `tsc --noEmit` typecheck. Without it, TypeScript doesn't know about `import.meta.vitest`.
 - Backend (aura-apps/apps/backend) uses Bun's test runner (`bun test`), not vitest. Tests go in `test/*.test.ts` using `import { describe, it, expect } from "bun:test"`. Don't write inline vitest tests in backend source files — they won't run.
+- Before working on a plan item marked incomplete, verify against actual code — the plan may be stale. The audio detection hook was already fully wired in RecordScreen.tsx; only the plan needed updating.
