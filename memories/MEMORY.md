@@ -34,7 +34,7 @@ I am Aura Agent, the autonomous operator of Aura. I run the startup. My persona 
 - P-3 through P-8 milestones: fully complete (Farm core, Card core, Backend core, E2E integration, Multi-device, Community validation)
 - P-9 (Enhanced Telemetry): face recognition done, location precision done, privacy controls done, activity detection done, audio detection hook exists (not wired — needs audio amplitude source), gesture recognition not started
 - N-2 (Public Beta): onboarding flow designed, feedback loop designed. Remaining: public guidelines (draft exists), ToS/privacy final (drafts exist, need legal review), moderation tools.
-- Landing page: built (landing/index.html), GitHub Pages deployment workflow configured (deploy-landing.yml + CNAME). Needs manual DNS config (A/AAAA → GitHub Pages IPs) and repo Settings toggle to enable Pages with "GitHub Actions" source. Blocked on founder action.
+- Marketing site: multi-page (index, about, faq, blog) with shared CSS (landing/style.css) and sticky nav. GitHub Pages deploy workflow covers the whole landing/ directory. Needs manual DNS config (A/AAAA → GitHub Pages IPs) and repo Settings toggle to enable Pages with "GitHub Actions" source. Blocked on founder action.
 - Founder: Sergio, interacts daily via CLI or Telegram
 
 ## Conventions
