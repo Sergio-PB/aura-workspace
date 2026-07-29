@@ -1,6 +1,6 @@
 # Aura Agent — Operational Memory
 
-Last updated: 2026-07-27
+Last updated: 2026-07-29
 
 ## Identity
 I am Aura Agent, the autonomous operator of Aura. I run the startup. My persona is defined in ~/.hermes/SOUL.md and mirrored in the workspace repo.
@@ -30,10 +30,10 @@ I am Aura Agent, the autonomous operator of Aura. I run the startup. My persona 
 - C-1 milestone: brand identity done, operating rhythm done, compliance drafts done (privacy policy + ToS in docs/legal/, awaiting lawyer review); remaining items (legal structure, DNS, bank, public presence) have research/recommendation docs ready, all blocked on founder decisions
 - P-1 milestone: fully complete (all 6 ADRs + architecture doc, data flow, DB schema, security architecture)
 - P-2 milestone: fully complete (monorepo tooling, CI/CD, local dev setup, testing, code quality, shared packages)
-- N-1 (Founding Community): community guidelines + moderation process drafted, founding member kit + first-event guide + feedback template ready (5/5 prepped). All remaining items require founder action (invite members, run event, gather feedback).
+- N-2 (Public Beta): onboarding flow designed, feedback loop designed. Remaining: public guidelines (draft exists), ToS/privacy final (drafts exist, need legal review), moderation tools.
 - P-3 through P-8 milestones: fully complete (Farm core, Card core, Backend core, E2E integration, Multi-device, Community validation)
 - P-9 (Enhanced Telemetry): face recognition done, location precision done, privacy controls done, activity detection done, audio detection hook exists (not wired — needs audio amplitude source), gesture recognition not started
-- N-1 (Founding Community): community guidelines + moderation process drafted, founding member kit + first-event guide + feedback template ready (5/5 prepped). All remaining items require founder action (invite members, run event, gather feedback).
+- N-2 (Public Beta): onboarding flow designed, feedback loop designed. Remaining: public guidelines (draft exists), ToS/privacy final (drafts exist, need legal review), moderation tools.
 - Landing page: built (landing/index.html), GitHub Pages deployment workflow configured (deploy-landing.yml + CNAME). Needs manual DNS config (A/AAAA → GitHub Pages IPs) and repo Settings toggle to enable Pages with "GitHub Actions" source. Blocked on founder action.
 - Founder: Sergio, interacts daily via CLI or Telegram
 
@@ -58,3 +58,4 @@ I am Aura Agent, the autonomous operator of Aura. I run the startup. My persona 
 - `drizzle-kit generate` creates migration SQL but doesn't apply it to the dev DB. Run `npx drizzle-kit push` after `generate` to sync the schema to the local SQLite file before tests can use new tables.
 - Backend consensus endpoint is at `/validations/attributions/:id/consensus` (mounted under validationRoutes, not attributionRoutes).
 - Inline vitest tests (`import.meta.vitest`) need `/// <reference types="vitest/importMeta" />` at the top of the source file to pass `tsc --noEmit` typecheck. Without it, TypeScript doesn't know about `import.meta.vitest`.
+- Backend (aura-apps/apps/backend) uses Bun's test runner (`bun test`), not vitest. Tests go in `test/*.test.ts` using `import { describe, it, expect } from "bun:test"`. Don't write inline vitest tests in backend source files — they won't run.
