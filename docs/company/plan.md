@@ -264,7 +264,7 @@ Launch a social reputation network at `ifarm.club` with two products: **The Farm
 - [ ] Cryptographic identity verification (no spoofing)
 - [ ] Anti-gaming measures (prevent point farming, Sybil attacks)
 - [ ] Privacy controls (granular telemetry sharing)
-- [ ] Data retention and deletion policies
+- [x] Data retention and deletion policies
 - [ ] Backend scaling (single machine → cloud)
 - [ ] Media storage and CDN
 - [ ] Real-time feed performance
