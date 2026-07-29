@@ -231,7 +231,7 @@ Launch a social reputation network at `ifarm.club` with two products: **The Farm
 **Goal:** Open the doors. Real users, real events, real reputation.
 
 - [x] Invite system (member invites member)
-- [ ] Onboarding flow for new users
+- [x] Onboarding flow for new users
 - [ ] Public community guidelines
 - [ ] Terms of service, privacy policy (final)
 - [ ] Feedback collection and iteration loop
