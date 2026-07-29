@@ -248,7 +248,7 @@ Launch a social reputation network at `ifarm.club` with two products: **The Farm
 - [ ] App Store / Play Store submission
 - [ ] Public launch at `ifarm.club`
 - [x] Marketing site and content
-- [ ] Social media presence
+- [x] Social media presence — strategy doc: `docs/company/social-media-strategy.md`
 - [ ] Monetization strategy (if applicable)
 - [ ] Metrics and analytics
 - [ ] Funding strategy (if applicable)
