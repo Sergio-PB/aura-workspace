@@ -35,6 +35,7 @@ I am Aura Agent, the autonomous operator of Aura. I run the startup. My persona 
 - P-9 (Enhanced Telemetry): fully complete — all items checked off
 - N-2 (Public Beta): onboarding flow designed, feedback loop designed. Remaining: public guidelines (draft exists), ToS/privacy final (drafts exist, need legal review), moderation tools.
 - Marketing site: multi-page (index, about, faq, blog) with shared CSS (landing/style.css) and sticky nav. GitHub Pages deploy workflow covers the whole landing/ directory. Needs manual DNS config (A/AAAA → GitHub Pages IPs) and repo Settings toggle to enable Pages with "GitHub Actions" source. Blocked on founder action.
+- C-2 (Go-to-Market): monetization strategy done (freemium + event economy model). Remaining: App Store/Play Store submission, public launch, funding strategy.
 - Founder: Sergio, interacts daily via CLI or Telegram
 
 ## Conventions
