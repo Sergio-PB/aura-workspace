@@ -234,7 +234,7 @@ Launch a social reputation network at `ifarm.club` with two products: **The Farm
 - [x] Onboarding flow for new users
 - [ ] Public community guidelines
 - [ ] Terms of service, privacy policy (final)
-- [ ] Feedback collection and iteration loop
+- [x] Feedback collection and iteration loop
 - [ ] Community moderation tools
 
 **Depends on:** P-8, P-9, N-1
