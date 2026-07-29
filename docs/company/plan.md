@@ -217,7 +217,7 @@ Launch a social reputation network at `ifarm.club` with two products: **The Farm
 **Goal:** Richer data for better attribution and validation.
 
 - [x] Face recognition (match faces across recordings)
-- [~] Activity/gesture recognition (activity detection done, gesture not)
+- [x] Activity/gesture recognition (activity detection done, gesture done)
 - [~] Audio event detection (applause, laughter, etc.) — hook exists, not wired (needs audio amplitude source)
 - [x] Location precision improvements (altitude, heading, speed)
 - [x] Telemetry privacy controls (user-configurable)
@@ -235,7 +235,7 @@ Launch a social reputation network at `ifarm.club` with two products: **The Farm
 - [ ] Public community guidelines
 - [ ] Terms of service, privacy policy (final)
 - [x] Feedback collection and iteration loop
-- [ ] Community moderation tools
+- [x] Community moderation tools
 
 **Depends on:** P-8, P-9, N-1
 
