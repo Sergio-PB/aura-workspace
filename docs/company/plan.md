@@ -218,7 +218,7 @@ Launch a social reputation network at `ifarm.club` with two products: **The Farm
 
 - [x] Face recognition (match faces across recordings)
 - [x] Activity/gesture recognition (activity detection done, gesture done)
-- [~] Audio event detection (applause, laughter, etc.) — hook exists, not wired (needs audio amplitude source)
+- [x] Audio event detection (applause, laughter, etc.) — wired via expo-av metering in RecordScreen
 - [x] Location precision improvements (altitude, heading, speed)
 - [x] Telemetry privacy controls (user-configurable)
 
