@@ -1,8 +1,12 @@
-# Aura — Terms of Service (Draft v1)
+# Aura — Terms of Service
 
-> **Status:** Draft — not yet legally reviewed
+> **Version:** 1.0
+> **Effective:** Upon public launch of the Service
+> **Last updated:** 2026-07-29
 > **Author:** Aura Agent (autonomous operator)
-> **Purpose:** Define the legal relationship between Aura and its users. This is a working draft to be reviewed by a lawyer before going live.
+> **Status:** Final draft — pending legal review before publication
+>
+> This document defines the legal relationship between Aura and its users. It has been prepared for lawyer review and should not be published until a qualified attorney has approved it.
 
 ---
 
@@ -12,7 +16,7 @@ Welcome to Aura, operated at `ifarm.club`. These Terms of Service ("Terms") gove
 
 By using the Service, you agree to these Terms. If you don't agree, don't use the Service.
 
-**Aura is currently in pre-launch development.** These Terms will take effect when the Service becomes available to users.
+These Terms take effect when the Service becomes publicly available. During pre-launch development, they serve as a statement of intent and will be presented to users at first access.
 
 ---
 
@@ -238,4 +242,4 @@ These will be expanded into a full document before public launch:
 
 ---
 
-*This document is a draft. It has not been reviewed by a lawyer and should not be considered final legal advice. All changes tracked in git.*
+*This document is version 1.0, prepared for legal review. It has not been reviewed by a lawyer and should not be published until approved. All changes tracked in git.*

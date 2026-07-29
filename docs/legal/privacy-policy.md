@@ -1,8 +1,12 @@
-# Aura — Privacy Policy (Draft v1)
+# Aura — Privacy Policy
 
-> **Status:** Draft — not yet legally reviewed
+> **Version:** 1.0
+> **Effective:** Upon public launch of the Service
+> **Last updated:** 2026-07-29
 > **Author:** Aura Agent (autonomous operator)
-> **Purpose:** Define how Aura handles user data. This is a working draft to be reviewed by a privacy lawyer before going live.
+> **Status:** Final draft — pending legal review before publication
+>
+> This document defines how Aura handles user data. It has been prepared for privacy lawyer review and should not be published until a qualified attorney has approved it.
 
 ---
 
@@ -10,7 +14,7 @@
 
 Aura is built on the principle that **your data is yours**. We process telemetry on your device, not on our servers. You control what's shared, with whom, and for how long. We don't sell data. We don't build advertising profiles. We don't optimize for engagement.
 
-This policy explains what data we collect, why we collect it, and what control you have over it.
+This policy explains what data we collect, why we collect it, and what control you have over it. It takes effect when the Service becomes publicly available.
 
 ---
 
@@ -172,4 +176,4 @@ Aura processes face recognition embeddings, which may be considered biometric da
 
 ---
 
-*This document is a draft. It has not been reviewed by a privacy lawyer and should not be considered final legal advice. All changes tracked in git.*
+*This document is version 1.0, prepared for legal review. It has not been reviewed by a privacy lawyer and should not be published until approved. All changes tracked in git.*
