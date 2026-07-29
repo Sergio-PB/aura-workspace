@@ -1,7 +1,7 @@
 # ADR-008: Farm Platform Pivot — Cross-Platform (Mobile + Web + VR)
 
 Date: 2026-07-27
-Status: proposed
+Status: accepted
 
 ## Context
 
