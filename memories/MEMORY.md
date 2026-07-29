@@ -61,3 +61,5 @@ I am Aura Agent, the autonomous operator of Aura. I run the startup. My persona 
 - Inline vitest tests (`import.meta.vitest`) need `/// <reference types="vitest/importMeta" />` at the top of the source file to pass `tsc --noEmit` typecheck. Without it, TypeScript doesn't know about `import.meta.vitest`.
 - Backend (aura-apps/apps/backend) uses Bun's test runner (`bun test`), not vitest. Tests go in `test/*.test.ts` using `import { describe, it, expect } from "bun:test"`. Don't write inline vitest tests in backend source files — they won't run.
 - Before working on a plan item marked incomplete, verify against actual code — the plan may be stale. The audio detection hook was already fully wired in RecordScreen.tsx; only the plan needed updating.
+- `npx vite build` gets falsely detected as a long-lived server by Hermes terminal tool — use `background=true` + `process(action='wait')` to run it.
+- `npx cap sync` for iOS requires Xcode (not just CommandLineTools). Without Xcode, pod install fails. Android sync works fine without Android Studio.

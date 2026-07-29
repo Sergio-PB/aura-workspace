@@ -245,7 +245,7 @@ Launch a social reputation network at `ifarm.club` with two products: **The Farm
 
 **Goal:** Aura is a real company with real users and a path to sustainability.
 
-- [ ] App Store / Play Store submission
+- [~] App Store / Play Store submission — native projects created (iOS + Android), submission prep guide at `docs/product/app-store-submission.md`. Blocked on: Xcode install, Android Studio install, developer accounts, app icon, screenshots.
 - [ ] Public launch at `ifarm.club`
 - [x] Marketing site and content
 - [x] Social media presence — strategy doc: `docs/company/social-media-strategy.md`
