@@ -1,0 +1,336 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=Inter:wght@400;600&display=swap');
+
+:root {
+  --purple: #6C5CE7;
+  --purple-dark: #4834D4;
+  --green: #00D2A0;
+  --amber: #FFA502;
+  --midnight: #1E1E2E;
+  --stone: #6B7280;
+  --cloud: #F3F4F6;
+  --white: #FFFFFF;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background: var(--midnight);
+  color: var(--cloud);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Nav ── */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 2rem;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  position: sticky;
+  top: 0;
+  background: var(--midnight);
+  z-index: 10;
+}
+
+.nav-logo {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--white);
+  text-decoration: none;
+  background: linear-gradient(135deg, var(--purple), var(--green));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.nav-links { display: flex; gap: 1.5rem; }
+
+.nav-links a {
+  color: var(--stone);
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover { color: var(--white); }
+
+/* ── Page Layout ── */
+.page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+
+.page h1 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(2rem, 5vw, 3rem);
+  color: var(--white);
+  margin-bottom: 1rem;
+}
+
+.page .lead {
+  font-size: 1.2rem;
+  color: var(--stone);
+  margin-bottom: 3rem;
+}
+
+.page section {
+  margin-bottom: 3rem;
+}
+
+.page h2 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.5rem;
+  color: var(--white);
+  margin-bottom: 0.75rem;
+}
+
+.page h3 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.2rem;
+  color: var(--white);
+  margin-bottom: 0.5rem;
+}
+
+.page p { color: var(--stone); margin-bottom: 1rem; }
+
+.page a { color: var(--purple); text-decoration: none; }
+.page a:hover { color: var(--green); }
+
+/* ── Hero (homepage only) ── */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 50%; left: 50%;
+  width: 600px; height: 600px;
+  background: radial-gradient(circle, rgba(108,92,231,0.15) 0%, transparent 70%);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.aura-mark {
+  width: 120px;
+  height: 120px;
+  margin-bottom: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.aura-mark svg { width: 100%; height: 100%; }
+
+.hero h1 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(2.5rem, 8vw, 5rem);
+  font-weight: 700;
+  color: var(--white);
+  letter-spacing: -0.02em;
+  position: relative;
+  z-index: 1;
+}
+
+.hero h1 span {
+  background: linear-gradient(135deg, var(--purple), var(--green));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero .tagline {
+  font-size: 1.25rem;
+  color: var(--stone);
+  margin-top: 1rem;
+  max-width: 480px;
+  position: relative;
+  z-index: 1;
+}
+
+/* ── Product Cards ── */
+.products, .product-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+
+.product-card {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 16px;
+  padding: 2.5rem 2rem;
+  transition: border-color 0.3s, transform 0.3s;
+}
+
+.product-card:hover {
+  border-color: rgba(108,92,231,0.4);
+  transform: translateY(-2px);
+}
+
+.product-card .icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.product-card h2, .product-card h3 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.5rem;
+  color: var(--white);
+  margin-bottom: 0.5rem;
+}
+
+.product-card .label {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.25rem 0.75rem;
+  border-radius: 100px;
+  margin-bottom: 1rem;
+}
+
+.product-card.farm .label {
+  background: rgba(108,92,231,0.2);
+  color: var(--purple);
+}
+
+.product-card.card .label {
+  background: rgba(0,210,160,0.2);
+  color: var(--green);
+}
+
+.product-card p {
+  color: var(--stone);
+  font-size: 0.95rem;
+}
+
+/* ── How It Works ── */
+.how {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.how h2 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 2rem;
+  color: var(--white);
+  margin-bottom: 3rem;
+}
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.step { position: relative; }
+
+.step .num {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--purple), var(--purple-dark));
+  color: var(--white);
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+}
+
+.step h3 {
+  color: var(--white);
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.step p {
+  color: var(--stone);
+  font-size: 0.9rem;
+}
+
+/* ── Values ── */
+.values {
+  list-style: none;
+  padding: 0;
+}
+
+.values li {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  color: var(--stone);
+}
+
+.values li strong { color: var(--white); }
+
+/* ── Blog ── */
+.blog-post {
+  padding: 2rem 0;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.blog-post:last-child { border-bottom: none; }
+
+.blog-post time {
+  font-size: 0.85rem;
+  color: var(--stone);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.blog-post h2 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.blog-post h2 a {
+  color: var(--white);
+  text-decoration: none;
+}
+
+.blog-post h2 a:hover { color: var(--purple); }
+
+.blog-post p { color: var(--stone); font-size: 0.95rem; }
+
+/* ── Footer ── */
+footer {
+  text-align: center;
+  padding: 4rem 2rem;
+  color: var(--stone);
+  font-size: 0.85rem;
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
+
+footer a {
+  color: var(--purple);
+  text-decoration: none;
+}
+
+footer a:hover { color: var(--green); }
+
+/* ── Responsive ── */
+@media (max-width: 640px) {
+  .products, .product-grid { grid-template-columns: 1fr; }
+  .steps { grid-template-columns: 1fr; }
+  .nav { flex-direction: column; gap: 0.75rem; }
+}
