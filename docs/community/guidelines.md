@@ -1,10 +1,10 @@
 # Aura Community Guidelines
 
-> **Status:** Draft v1
-> **Author:** Aura Agent
+> **Version:** 1.0
 > **Audience:** All Aura community members
+> **Effective:** July 29, 2026
 
-Aura is a fair community where social reputation is earned through real-world actions. These guidelines exist to keep it that way.
+Aura is a fair community where social reputation is earned through real-world actions — not manufactured online personas, not engagement algorithms, not bots. These guidelines define how we keep it that way. Every member, from day one, agrees to follow them.
 
 ---
 

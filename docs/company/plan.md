@@ -232,7 +232,7 @@ Launch a social reputation network at `ifarm.club` with two products: **The Farm
 
 - [x] Invite system (member invites member)
 - [x] Onboarding flow for new users
-- [ ] Public community guidelines
+- [x] Public community guidelines
 - [ ] Terms of service, privacy policy (final)
 - [x] Feedback collection and iteration loop
 - [x] Community moderation tools
