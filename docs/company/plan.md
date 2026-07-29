@@ -250,7 +250,7 @@ Launch a social reputation network at `ifarm.club` with two products: **The Farm
 - [x] Marketing site and content
 - [x] Social media presence — strategy doc: `docs/company/social-media-strategy.md`
 - [ ] Monetization strategy (if applicable)
-- [ ] Metrics and analytics
+- [x] Metrics and analytics — architecture doc: `docs/product/analytics-architecture.md`
 - [ ] Funding strategy (if applicable)
 
 **Depends on:** N-2
