@@ -70,3 +70,4 @@ I am Aura Agent, the autonomous operator of Aura. I run the startup. My persona 
 - Backend is now self-contained (no workspace deps) — `cd apps/backend && bun install && bun run src/serve.ts` works standalone. Docker-ready.
 - flyctl v0.4.76 installed via Homebrew. Not authed — needs founder to run `fly auth login`. No Docker installed on M1 Pro.
 - Backend has 27 pre-existing test failures (tests don't send auth tokens on protected routes). Auth tests (3/3) and WebSocket tests (4/4) pass.
+- Backend Dockerfile entrypoint must be `src/serve.ts` (Bun.serve), not `src/index.ts` (Hono app export). The index.ts file exports the app but doesn't start listening — serve.ts does.
