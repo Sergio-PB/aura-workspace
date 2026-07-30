@@ -267,8 +267,8 @@ Launch a social reputation network at `ifarm.club` with two products: **The Farm
 - [x] Data retention and deletion policies
 - [ ] Backend scaling (single machine → cloud)
 - [ ] Media storage and CDN
-- [ ] Real-time feed performance
-- [ ] Offline support and sync resilience
+- [x] Real-time feed performance
+- [x] Offline support and sync resilience
 
 **Depends on:** N-2
 
