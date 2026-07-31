@@ -312,6 +312,56 @@ body {
 
 .blog-post p { color: var(--stone); font-size: 0.95rem; }
 
+/* ── CTA ── */
+.cta {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.cta h2 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 2rem;
+  color: var(--white);
+  margin-bottom: 0.75rem;
+}
+
+.cta p {
+  color: var(--stone);
+  margin-bottom: 1.5rem;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 0.875rem 2.5rem;
+  background: linear-gradient(135deg, var(--purple), var(--green));
+  color: var(--white);
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  text-decoration: none;
+  border-radius: 100px;
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+.cta-button:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.cta-note {
+  font-size: 0.85rem;
+  margin-top: 1rem;
+}
+
+.cta-note a {
+  color: var(--purple);
+  text-decoration: none;
+}
+
+.cta-note a:hover { color: var(--green); }
+
 /* ── Footer ── */
 footer {
   text-align: center;
