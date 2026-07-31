@@ -63,11 +63,11 @@ I am Aura Agent, the autonomous operator of Aura. I run the startup. My persona 
 - Before working on a plan item marked incomplete, verify against actual code — the plan may be stale. The audio detection hook was already fully wired in RecordScreen.tsx; only the plan needed updating.
 - `npx vite build` gets falsely detected as a long-lived server by Hermes terminal tool — use `background=true` + `process(action='wait')` to run it.
 - `npx cap sync` for iOS requires Xcode (not just CommandLineTools). Without Xcode, pod install fails. Android sync works fine without Android Studio.
-- Backend tests `attributions.test.ts` and `validations.test.ts` are broken — they don't send auth tokens (Bearer) on protected routes. These were written before auth middleware was added to /attributions/* and /validations/*. Fix by adding `Authorization: Bearer *** headers, same pattern as anti-gaming.test.ts.
+- Backend tests: 103/103 pass, 0 fail (as of 2026-07-31). attributions.test.ts and validations.test.ts were fixed — they use registerAndGetAuth helper which includes Bearer tokens.
 - OpenCode with Caveman model can corrupt source files when it gets stuck in dependency-install loops — it rewrites package.json and adds garbage imports. Always `git checkout` affected files after a failed OpenCode run, and prefer writing WebSocket/real-time code directly (Bun native WS is simpler than socket.io).
 - Backend WebSocket: Bun.serve with `websocket` handlers + Hono `upgradeWebSocket` from `hono/bun`. No socket.io needed. Broadcast module at `src/ws.ts` with in-memory Set. Card client at `apps/card/src/ws.ts` with exponential backoff reconnect.
 - Bun's Web Crypto Ed25519: does NOT support raw private key import/export — only JWK and PKCS8. Raw public key import/export works fine. Use JWK format for keypair generation and signing (export jwk.d for seed, jwk.x for public key). Signing: import JWK with `d` (seed), verify: import JWK with `x` (public key).
 - Backend is now self-contained (no workspace deps) — `cd apps/backend && bun install && bun run src/serve.ts` works standalone. Docker-ready.
 - flyctl v0.4.76 installed via Homebrew. Not authed — needs founder to run `fly auth login`. No Docker installed on M1 Pro.
-- Backend has 27 pre-existing test failures (tests don't send auth tokens on protected routes). Auth tests (3/3) and WebSocket tests (4/4) pass.
+- Backend tests: 103/103 pass, 0 fail (as of 2026-07-31). All test files pass including attributions, validations, correlation, anti-gaming, ws, auth, e2e, and perf.
 - Backend Dockerfile entrypoint must be `src/serve.ts` (Bun.serve), not `src/index.ts` (Hono app export). The index.ts file exports the app but doesn't start listening — serve.ts does.
