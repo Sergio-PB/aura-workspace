@@ -304,18 +304,9 @@ W-1 ──→ C-1 ──→ P-1 ──→ P-2 ──→ P-3 ──┐
 
 ---
 
-## Key Decisions (ADRs Needed)
+## Key Decisions (All Resolved)
 
-| # | Decision | Track | Options |
-|---|----------|-------|---------|
-| 1 | Farm platform | P-1 | Native (Swift/Kotlin) vs React Native vs Flutter vs PWA |
-| 2 | Backend stack | P-1 | Node/TypeScript vs Python vs Go vs Rust |
-| 3 | Database & sync | P-1 | PostgreSQL vs SQLite (local-first) vs hybrid |
-| 4 | Identity model | P-1 | Self-sovereign keypairs vs email/phone vs OAuth |
-| 5 | API protocol | P-1 | REST vs GraphQL vs gRPC |
-| 6 | Cloud provider | P-1 | Defer to P-5, Fly.io as default (ADR-007) |
-| 7 | Legal structure | C-1 | LLC vs C-Corp vs sole proprietorship |
-| 8 | Monorepo tooling | P-2 | Turborepo vs Nx vs pnpm workspaces |
+All 9 ADRs written and approved. See `docs/adr/` for full records. One pending: ADR-009 (Media Storage — Tigris).
 
 ---
 
