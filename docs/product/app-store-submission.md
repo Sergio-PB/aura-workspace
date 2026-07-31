@@ -52,7 +52,7 @@ cd android && ./gradlew assembleRelease
 - [ ] Full description
 - [ ] Keywords
 - [ ] Screenshots (6.7" iPhone + 12.9" iPad)
-- [ ] App icon (1024x1024 PNG)
+- [x] App icon (1024x1024 PNG) — generated from brand SVG, placed in iOS + Android native projects
 - [ ] Privacy policy URL
 - [ ] Support URL
 - [ ] Age rating questionnaire
@@ -73,7 +73,7 @@ All telemetry is user-controlled. See `docs/legal/privacy-policy.md`.
 2. **Android Studio not installed** — Android build possible via CLI but untested
 3. **No Apple Developer account** — required for App Store submission
 4. **No Google Play Developer account** — required for Play Store submission
-5. **No app icon** — brand assets exist but no app icon generated
+5. **No app icon** — ✅ generated from brand SVG, placed in iOS + Android native projects
 6. **No screenshots** — app needs to be running on device for screenshots
 
 ## Next Steps
