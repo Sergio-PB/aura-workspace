@@ -69,8 +69,9 @@ fi
 # 4. Check for RETRY-FAILED in error log
 ERROR_LOG="/Users/sergio/aura-workspace/logs/errors.md"
 if [ -f "$ERROR_LOG" ]; then
-    RETRY_FAILED=$(grep -c '\[RETRY-FAILED\]' "$ERROR_LOG" 2>/dev/null | tail -1 || echo 0)
-    if [ "$RETRY_FAILED" -gt 0 ]; then
+    RETRY_FAILED=$(grep -c '\[RETRY-FAILED\]' "$ERROR_LOG" 2>/dev/null | tr -d '[:space:]' || echo 0)
+    RETRY_FAILED=${RETRY_FAILED:-0}
+    if [ "$RETRY_FAILED" -gt 0 ] 2>/dev/null; then
         alert "⚠️ *Pulse errors require attention.* ${RETRY_FAILED} RETRY-FAILED entries in error log."
     fi
 fi
