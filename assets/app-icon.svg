@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1E1E2E"/>
+      <stop offset="100%" stop-color="#4834D4"/>
+    </linearGradient>
+    <linearGradient id="aura" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#6C5CE7"/>
+      <stop offset="100%" stop-color="#00D2A0"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="12" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="softGlow">
+      <feGaussianBlur stdDeviation="24" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1024" height="1024" rx="224" fill="url(#bg)"/>
+
+  <!-- Outer glow ring -->
+  <circle cx="512" cy="512" r="280" fill="none" stroke="url(#aura)" stroke-width="4" opacity="0.3" filter="url(#softGlow)"/>
+
+  <!-- Aura circle (radiating) -->
+  <circle cx="560" cy="440" r="200" fill="url(#aura)" opacity="0.25" filter="url(#softGlow)"/>
+
+  <!-- Solid circle (individual) -->
+  <circle cx="440" cy="560" r="200" fill="#6C5CE7" opacity="0.9"/>
+
+  <!-- The "A" letterform -->
+  <text x="512" y="620" text-anchor="middle" font-family="'Space Grotesk', 'Inter', sans-serif" font-weight="700" font-size="420" fill="white" filter="url(#glow)">A</text>
+</svg>
