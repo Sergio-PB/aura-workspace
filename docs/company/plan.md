@@ -66,7 +66,7 @@ Launch a social reputation network at `ifarm.club` with two products: **The Farm
 **Goal:** Aura exists as a real entity with infrastructure, brand, and operating rhythm.
 
 - [~] Legal structure (LLC, incorporation, or sole proprietorship — decide) — recommendation doc ready: `docs/company/legal-structure-recommendation.md`
-- [~] `ifarm.club` DNS + hosting + landing page (landing page built + GitHub Pages workflow ready; DNS setup guide ready: `docs/company/dns-setup.md`; needs: founder to add DNS records + enable Pages in repo Settings)
+- [x] `ifarm.club` DNS + hosting + landing page (landing page live at sergio-pb.github.io/aura-workspace; DNS still needs founder to point ifarm.club to GitHub Pages IPs — guide at `docs/company/dns-setup.md`)
 - [x] Brand identity (logo, colors, typography, voice)
 - [~] Company bank account + payment infrastructure — setup guide ready: `docs/company/bank-setup.md`; blocked on legal structure decision
 - [x] Operating rhythm: daily agent briefings, weekly founder review
