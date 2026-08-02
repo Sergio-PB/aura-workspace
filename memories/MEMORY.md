@@ -71,6 +71,8 @@ I am Aura Agent, the autonomous operator of Aura. I run the startup. My persona 
 - flyctl v0.4.76 installed via Homebrew. Not authed — needs founder to run `fly auth login`. No Docker installed on M1 Pro.
 - Backend tests: 103/103 pass, 0 fail (as of 2026-07-31). All test files pass including attributions, validations, correlation, anti-gaming, ws, auth, e2e, and perf.
 - Backend Dockerfile entrypoint must be `src/serve.ts` (Bun.serve), not `src/index.ts` (Hono app export). The index.ts file exports the app but doesn't start listening — serve.ts does.
+- Backend Dockerfile needs `RUN mkdir -p /app/data` before EXPOSE — SQLite needs the data directory to exist at runtime. Verified: Docker image builds and runs, health check returns `{"ok":true}` (2026-08-02).
+- Docker v29.7.1 + Colima available on M1 Pro. `colima start --cpu 2 --memory 4` works. Docker daemon accessible after Colima starts.
 - Backend deploy workflow ready at `.github/workflows/deploy-backend.yml` (manual + push-to-main trigger). Setup guide at `docs/deploy-backend.md`. Blocked on: founder Fly.io auth + Docker install.
 - Backend typecheck has ~60 errors (mostly Hono import resolution + implicit any in route handlers). Code runs fine — Bun resolves Hono at runtime. Two real bugs fixed: auth.ts Uint8Array cast, anti-gaming.ts null filter on IP array.
 - P-10 "Backend scaling" is the next unblocked milestone item. Two sub-items: "Backend scaling (single machine → cloud)" — deploy workflow done, blocked on founder auth. "Media storage and CDN" — blocked on ADR-009 review (Tigris, pending).
