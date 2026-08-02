@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Backend Deploy-Ready — Aura</title>
+<meta name="description" content="Aura's backend is self-contained, Docker-ready, and passes 103 tests. Media storage decision pending CTO review.">
+<meta property="og:title" content="Backend Deploy-Ready — Aura">
+<meta property="og:description" content="103 tests pass. Self-contained Bun server. Docker-ready. Just needs founder to auth Fly.io.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://ifarm.club/blog/backend-deploy-ready">
+<meta property="og:image" content="https://ifarm.club/og-image.svg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<nav class="nav">
+  <a href="/" class="nav-logo">Aura</a>
+  <div class="nav-links">
+    <a href="/about">About</a>
+    <a href="/faq">FAQ</a>
+    <a href="/blog">Blog</a>
+  </div>
+</nav>
+
+<main class="page">
+  <article class="blog-post">
+    <time datetime="2026-07-31">July 31, 2026</time>
+    <h1>Backend Deploy-Ready, Media Storage Decision Pending</h1>
+    <p class="lead">The Aura backend is self-contained, passes 103 tests, and has a deploy workflow ready to go. Just needs founder auth on Fly.io — and a decision on media storage.</p>
+
+    <h2>Backend: Self-Contained and Docker-Ready</h2>
+    <p>The backend (<code>apps/backend</code>) is now fully self-contained — no workspace dependencies. A single <code>bun install && bun run src/serve.ts</code> starts the server. The Dockerfile is written, the deploy workflow (<code>.github/workflows/deploy-backend.yml</code>) triggers on push to main or manual dispatch, and the setup guide is documented at <code>docs/deploy-backend.md</code>.</p>
+
+    <p>What's holding it back from the cloud? Two things:</p>
+    <ol>
+      <li><strong>Fly.io auth.</strong> <code>flyctl</code> is installed (v0.4.76 via Homebrew) but needs the founder to run <code>fly auth login</code>. No credentials, no deploy.</li>
+      <li><strong>Docker.</strong> Not installed on the M1 Pro dev machine. Fly.io builds from Dockerfiles, so Docker Desktop (or an alternative) needs to be set up.</li>
+    </ol>
+
+    <h2>Test Suite: 103 Passing, 0 Failing</h2>
+    <p>The backend test suite covers:</p>
+    <ul>
+      <li>Authentication (Ed25519 challenge-response, JWT sessions)</li>
+      <li>Attributions (create, claim, validate)</li>
+      <li>Community validation (consensus algorithm, reputation weighting)</li>
+      <li>Multi-device correlation (time + location + Bluetooth + audio fingerprinting)</li>
+      <li>Anti-gaming measures (Sybil detection, point farming prevention)</li>
+      <li>WebSocket real-time feed</li>
+      <li>End-to-end integration</li>
+      <li>Performance baselines</li>
+    </ul>
+    <p>All 103 tests pass. The backend is production-ready from a code perspective.</p>
+
+    <h2>Media Storage: Tigris Proposed</h2>
+    <p>We need somewhere to store recordings, profile images, and telemetry data. The proposal (ADR-009) is <strong>Tigris</strong> — an S3-compatible object store that's native to Fly.io. Free tier: 5 GB storage + 25 GB egress per month. Since it speaks the S3 API, we're not locked in — migration to AWS S3, Cloudflare R2, or any S3-compatible provider is straightforward.</p>
+
+    <p>The ADR is written and awaiting CTO review. Once approved, media upload endpoints get wired into the backend and we're one step closer to a full production deploy.</p>
+
+    <h2>What's Next</h2>
+    <p>Two founder actions unblock the next phase:</p>
+    <ol>
+      <li>Auth Fly.io + install Docker → backend goes live</li>
+      <li>Approve ADR-009 (Tigris) → media storage gets wired in</li>
+    </ol>
+    <p>After that: DNS for ifarm.club, App Store submission prep, and the founding community launch.</p>
+  </article>
+
+  <p><a href="/blog">← Back to blog</a></p>
+</main>
+
+<footer>
+  <p>Aura &copy; 2026 &mdash; <a href="https://ifarm.club">ifarm.club</a></p>
+  <p>Built in the open. <a href="https://github.com/Sergio-PB/aura-workspace">See the code</a>.</p>
+</footer>
+</body>
+</html>

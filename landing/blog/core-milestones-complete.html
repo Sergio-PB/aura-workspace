@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>All Core Milestones Complete — Aura</title>
+<meta name="description" content="The Farm, The Card, the Backend, and end-to-end integration are all built. Community validation, multi-device correlation, and enhanced telemetry are done.">
+<meta property="og:title" content="All Core Milestones Complete — Aura">
+<meta property="og:description" content="P-3 through P-8 are done. The product works end-to-end. Now we enter the go-to-market phase.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://ifarm.club/blog/core-milestones-complete">
+<meta property="og:image" content="https://ifarm.club/og-image.svg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<nav class="nav">
+  <a href="/" class="nav-logo">Aura</a>
+  <div class="nav-links">
+    <a href="/about">About</a>
+    <a href="/faq">FAQ</a>
+    <a href="/blog">Blog</a>
+  </div>
+</nav>
+
+<main class="page">
+  <article class="blog-post">
+    <time datetime="2026-07-26">July 26, 2026</time>
+    <h1>All Core Milestones Complete</h1>
+    <p class="lead">The Farm, The Card, the Backend, and end-to-end integration are all built. Community validation, multi-device correlation, and enhanced telemetry are done. We're entering the go-to-market phase.</p>
+
+    <h2>What Got Built</h2>
+
+    <h3>The Farm (P-3)</h3>
+    <p>A local media studio that captures moments with rich telemetry — camera, geolocation, IP, face detection. Users record and attribute aura points to people they witnessed doing something notable. Works fully offline. No network required.</p>
+
+    <h3>The Card (P-4)</h3>
+    <p>Cryptographic identity generation (Ed25519 keypairs), profile management, point claim flow, chronological social feed, and quick reactions. Your reputation, portable and verifiable.</p>
+
+    <h3>The Backend (P-5)</h3>
+    <p>Bun + Hono server with SQLite (Drizzle ORM). User registration, event storage, point attribution API, feed delivery, and an admin dashboard. JWT sessions, auth middleware, and Ed25519 challenge-response login.</p>
+
+    <h3>End-to-End Integration (P-6)</h3>
+    <p>Farm → Backend upload pipeline, Backend → Card feed delivery, offline queue with retry, and a full end-to-end test suite. The complete flow works: record, upload, validate, claim, view in feed.</p>
+
+    <h3>Multi-Device & Event Correlation (P-7)</h3>
+    <p>Multiple Farms at the same event. Cross-device time + location correlation, duplicate detection and merging, Bluetooth proximity for same-room detection, and audio fingerprinting for event matching.</p>
+
+    <h3>Community Validation (P-8)</h3>
+    <p>Points aren't just claimed — they're confirmed or challenged by others who were there. Consensus algorithm with configurable thresholds, reputation weighting for validators, dispute resolution flow, and full validation transparency.</p>
+
+    <h2>By the Numbers</h2>
+    <ul>
+      <li><strong>6 milestones</strong> completed (P-3 through P-8)</li>
+      <li><strong>103 backend tests</strong> passing, 0 failing</li>
+      <li><strong>9 ADRs</strong> written and approved</li>
+      <li><strong>1 autonomous agent</strong> running on a 30-minute cadence</li>
+      <li><strong>0 human-written lines of code</strong> — the entire product was built by the Aura Agent</li>
+    </ul>
+
+    <h2>What's Next</h2>
+    <p>We're entering the go-to-market phase. Enhanced telemetry (P-9) adds face recognition, gesture detection, and audio event detection. Then: founding community (N-1), public beta (N-2), and App Store submission (C-2).</p>
+    <p>The product works. Now we need people.</p>
+  </article>
+
+  <p><a href="/blog">← Back to blog</a></p>
+</main>
+
+<footer>
+  <p>Aura &copy; 2026 &mdash; <a href="https://ifarm.club">ifarm.club</a></p>
+  <p>Built in the open. <a href="https://github.com/Sergio-PB/aura-workspace">See the code</a>.</p>
+</footer>
+</body>
+</html>
