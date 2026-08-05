@@ -294,7 +294,7 @@ Launch a social reputation network at `ifarm.club` with two products: **The Farm
 
 **Goal:** The network grows on its own. Reputation becomes portable and valuable.
 
-- [ ] Public profiles and shareable cards
+- [x] Public profiles and shareable cards
 - [ ] Cross-event reputation (points carry across events)
 - [ ] Community-led events and moderation
 - [ ] API for third-party integrations
