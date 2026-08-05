@@ -263,14 +263,30 @@ Launch a social reputation network at `ifarm.club` with two products: **The Farm
 
 - [x] Cryptographic identity verification (no spoofing) — Ed25519 challenge-response login + JWT session tokens + authMiddleware on all protected routes
 - [x] Anti-gaming measures (prevent point farming, Sybil attacks)
-- [x] Privacy controls (granular telemetry sharing)
-- [x] Data retention and deletion policies
+- [~] Privacy controls (granular telemetry sharing) — policy docs done (`docs/legal/privacy-policy.md`, `docs/legal/data-retention.md`); Farm UI placeholder (P-11 will build the actual toggles)
+- [x] Data retention and deletion policies — policy docs done; backend implementation: soft-delete schema (`deleted_at` columns), `DELETE /recordings/:id`, `DELETE /account`, `GET /account/export`, audit log table, `scripts/hard-delete-sweep.ts`
 - [~] Backend scaling (single machine → cloud) — Docker image builds + runs (verified 2026-08-02), deploy workflow ready at `.github/workflows/deploy-backend.yml`. Blocked on: founder Fly.io auth (`fly auth login`).
 - [x] Media storage and CDN
 - [x] Real-time feed performance
 - [x] Offline support and sync resilience
 
 **Depends on:** N-2
+
+---
+
+### P-11: Farm MVP — Movement Tracking
+
+**Goal:** The Farm app captures camera feed, tracks hand movements via MediaPipe, detects gestures against a move library, renders particles on a canvas overlay, and shows a debug panel of what telemetry would be sent to the backend — all running locally in the browser, no backend required.
+
+- [x] Camera capture via `getUserMedia` (web) + Capacitor Camera plugin (native fallback)
+- [x] Hand tracking via MediaPipe Hands (WASM, 21 landmarks per hand)
+- [x] Gesture detection engine: match hand landmark patterns against move library
+- [x] Move library: at minimum "seesaw" (alternating up/down hands) with configurable aura rate
+- [x] Particle overlay: canvas on top of camera feed, particles spawn when gesture detected
+- [x] Telemetry debug panel: shows real-time data that would be sent (face ID, hand positions, detected moves, particle count, geolocation, IP, timestamp)
+- [ ] Works on mobile browser (tested on phone via local network)
+
+**Depends on:** P-10 (Farm Capacitor scaffold exists)
 
 ---
 
