@@ -320,6 +320,43 @@ Launch a social reputation network at `ifarm.club` with two products: **The Farm
 
 ---
 
+### P-14: Video Farming
+
+**Goal:** Process pre-recorded videos through the same tracking pipeline as the live camera. Users can upload or select a video, and the Farm runs MediaPipe on each frame, detecting gestures and moves just like the live feed.
+
+- [ ] Video file input (file picker or drag-and-drop)
+- [ ] Frame-by-frame MediaPipe processing (seekable video → hand tracking per frame)
+- [ ] Same gesture/move detection pipeline as live camera
+- [ ] Playback controls (play, pause, scrub, speed)
+- [ ] Telemetry overlay on video (same debug panel, synced to video time)
+- [ ] Export: save processed video with particle overlay burned in
+
+**Depends on:** P-11 (tracking pipeline exists)
+
+---
+
+### P-15: Pre-Launch Checklist
+
+**Goal:** Every box checked before Aura goes public. Security, abuse prevention, legal, and operational readiness.
+
+- [ ] **Abuse prevention — duplicate detection** — hash video frames/recordings; reject re-uploads of identical content
+- [ ] **Abuse prevention — rate limiting** — cap aura submissions per user per time window
+- [ ] **Abuse prevention — device fingerprinting** — tie submissions to a device + IP + geolocation tuple; flag anomalies
+- [ ] **Abuse prevention — minimum effort threshold** — require minimum tracking duration or move variety before awarding points
+- [ ] **Abuse prevention — Sybil resistance** — cryptographic identity binding (Ed25519 keypair per device)
+- [ ] **Security audit** — review auth flow, data at rest, data in transit, API surface
+- [ ] **Privacy review** — GDPR/CCPA compliance, data deletion flow, telemetry opt-out
+- [ ] **Legal** — Terms of Service final, Privacy Policy final, DMCA/copyright policy
+- [ ] **App store readiness** — App Store + Play Store listings, screenshots, descriptions
+- [ ] **Infrastructure** — Fly.io backend deployed, Tigris media storage live, CDN configured
+- [ ] **Monitoring** — error tracking, uptime monitoring, abuse alerting
+- [ ] **Community guidelines** — published, accessible, enforceable
+- [ ] **Launch plan** — rollout strategy (invite-only → waitlist → public), comms plan
+
+**Depends on:** P-10 (backend deployed), P-12 (move library), P-13 (reward system), P-14 (video farming), C-1 (legal), C-2 (GTM)
+
+---
+
 ### N-3: Network Effects
 
 **Goal:** The network grows on its own. Reputation becomes portable and valuable.
