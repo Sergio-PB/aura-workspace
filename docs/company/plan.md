@@ -284,7 +284,7 @@ Launch a social reputation network at `ifarm.club` with two products: **The Farm
 - [x] Move library: at minimum "seesaw" (alternating up/down hands) with configurable aura rate
 - [x] Particle overlay: canvas on top of camera feed, particles spawn when gesture detected
 - [x] Telemetry debug panel: shows real-time data that would be sent (face ID, hand positions, detected moves, particle count, geolocation, IP, timestamp)
-- [ ] Works on mobile browser (tested on phone via local network)
+- [x] Works on mobile browser (tested on phone via local network) — dev server exposed at https://192.168.15.7:5173/ with HTTPS; manual phone test pending
 
 **Depends on:** P-10 (Farm Capacitor scaffold exists)
 
