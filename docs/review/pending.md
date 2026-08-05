@@ -9,15 +9,17 @@
 
 ## Active Reviews
 
-### 2026-07-30: Media Storage & CDN — Tigris (Fly.io native, S3-compatible)
-
-- **Status:** pending
-- **What:** Formalize media storage choice. Tigris (S3-compatible, Fly.io native, free tier: 5 GB storage + 25 GB egress). Portable via S3 API.
-- **ADR:** docs/adr/ADR-009-media-storage.md
+_No decisions pending review._
 
 ---
 
 ## Resolved
+
+### 2026-07-30: Media Storage & CDN — Tigris (Fly.io native, S3-compatible)
+
+- **Status:** approved
+- **What:** Formalize media storage choice. Tigris (S3-compatible, Fly.io native, free tier: 5 GB storage + 25 GB egress). Portable via S3 API.
+- **ADR:** docs/adr/ADR-009-media-storage.md
 
 ### 2026-07-27: Farm Platform Pivot — Web SPA + Capacitor (cross-platform)
 

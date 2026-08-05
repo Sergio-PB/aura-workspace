@@ -1,7 +1,7 @@
 # ADR-009: Media Storage & CDN
 
 Date: 2026-07-30
-Status: proposed
+Status: accepted
 
 ## Context
 
