@@ -357,6 +357,32 @@ Launch a social reputation network at `ifarm.club` with two products: **The Farm
 
 ---
 
+### P-16: Feed MVP — Live Leaderboard & Point Streaming
+
+**Goal:** End-to-end flow: user selects a target user on the Farm, performs moves, the device streams hand coordinates + detected moves to the backend, the server translates the stream into aura points, and a live leaderboard updates in real time. Simple foundation that can scale.
+
+**Mental model:** The device is trusted. It tells the server "User A did seesaw at rate 0.8 for 3 seconds." The server responds "That's 24 aura points for User A." The leaderboard updates.
+
+- [ ] **Simple user model** — `users` table: `id` (UUID), `username` (string). No auth, no passwords. Just identity.
+- [ ] **User selector on Farm** — carousel or overlay on the camera view. User picks a target before/while recording. Sends `targetUserId` with every stream frame.
+- [ ] **Move stream protocol** — Farm opens a WebSocket to backend. Sends JSON frames: `{ targetUserId, move, rate, timestamp, handPositions: { left, right } }` at ~10 Hz while a move is active.
+- [ ] **Server-side point calculator** — backend receives move stream, applies scoring formula: `points = rate × duration × moveMultiplier`. Accumulates per-user per-session. Persists to `attributions` table.
+- [ ] **Live leaderboard** — backend broadcasts point updates via WebSocket. Farm (or Card) renders a sorted list of users by total points, updating in real time.
+- [ ] **Feed screen** — displays the leaderboard + recent attributions. Accessible from both Farm and Card.
+- [ ] **Session lifecycle** — start session (select user), stream moves, end session (finalize points). Points are provisional until session ends.
+
+**Scoring formula (v1):**
+```
+points = Σ (rate × duration_seconds × moveMultiplier)
+  where moveMultiplier = { seesaw: 10, wave: 8, clap: 12, raise_roof: 15 }
+  rate is 0..1 from the move detector
+  duration is time the move was continuously active
+```
+
+**Depends on:** P-11 (tracking pipeline), P-5 (backend core), P-6 (E2E integration)
+
+---
+
 ### N-3: Network Effects
 
 **Goal:** The network grows on its own. Reputation becomes portable and valuable.

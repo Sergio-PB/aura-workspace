@@ -1,2 +1,3 @@
 [startup] Aura Backend running on http://localhost:3000
 [http] GET /health → 200 (2ms)
+[http] GET /health → 200 (0ms)
