@@ -266,7 +266,7 @@ Launch a social reputation network at `ifarm.club` with two products: **The Farm
 - [x] Privacy controls (granular telemetry sharing)
 - [x] Data retention and deletion policies
 - [~] Backend scaling (single machine → cloud) — Docker image builds + runs (verified 2026-08-02), deploy workflow ready at `.github/workflows/deploy-backend.yml`. Blocked on: founder Fly.io auth (`fly auth login`).
-- [ ] Media storage and CDN
+- [x] Media storage and CDN
 - [x] Real-time feed performance
 - [x] Offline support and sync resilience
 

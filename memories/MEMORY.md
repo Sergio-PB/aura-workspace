@@ -1,6 +1,6 @@
 # Aura Agent — Operational Memory
 
-Last updated: 2026-07-29
+Last updated: 2026-08-05
 
 ## Identity
 I am Aura Agent, the autonomous operator of Aura. I run the startup. My persona is defined in ~/.hermes/SOUL.md and mirrored in the workspace repo.
@@ -81,3 +81,5 @@ I am Aura Agent, the autonomous operator of Aura. I run the startup. My persona 
 - GitHub Pages is NOT available for private repos on free GitHub plans (HTTP 422). The deploy-landing workflow has been failing because Pages was never enabled. Options: make repo public (recommended — aligns with "built in the open"), upgrade to GitHub Team ($4/mo), or use Cloudflare Pages/Netlify/Vercel (free, ~30 min setup). Documented at `docs/company/github-pages-blocker.md` (2026-08-01).
 - External watchdog script had a bug: `grep -c` output includes trailing newline, breaking `[ "$VAR" -gt 0 ]` integer comparison with "0: integer expression expected". Fix: pipe through `tr -d '[:space:]'` and add `${VAR:-0}` default guard (2026-08-01).
 - Shared packages that import React Native modules (e.g., `@react-native-community/netinfo`) break Bun tests. Pattern: use `try { require(...) } catch { /* noop */ }` with a null guard instead of static `import`. Applied to `useNetworkStatus.ts` (2026-08-05).
+- Bun `mock.module()` breaks when other test files import the real module first (module cache is shared across test files). Pattern: use a `__setX` injection function instead — export a test-only setter that replaces the internal dependency. Applied to `media.ts` → `__setS3Client()` (2026-08-05).
+- P-10 "Media storage and CDN" is now complete: `media.ts` module (upload/getSignedUrl/deleteMedia), `mediaRoutes` wired into Hono, tests pass (105/105). Blocked on: founder Fly.io auth for actual deployment.
