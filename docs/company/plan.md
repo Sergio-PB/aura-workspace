@@ -290,6 +290,36 @@ Launch a social reputation network at `ifarm.club` with two products: **The Farm
 
 ---
 
+### P-12: Movement Library Expansion
+
+**Goal:** Expand the move library beyond seesaw to cover a range of real-world gestures. Each move has a detector, aura rate, and visual feedback.
+
+- [ ] **Wave** — single hand oscillating side-to-side (x-axis sign changes over window)
+- [ ] **Clap** — both hands rapidly converging (distance between wrists drops below threshold)
+- [ ] **Raise the roof** — both hands pushing upward repeatedly (y-axis peaks)
+- [ ] **Point tracking** — follow where a pointing hand is aimed (index tip direction vector)
+- [ ] Move library registry: unified interface for registering moves, querying active moves, and aggregating aura rates
+- [ ] Per-move particle effects (distinct colors/shapes per move type)
+
+**Depends on:** P-11 (tracking pipeline exists)
+
+---
+
+### P-13: Forgiving Reward System
+
+**Goal:** Make aura attribution psychologically pleasant by being generous with detection gaps. If a move is detected at T0, missed at T1 (tracking glitch), and detected again at T2, the system assumes the user was still performing the move continuously and bridges the gap.
+
+- [ ] **Detection gap bridging** — if a move was active within the last N frames (configurable, default ~15 = 0.5s at 30fps), treat a re-detection as continuation, not a new start
+- [ ] **Aura decay curve** — instead of binary on/off, aura rate decays gradually when tracking drops (e.g. hold at 80% for 0.5s, then linear decay to 0 over 1s)
+- [ ] **Minimum aura floor** — once a move is detected, award a minimum aura even if tracking is brief (e.g. 0.5s minimum credit)
+- [ ] **Over-giving bias** — when in doubt between "user stopped" and "tracking glitch", default to "still going" (configurable aggressiveness)
+- [ ] **Visual feedback continuity** — particles continue at reduced rate during gap bridging, so the user never sees a "dead" screen
+- [ ] **Configurable tuning** — gap window, decay curve shape, floor amount, and over-giving aggressiveness all tunable via constants
+
+**Depends on:** P-11 (tracking pipeline exists), P-12 (more moves to apply forgiveness to)
+
+---
+
 ### N-3: Network Effects
 
 **Goal:** The network grows on its own. Reputation becomes portable and valuable.
