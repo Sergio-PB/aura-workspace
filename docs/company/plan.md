@@ -339,19 +339,19 @@ Launch a social reputation network at `ifarm.club` with two products: **The Farm
 
 **Goal:** Every box checked before Aura goes public. Security, abuse prevention, legal, and operational readiness.
 
-- [ ] **Abuse prevention — duplicate detection** — hash video frames/recordings; reject re-uploads of identical content
-- [ ] **Abuse prevention — rate limiting** — cap aura submissions per user per time window
-- [ ] **Abuse prevention — device fingerprinting** — tie submissions to a device + IP + geolocation tuple; flag anomalies
-- [ ] **Abuse prevention — minimum effort threshold** — require minimum tracking duration or move variety before awarding points
-- [ ] **Abuse prevention — Sybil resistance** — cryptographic identity binding (Ed25519 keypair per device)
-- [ ] **Security audit** — review auth flow, data at rest, data in transit, API surface
-- [ ] **Privacy review** — GDPR/CCPA compliance, data deletion flow, telemetry opt-out
-- [ ] **Legal** — Terms of Service final, Privacy Policy final, DMCA/copyright policy
-- [ ] **App store readiness** — App Store + Play Store listings, screenshots, descriptions
-- [ ] **Infrastructure** — Fly.io backend deployed, Tigris media storage live, CDN configured
-- [ ] **Monitoring** — error tracking, uptime monitoring, abuse alerting
-- [ ] **Community guidelines** — published, accessible, enforceable
-- [ ] **Launch plan** — rollout strategy (invite-only → waitlist → public), comms plan
+- [x] **Abuse prevention — duplicate detection** — `mediaHash` + `audioFingerprint` on recordings, `duplicates.ts` route with overlap detection and merge endpoint
+- [x] **Abuse prevention — rate limiting** — `rate-limit.ts` middleware (60 req/60s sliding window), applied to attributions + validations
+- [~] **Abuse prevention — device fingerprinting** — `deviceId` + IP + geo captured per recording, IP clustering in anti-gaming. Gap: no browser fingerprint, no anomaly detection on device+IP+geo tuples
+- [ ] **Abuse prevention — minimum effort threshold** — GAP: no minimum tracking duration or move variety check before awarding points
+- [x] **Abuse prevention — Sybil resistance** — Ed25519 keypairs, `anti-gaming.ts` middleware (point velocity, new-account limits, IP clustering, reciprocal farming detection)
+- [ ] **Security audit** — GAP: no formal review. Auth flow, data at rest, data in transit, API surface need systematic audit
+- [~] **Privacy review** — Policy drafts exist, deletion flow implemented. Gap: lawyer review, telemetry opt-out UI, cookie consent
+- [~] **Legal** — ToS + Privacy Policy drafts exist (pending lawyer review). Gap: no DMCA/copyright policy, company not formed
+- [~] **App store readiness** — Native projects created, icon done, guide written. Blocked: Xcode, Android Studio, developer accounts, screenshots
+- [~] **Infrastructure** — Dockerfile + fly.toml + CI ready. Blocked: Fly.io auth + payment method. Gap: Tigris deploy, CDN, production DB
+- [~] **Monitoring** — Cron stack + launchd watchdog exist. Gap: production error tracking, uptime monitoring, abuse alerting
+- [x] **Community guidelines** — `docs/community/guidelines.md` v1.0 published with enforcement ladder
+- [ ] **Launch plan** — GAP: no rollout strategy, comms plan, or success criteria
 
 **Depends on:** P-10 (backend deployed), P-12 (move library), P-13 (reward system), P-14 (video farming), C-1 (legal), C-2 (GTM)
 
