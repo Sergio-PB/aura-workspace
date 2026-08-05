@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>ai.aura.backend</string>
+    <key>ProgramArguments</key>
+    <array>
+        <string>/bin/bash</string>
+        <string>-c</string>
+        <string>cd /Users/sergio/aura-apps/apps/backend &amp;&amp; mkdir -p data &amp;&amp; [ -f .env ] || printf 'DATABASE_URL=file:./data/aura.db\nAURA_JWT_SECRET=dev-secret-change-in-production\nPORT=3000\nNODE_ENV=development\n' &gt; .env &amp;&amp; exec bun run --watch src/serve.ts</string>
+    </array>
+    <key>WorkingDirectory</key>
+    <string>/Users/sergio/aura-apps/apps/backend</string>
+    <key>RunAtLoad</key>
+    <true/>
+    <key>KeepAlive</key>
+    <true/>
+    <key>ThrottleInterval</key>
+    <integer>5</integer>
+    <key>StandardOutPath</key>
+    <string>/Users/sergio/aura-workspace/logs/backend.log</string>
+    <key>StandardErrorPath</key>
+    <string>/Users/sergio/aura-workspace/logs/backend.log</string>
+    <key>EnvironmentVariables</key>
+    <dict>
+        <key>PATH</key>
+        <string>/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/Users/sergio/.bun/bin</string>
+        <key>HOME</key>
+        <string>/Users/sergio</string>
+    </dict>
+</dict>
+</plist>

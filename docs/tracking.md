@@ -9,28 +9,30 @@
 ## Architecture
 
 ```
-Camera (getUserMedia)
+Camera (getUserMedia)  OR  File Video (<input type="file">)
   → MediaPipe Hands WASM (21 landmarks/hand, 2 hands max)
     → Gesture Detector (static: open, fist, point, peace, thumbs_up)
-    → Move Detector (temporal: seesaw)
+    → Move Detector (temporal: seesaw, wave, clap, raise_roof, point)
       → Particle Overlay (canvas, burst on gesture/move)
       → Telemetry Debug Panel (real-time data dump)
+      → Export (MediaRecorder: video + particles composited)
 ```
 
 ---
 
 ## Components
 
-### 1. Camera Input
+### 1. Camera / File Input
 
 | Property | Value |
 |----------|-------|
-| Source | `navigator.mediaDevices.getUserMedia` (web) / Capacitor Camera (native fallback) |
+| Source | `navigator.mediaDevices.getUserMedia` (camera) or `<input type="file">` (pre-recorded video) |
 | Resolution | 320×240 (reduced for memory) |
 | Mirror | `scaleX(-1)` on video element |
 | Transport | HTTPS required (secure context for getUserMedia on non-localhost) |
+| File mode | RAF frame pump, playback controls (play/pause/seek), export via MediaRecorder |
 
-**File:** `src/hooks/useMediaPipe.ts` (camera init in `useEffect`)
+**File:** `src/hooks/useMediaPipe.ts` (camera init + file pump in `useEffect`), `src/screens/RecordScreen.tsx` (file input + playback + export)
 
 ### 2. MediaPipe Hands
 
@@ -147,8 +149,8 @@ interface HandState {
 | MediaPipe hand order arbitrary | Classify by wrist x > 0.5 |
 | getUserMedia requires HTTPS | `@vitejs/plugin-basic-ssl` for dev |
 | iOS front camera mirrors | `scaleX(-1)` on video, `1 - x` on particles |
-| Only one move (seesaw) | Extend `moves.ts` with new detectors |
 | No face tracking yet | Planned for P-9 |
+| File export is WebM only | MediaRecorder browser support; add MP4 via ffmpeg.wasm if needed |
 
 ---
 
