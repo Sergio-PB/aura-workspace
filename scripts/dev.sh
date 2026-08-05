@@ -23,13 +23,13 @@ BACKEND_PID=$!
 # Farm (Capacitor SPA)
 echo "  Farm     → http://localhost:5173"
 cd "$APPS/apps/farm-capacitor"
-npx vite --port 5173 &
+npx vite --port 5173 --host &
 FARM_PID=$!
 
 # Card (SPA)
 echo "  Card     → http://localhost:5174"
 cd "$APPS/apps/card"
-npx vite --port 5174 &
+npx vite --port 5174 --host &
 CARD_PID=$!
 
 echo ""
