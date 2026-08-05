@@ -221,17 +221,17 @@ To be appointed before serving EU users. Contact: dpo@ifarm.club (reserved).
 
 ## 6. Implementation Checklist
 
-- [ ] Add `deleted_at` columns to: `recordings`, `attributions`, `face_embeddings`
-- [ ] Add `anonymize_account(publicKey)` stored procedure
-- [ ] Add `DELETE /v1/recordings/:id` endpoint
-- [ ] Add `DELETE /v1/account` endpoint
-- [ ] Add `GET /v1/account/export` endpoint
-- [ ] Add `cron: hard-delete-sweep` (daily)
+- [x] Add `deleted_at` columns to: `recordings`, `attributions`, `face_embeddings`
+- [~] Add `anonymize_account(publicKey)` stored procedure — implemented inline in DELETE /account route
+- [x] Add `DELETE /v1/recordings/:id` endpoint
+- [x] Add `DELETE /v1/account` endpoint
+- [x] Add `GET /v1/account/export` endpoint
+- [x] Add `cron: hard-delete-sweep` (daily) — `scripts/hard-delete-sweep.ts`
 - [ ] Add `cron: inactivity-check` (weekly)
 - [ ] Add `cron: log-rotation` (daily)
 - [ ] Add S3 lifecycle policy for `trash/` prefix
 - [ ] Add GDPR erasure flow (skip soft-delete window)
-- [ ] Add audit log table and write entries for all deletion events
+- [x] Add audit log table and write entries for all deletion events
 - [ ] Add email notifications for inactivity warnings
 - [ ] Update Privacy Policy Section 7 to reference this document
 
