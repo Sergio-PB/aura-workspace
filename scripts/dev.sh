@@ -9,6 +9,12 @@ APPS="$ROOT/../aura-apps"
 echo "🚀 Starting Aura local dev..."
 echo ""
 
+# Kill anything already on our ports
+lsof -ti:3000 | xargs kill -9 2>/dev/null || true
+lsof -ti:5173 | xargs kill -9 2>/dev/null || true
+lsof -ti:5174 | xargs kill -9 2>/dev/null || true
+sleep 1
+
 # Backend
 echo "  Backend  → http://localhost:3000"
 cd "$APPS/apps/backend"
