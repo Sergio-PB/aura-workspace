@@ -324,12 +324,12 @@ Launch a social reputation network at `ifarm.club` with two products: **The Farm
 
 **Goal:** Process pre-recorded videos through the same tracking pipeline as the live camera. Users can upload or select a video, and the Farm runs MediaPipe on each frame, detecting gestures and moves just like the live feed.
 
-- [ ] Video file input (file picker or drag-and-drop)
-- [ ] Frame-by-frame MediaPipe processing (seekable video → hand tracking per frame)
-- [ ] Same gesture/move detection pipeline as live camera
-- [ ] Playback controls (play, pause, scrub, speed)
-- [ ] Telemetry overlay on video (same debug panel, synced to video time)
-- [ ] Export: save processed video with particle overlay burned in
+- [x] Video file input (file picker or drag-and-drop)
+- [x] Frame-by-frame MediaPipe processing (seekable video → hand tracking per frame)
+- [x] Same gesture/move detection pipeline as live camera
+- [x] Playback controls (play, pause, scrub, speed)
+- [x] Telemetry overlay on video (same debug panel, synced to video time)
+- [x] Export: save processed video with particle overlay burned in
 
 **Depends on:** P-11 (tracking pipeline exists)
 
