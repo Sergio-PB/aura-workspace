@@ -294,12 +294,12 @@ Launch a social reputation network at `ifarm.club` with two products: **The Farm
 
 **Goal:** Expand the move library beyond seesaw to cover a range of real-world gestures. Each move has a detector, aura rate, and visual feedback.
 
-- [ ] **Wave** — single hand oscillating side-to-side (x-axis sign changes over window)
-- [ ] **Clap** — both hands rapidly converging (distance between wrists drops below threshold)
-- [ ] **Raise the roof** — both hands pushing upward repeatedly (y-axis peaks)
-- [ ] **Point tracking** — follow where a pointing hand is aimed (index tip direction vector)
-- [ ] Move library registry: unified interface for registering moves, querying active moves, and aggregating aura rates
-- [ ] Per-move particle effects (distinct colors/shapes per move type)
+- [x] **Wave** — single hand oscillating side-to-side (x-axis sign changes over window)
+- [x] **Clap** — both hands rapidly converging (distance between wrists drops below threshold)
+- [x] **Raise the roof** — both hands pushing upward repeatedly (y-axis peaks)
+- [x] **Point tracking** — follow where a pointing hand is aimed (index tip direction vector)
+- [x] Move library registry: unified interface for registering moves, querying active moves, and aggregating aura rates
+- [x] Per-move particle effects (distinct colors/shapes per move type)
 
 **Depends on:** P-11 (tracking pipeline exists)
 
