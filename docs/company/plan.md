@@ -435,8 +435,8 @@ points = Σ (rate × duration_seconds × moveMultiplier)
 
 - [x] Public profiles and shareable cards
 - [x] Cross-event reputation (points carry across events) — global leaderboard endpoint: `GET /leaderboard` + `GET /leaderboard/user/:userId`
-- [ ] Community-led events and moderation
-- [ ] API for third-party integrations
+- [x] Community-led events and moderation
+- [x] API for third-party integrations
 - [x] Reputation portability (export, verify externally) — `GET /reputation/export/:userId` (signed Ed25519 attestation), `POST /reputation/verify`, `GET /reputation/public-key`
 - [x] Network health metrics and transparency reports
 
