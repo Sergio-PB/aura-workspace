@@ -9,3 +9,19 @@
 11:13:16 AM [vite] (client) hmr update /src/screens/ProfileScreen.tsx
 11:13:27 AM [vite] (client) hmr update /src/screens/ProfileScreen.tsx
 11:13:42 AM [vite] (client) hmr update /src/screens/ProfileScreen.tsx
+3:01:59 PM [vite] (client) hmr update /src/screens/ProfileScreen.tsx
+3:01:59 PM [vite] (client) hmr update /src/screens/ProfileScreen.tsx
+3:01:59 PM [vite] vite.config.ts changed, restarting server...
+3:01:59 PM [vite] (client) hmr update /src/App.tsx
+3:01:59 PM [vite] (client) hmr update /src/screens/PublicCardScreen.tsx, /src/screens/ProfileScreen.tsx
+3:01:59 PM [vite] (client) hmr update /src/index.css
+3:01:59 PM [vite] (client) hmr update /src/components/ShareableCard.tsx
+3:01:59 PM [vite] (client) hmr update /src/screens/FeedScreen.tsx
+3:01:59 PM [vite] (client) hmr update /src/screens/HomeScreen.tsx
+3:01:59 PM [vite] (client) page reload src/main.tsx
+3:01:59 PM [vite] (client) hmr update /src/screens/PublicCardScreen.tsx
+3:01:59 PM [vite] (client) hmr update /src/screens/FeedScreen.tsx
+3:01:59 PM [vite] (client) hmr update /src/screens/HomeScreen.tsx, /src/screens/ProfileScreen.tsx
+3:01:59 PM [vite] (client) hmr update /src/screens/PublicCardScreen.tsx, /src/screens/ProfileScreen.tsx
+3:01:59 PM [vite] (client) hmr update /src/screens/ProfileScreen.tsx
+3:01:59 PM [vite] server restarted.
