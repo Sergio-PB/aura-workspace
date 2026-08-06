@@ -344,7 +344,7 @@ Launch a social reputation network at `ifarm.club` with two products: **The Farm
 - [~] **Abuse prevention — device fingerprinting** — `deviceId` + IP + geo captured per recording, IP clustering in anti-gaming. Gap: no browser fingerprint, no anomaly detection on device+IP+geo tuples
 - [x] **Abuse prevention — minimum effort threshold** — `endSession` in `ws.ts` requires ≥30 ticks (~3s at 10 Hz) before points count; sessions below threshold get 0 points
 - [x] **Abuse prevention — Sybil resistance** — Ed25519 keypairs, `anti-gaming.ts` middleware (point velocity, new-account limits, IP clustering, reciprocal farming detection)
-- [ ] **Security audit** — GAP: no formal review. Auth flow, data at rest, data in transit, API surface need systematic audit
+- [x] **Security audit** — completed 2026-08-05: 12 findings (1 critical, 3 high, 4 medium, 4 low). Critical + high fixed. See `docs/security/audit-2026-08-05.md`.
 - [~] **Privacy review** — Policy drafts exist, deletion flow implemented. Gap: lawyer review, telemetry opt-out UI, cookie consent
 - [~] **Legal** — ToS + Privacy Policy drafts exist (pending lawyer review). Gap: no DMCA/copyright policy, company not formed
 - [~] **App store readiness** — Native projects created, icon done, guide written. Blocked: Xcode, Android Studio, developer accounts, screenshots
