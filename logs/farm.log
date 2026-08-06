@@ -8,3 +8,32 @@
 8:31:03 PM [vite] (client) hmr update /src/screens/RecordScreen.tsx
 8:31:06 PM [vite] (client) hmr update /src/screens/RecordScreen.tsx
 8:31:09 PM [vite] (client) hmr update /src/screens/RecordScreen.tsx
+8:45:08 PM [vite] (client) hmr update /src/screens/RecordScreen.tsx
+8:45:16 PM [vite] (client) hmr update /src/screens/RecordScreen.tsx
+8:45:20 PM [vite] (client) hmr update /src/screens/RecordScreen.tsx
+8:46:08 PM [vite] (client) hmr update /src/screens/FeedScreen.tsx
+8:46:08 PM [vite] Internal server error: Failed to resolve import "../hooks/useCardWebSocket" from "src/screens/FeedScreen.tsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /Users/sergio/aura-apps/apps/farm-capacitor/src/screens/FeedScreen.tsx:5:56
+  17 |  var _s = $RefreshSig$();
+  18 |  import { useRef } from "react";
+  19 |  import { useCardWebSocket } from "../hooks/useCardWebSocket";
+     |                                    ^
+  20 |  function getUserId() {
+  21 |    const key = "aura-farm-user-id";
+      at TransformPluginContext._formatLog (file:///Users/sergio/aura-apps/node_modules/.pnpm/vite@6.4.3_@types+node@26.1.1_lightningcss@1.33.0_terser@5.49.0_tsx@4.23.1/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:42658:41)
+      at TransformPluginContext.error (file:///Users/sergio/aura-apps/node_modules/.pnpm/vite@6.4.3_@types+node@26.1.1_lightningcss@1.33.0_terser@5.49.0_tsx@4.23.1/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:42655:16)
+      at normalizeUrl (file:///Users/sergio/aura-apps/node_modules/.pnpm/vite@6.4.3_@types+node@26.1.1_lightningcss@1.33.0_terser@5.49.0_tsx@4.23.1/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:40634:23)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async file:///Users/sergio/aura-apps/node_modules/.pnpm/vite@6.4.3_@types+node@26.1.1_lightningcss@1.33.0_terser@5.49.0_tsx@4.23.1/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:40753:37
+      at async Promise.all (index 4)
+      at async TransformPluginContext.transform (file:///Users/sergio/aura-apps/node_modules/.pnpm/vite@6.4.3_@types+node@26.1.1_lightningcss@1.33.0_terser@5.49.0_tsx@4.23.1/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:40680:7)
+      at async EnvironmentPluginContainer.transform (file:///Users/sergio/aura-apps/node_modules/.pnpm/vite@6.4.3_@types+node@26.1.1_lightningcss@1.33.0_terser@5.49.0_tsx@4.23.1/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:42453:18)
+      at async loadAndTransform (file:///Users/sergio/aura-apps/node_modules/.pnpm/vite@6.4.3_@types+node@26.1.1_lightningcss@1.33.0_terser@5.49.0_tsx@4.23.1/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:35845:27)
+      at async viteTransformMiddleware (file:///Users/sergio/aura-apps/node_modules/.pnpm/vite@6.4.3_@types+node@26.1.1_lightningcss@1.33.0_terser@5.49.0_tsx@4.23.1/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:37369:24)
+8:46:11 PM [vite] (client) hmr update /src/App.tsx
+8:46:14 PM [vite] (client) hmr update /src/screens/FeedScreen.tsx
+11:35:30 PM [vite] (client) hmr update /src/App.tsx
+11:35:37 PM [vite] (client) hmr update /src/components/UserCarousel.tsx
+11:45:39 PM [vite] (client) hmr update /src/screens/RecordScreen.tsx
+11:45:39 PM [vite] (client) hmr update /src/screens/FeedScreen.tsx

@@ -351,7 +351,7 @@ Launch a social reputation network at `ifarm.club` with two products: **The Farm
 - [~] **Infrastructure** — Dockerfile + fly.toml + CI ready. Blocked: Fly.io auth + payment method. Gap: Tigris deploy, CDN, production DB
 - [~] **Monitoring** — Cron stack + launchd watchdog exist. Gap: production error tracking, uptime monitoring, abuse alerting
 - [x] **Community guidelines** — `docs/community/guidelines.md` v1.0 published with enforcement ladder
-- [ ] **Launch plan** — GAP: no rollout strategy, comms plan, or success criteria
+- [x] **Launch plan** — `docs/product/launch-plan.md`: phased rollout (soft → friends → event → beta → public), comms plan, go/no-go criteria, post-launch metrics
 
 **Depends on:** P-10 (backend deployed), P-12 (move library), P-13 (reward system), P-14 (video farming), C-1 (legal), C-2 (GTM)
 
