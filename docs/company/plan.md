@@ -342,7 +342,7 @@ Launch a social reputation network at `ifarm.club` with two products: **The Farm
 - [x] **Abuse prevention — duplicate detection** — `mediaHash` + `audioFingerprint` on recordings, `duplicates.ts` route with overlap detection and merge endpoint
 - [x] **Abuse prevention — rate limiting** — `rate-limit.ts` middleware (60 req/60s sliding window), applied to attributions + validations
 - [~] **Abuse prevention — device fingerprinting** — `deviceId` + IP + geo captured per recording, IP clustering in anti-gaming. Gap: no browser fingerprint, no anomaly detection on device+IP+geo tuples
-- [ ] **Abuse prevention — minimum effort threshold** — GAP: no minimum tracking duration or move variety check before awarding points
+- [x] **Abuse prevention — minimum effort threshold** — `endSession` in `ws.ts` requires ≥30 ticks (~3s at 10 Hz) before points count; sessions below threshold get 0 points
 - [x] **Abuse prevention — Sybil resistance** — Ed25519 keypairs, `anti-gaming.ts` middleware (point velocity, new-account limits, IP clustering, reciprocal farming detection)
 - [ ] **Security audit** — GAP: no formal review. Auth flow, data at rest, data in transit, API surface need systematic audit
 - [~] **Privacy review** — Policy drafts exist, deletion flow implemented. Gap: lawyer review, telemetry opt-out UI, cookie consent
@@ -363,13 +363,13 @@ Launch a social reputation network at `ifarm.club` with two products: **The Farm
 
 **Mental model:** The device is trusted. It tells the server "User A did seesaw at rate 0.8 for 3 seconds." The server responds "That's 24 aura points for User A." The leaderboard updates.
 
-- [ ] **Simple user model** — `users` table: `id` (UUID), `username` (string). No auth, no passwords. Just identity.
-- [ ] **User selector on Farm** — carousel or overlay on the camera view. User picks a target before/while recording. Sends `targetUserId` with every stream frame.
-- [ ] **Move stream protocol** — Farm opens a WebSocket to backend. Sends JSON frames: `{ targetUserId, move, rate, timestamp, handPositions: { left, right } }` at ~10 Hz while a move is active.
-- [ ] **Server-side point calculator** — backend receives move stream, applies scoring formula: `points = rate × duration × moveMultiplier`. Accumulates per-user per-session. Persists to `attributions` table.
-- [ ] **Live leaderboard** — backend broadcasts point updates via WebSocket. Farm (or Card) renders a sorted list of users by total points, updating in real time.
-- [ ] **Feed screen** — displays the leaderboard + recent attributions. Accessible from both Farm and Card.
-- [ ] **Session lifecycle** — start session (select user), stream moves, end session (finalize points). Points are provisional until session ends.
+- [x] **Simple user model** — `users` table: `id` (UUID), `displayName` (string). No auth, no passwords. Just identity. (Existing users table reused; public `/users` endpoint for carousel.)
+- [x] **User selector on Farm** — carousel or overlay on the camera view. User picks a target before/while recording. Sends `targetUserId` with every stream frame. (`UserCarousel.tsx`)
+- [x] **Move stream protocol** — Farm opens a WebSocket to backend. Sends JSON frames: `{ targetUserId, move, rate, timestamp }` at ~10 Hz while a move is active. (`useFarmWebSocket.ts`)
+- [x] **Server-side point calculator** — backend receives move stream, applies scoring formula: `points = rate × duration × moveMultiplier`. Accumulates per-user per-session. Persists to `attributions` table. (`calculator.ts`, `ws.ts`)
+- [x] **Live leaderboard** — backend broadcasts point updates via WebSocket. Farm (or Card) renders a sorted list of users by total points, updating in real time. (`ws.ts` broadcast, `FeedScreen.tsx`)
+- [x] **Feed screen** — displays the leaderboard + recent attributions. Accessible from both Farm and Card. (`FeedScreen.tsx`)
+- [x] **Session lifecycle** — start session (select user), stream moves, end session (finalize points). Points are provisional until session ends. (`routes/sessions.ts`)
 
 **Scoring formula (v1):**
 ```
