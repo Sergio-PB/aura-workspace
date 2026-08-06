@@ -565,3 +565,5 @@ LibsqlError: SQLITE_ERROR: no such table: api_keys
 [http] GET /users → 200 (1ms)
 [http] GET /users → 200 (3ms)
 [http] GET /users → 200 (10ms)
+[startup] Aura Backend running on https://localhost:3000
+[startup] Aura Backend running on https://localhost:3000

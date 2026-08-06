@@ -3,7 +3,7 @@
   "consecutive_timeouts": 0,
   "last_error_type": null,
   "last_error_message": null,
-  "cooldown_until": "2026-08-06T15:02:56.512507+00:00",
+  "cooldown_until": null,
   "last_alerted_failures": 0,
   "last_alerted_at": "2026-08-06T14:15:14.625423+00:00",
   "last_5_statuses": [
