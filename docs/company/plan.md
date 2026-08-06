@@ -438,7 +438,7 @@ points = Σ (rate × duration_seconds × moveMultiplier)
 - [ ] Community-led events and moderation
 - [ ] API for third-party integrations
 - [x] Reputation portability (export, verify externally) — `GET /reputation/export/:userId` (signed Ed25519 attestation), `POST /reputation/verify`, `GET /reputation/public-key`
-- [ ] Network health metrics and transparency reports
+- [x] Network health metrics and transparency reports
 
 **Depends on:** C-2, P-10
 
