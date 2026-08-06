@@ -400,9 +400,9 @@ points = Σ (rate × duration_seconds × moveMultiplier)
 - [ ] **Combo system** — consecutive moves within 2s window multiply points (×2, ×3, ×5, ×10). Visual streak indicator
 - [ ] **Move-specific particles** — each move type has unique particle color/shape/behavior (seesaw=gold waves, wave=blue ripples, clap=white burst, raise_roof=purple columns)
 - [ ] **Score popups** — "+24 aura" floats up and fades on each point award
-- [ ] **Level-up animations** — milestone thresholds (100, 500, 1000, 5000 points) trigger full-screen celebration
-- [ ] **Haptic feedback hooks** — placeholder API for vibration on move detection (implement when Capacitor plugin added)
-- [ ] **Sound cue slots** — each move type, combo, and level-up has a named sound slot (`.sfx.seesaw`, `.sfx.combo_x3`, etc.) for future audio integration
+- [x] **Level-up animations** — milestone thresholds (100, 500, 1000, 5000 points) trigger full-screen celebration
+- [x] **Haptic feedback hooks** — placeholder API for vibration on move detection (implement when Capacitor plugin added)
+- [x] **Sound cue slots** — each move type, combo, and level-up has a named sound slot (`.sfx.seesaw`, `.sfx.combo_x3`, etc.) for future audio integration
 - [ ] **Transition animations** — screen transitions (home→record, record→feed) use smooth slides/fades
 - [ ] **Loading states** — camera init, model loading, WebSocket connecting all have animated indicators (not blank screens)
 - [ ] **Dark theme polish** — consistent color palette, proper contrast ratios, no raw CSS defaults
