@@ -263,7 +263,7 @@ Launch a social reputation network at `ifarm.club` with two products: **The Farm
 
 - [x] Cryptographic identity verification (no spoofing) — Ed25519 challenge-response login + JWT session tokens + authMiddleware on all protected routes
 - [x] Anti-gaming measures (prevent point farming, Sybil attacks)
-- [~] Privacy controls (granular telemetry sharing) — policy docs done (`docs/legal/privacy-policy.md`, `docs/legal/data-retention.md`); Farm UI placeholder (P-11 will build the actual toggles)
+- [x] Privacy controls (granular telemetry sharing) — policy docs done (`docs/legal/privacy-policy.md`, `docs/legal/data-retention.md`); Farm UI toggles built in Capacitor Farm (PrivacySettingsScreen + wired into RecordScreen)
 - [x] Data retention and deletion policies — policy docs done; backend implementation: soft-delete schema (`deleted_at` columns), `DELETE /recordings/:id`, `DELETE /account`, `GET /account/export`, audit log table, `scripts/hard-delete-sweep.ts`
 - [~] Backend scaling (single machine → cloud) — Docker image builds + runs (verified 2026-08-02), deploy workflow ready at `.github/workflows/deploy-backend.yml`. Blocked on: founder Fly.io auth (`fly auth login`).
 - [x] Media storage and CDN
