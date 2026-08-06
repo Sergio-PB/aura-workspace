@@ -341,7 +341,7 @@ Launch a social reputation network at `ifarm.club` with two products: **The Farm
 
 - [x] **Abuse prevention — duplicate detection** — `mediaHash` + `audioFingerprint` on recordings, `duplicates.ts` route with overlap detection and merge endpoint
 - [x] **Abuse prevention — rate limiting** — `rate-limit.ts` middleware (60 req/60s sliding window), applied to attributions + validations
-- [~] **Abuse prevention — device fingerprinting** — `deviceId` + IP + geo captured per recording, IP clustering in anti-gaming. Gap: no browser fingerprint, no anomaly detection on device+IP+geo tuples
+- [x] **Abuse prevention — device fingerprinting** — `deviceId` + IP + geo captured per recording, IP clustering in anti-gaming. Browser fingerprint via canvas+WebGL (`useDeviceFingerprint` hook), anomaly detection middleware (`device-anomaly.ts`) checks device diversity, geo jumps, IP churn, and device+IP mismatch. Score ≥70 blocks session, ≥40 flags.
 - [x] **Abuse prevention — minimum effort threshold** — `endSession` in `ws.ts` requires ≥30 ticks (~3s at 10 Hz) before points count; sessions below threshold get 0 points
 - [x] **Abuse prevention — Sybil resistance** — Ed25519 keypairs, `anti-gaming.ts` middleware (point velocity, new-account limits, IP clustering, reciprocal farming detection)
 - [x] **Security audit** — completed 2026-08-05: 12 findings (1 critical, 3 high, 4 medium, 4 low). Critical + high fixed. See `docs/security/audit-2026-08-05.md`.
