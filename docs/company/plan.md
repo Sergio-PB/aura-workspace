@@ -388,7 +388,7 @@ points = Σ (rate × duration_seconds × moveMultiplier)
 **Goal:** The network grows on its own. Reputation becomes portable and valuable.
 
 - [x] Public profiles and shareable cards
-- [ ] Cross-event reputation (points carry across events)
+- [x] Cross-event reputation (points carry across events) — global leaderboard endpoint: `GET /leaderboard` + `GET /leaderboard/user/:userId`
 - [ ] Community-led events and moderation
 - [ ] API for third-party integrations
 - [ ] Reputation portability (export, verify externally)
