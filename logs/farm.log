@@ -50,3 +50,12 @@
 11:36:51 AM [vite] (client) hmr update /src/screens/RecordScreen.tsx
 11:36:54 AM [vite] (client) hmr update /src/screens/RecordScreen.tsx
 11:36:58 AM [vite] (client) hmr update /src/screens/RecordScreen.tsx
+12:01:59 PM [vite] (client) page reload src/main.tsx
+12:02:06 PM [vite] (client) hmr update /src/App.tsx
+12:02:19 PM [vite] (client) hmr update /src/App.tsx
+12:02:39 PM [vite] (client) hmr update /src/screens/RecordScreen.tsx
+12:02:46 PM [vite] (client) hmr update /src/screens/RecordScreen.tsx
+12:02:58 PM [vite] (client) hmr update /src/screens/RecordScreen.tsx
+12:03:02 PM [vite] (client) hmr update /src/screens/RecordScreen.tsx
+12:03:24 PM [vite] (client) hmr update /src/screens/HomeScreen.tsx
+12:03:34 PM [vite] (client) hmr update /src/screens/FeedScreen.tsx

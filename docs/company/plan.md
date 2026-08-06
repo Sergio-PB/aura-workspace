@@ -399,17 +399,17 @@ points = Σ (rate × duration_seconds × moveMultiplier)
 - **Session-scoped** — streaks, combos, and ego reset per recording. No long-running campaigns.
 
 **Checklist:**
-- [ ] **Game HUD overlay** — replaces debug panel. Shows: target user avatar, current move name, streak counter, combo multiplier, session aura points with animated counter
-- [ ] **Streak system** — continuous movement without gaps builds a streak counter. Visual flame/glow intensifies. Streak breaks on 1.5s+ gap. Max streak recorded as user stat.
-- [ ] **Combo system** — chaining *different* moves within 2s window multiplies points (×2, ×3, ×5, ×10). Visual combo meter. "seesaw → wave → clap" = ×3 combo. Max combo recorded as user stat.
-- [ ] **Ego bursts** — within a single session, hitting point thresholds (100, 250, 500, 1000) triggers a full-screen celebration ("Ego ×2!", "Ego ×5!"). Resets per session. Max ego recorded as user stat.
-- [ ] **Move-specific particles** — each move type has unique particle color/shape/behavior (seesaw=gold waves, wave=blue ripples, clap=white burst, raise_roof=purple columns)
-- [ ] **Score popups** — "+24 aura" floats up and fades on each point award. Combo/streak/ego multipliers shown in popup.
-- [ ] **Haptic feedback hooks** — placeholder API for vibration on move detection, streak milestones, combo hits, ego bursts (implement when Capacitor plugin added)
-- [ ] **Sound cue slots** — each move type, combo tier, streak milestone, and ego burst has a named sound slot (`.sfx.seesaw`, `.sfx.combo_x3`, `.sfx.streak_10`, `.sfx.ego_x2`, etc.) for future audio integration
-- [ ] **Transition animations** — screen transitions (home→record, record→feed) use smooth slides/fades
-- [ ] **Loading states** — camera init, model loading, WebSocket connecting all have animated indicators (not blank screens)
-- [ ] **Dark theme polish** — consistent color palette, proper contrast ratios, no raw CSS defaults
+- [x] **Game HUD overlay** — replaces debug panel. Shows: target user avatar, current move name, streak counter, combo multiplier, session aura points with animated counter
+- [x] **Streak system** — continuous movement without gaps builds a streak counter. Visual flame/glow intensifies. Streak breaks on 1.5s+ gap. Max streak recorded as user stat.
+- [x] **Combo system** — chaining *different* moves within 2s window multiplies points (×2, ×3, ×5, ×10). Visual combo meter. "seesaw → wave → clap" = ×3 combo. Max combo recorded as user stat.
+- [x] **Ego bursts** — within a single session, hitting point thresholds (100, 250, 500, 1000) triggers a full-screen celebration ("Ego ×2!", "Ego ×5!"). Resets per session. Max ego recorded as user stat.
+- [x] **Move-specific particles** — each move type has unique particle color/shape/behavior (seesaw=gold waves, wave=blue ripples, clap=white burst, raise_roof=purple columns)
+- [x] **Score popups** — "+24 aura" floats up and fades on each point award. Combo/streak/ego multipliers shown in popup.
+- [x] **Haptic feedback hooks** — placeholder API for vibration on move detection, streak milestones, combo hits, ego bursts (implement when Capacitor plugin added)
+- [x] **Sound cue slots** — each move type, combo tier, streak milestone, and ego burst has a named sound slot (`.sfx.seesaw`, `.sfx.combo_x3`, `.sfx.streak_10`, `.sfx.ego_x2`, etc.) for future audio integration
+- [x] **Transition animations** — screen transitions (home→record, record→feed) use smooth slides/fades
+- [x] **Loading states** — camera init, model loading, WebSocket connecting all have animated indicators (not blank screens)
+- [x] **Dark theme polish** — consistent color palette, proper contrast ratios, no raw CSS defaults
 
 **User stats (persistent, no levels):**
 - Total aura points
