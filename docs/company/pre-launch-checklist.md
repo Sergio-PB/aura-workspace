@@ -77,8 +77,8 @@
 - [x] Biometric data notice (Appendix A in privacy policy)
 - [ ] **Gap:** No GDPR/CCPA compliance review by a lawyer
 - [ ] **Gap:** No data deletion verification flow (user can request deletion — can we prove it happened?)
-- [ ] **Gap:** No telemetry opt-out UI in Farm (policy says user controls what's shared; UI toggles not built)
-- [ ] **Gap:** No cookie consent / tracking disclosure on landing page
+- [x] **Gap:** No telemetry opt-out UI in Farm — DONE (PrivacySettingsScreen in Capacitor Farm, wired into RecordScreen)
+- [x] **Gap:** No cookie consent / tracking disclosure on landing page — DONE (banner on all 8 pages)
 
 ---
 
@@ -88,7 +88,7 @@
 - [x] Privacy Policy draft: `docs/legal/privacy-policy.md` v1.0
 - [x] Community Guidelines: `docs/community/guidelines.md` v1.0
 - [x] Legal structure recommendation: `docs/company/legal-structure-recommendation.md`
-- [ ] **Gap:** No DMCA / copyright policy
+- [x] **Gap:** No DMCA / copyright policy — DONE (`docs/legal/dmca-policy.md`)
 - [ ] **Gap:** No lawyer review on any legal document (all marked "pending legal review")
 - [ ] **Gap:** Company not yet formed (blocked on legal structure decision)
 - [ ] **Gap:** No DPO or EU Representative appointed (required for GDPR)
@@ -180,8 +180,8 @@
 | Minimum effort threshold | GAP | Implement duration/move variety gate |
 | Sybil resistance | DONE | — |
 | Security audit | GAP | Formal review needed |
-| Privacy review | PARTIAL | Lawyer review, telemetry opt-out UI, cookie consent |
-| Legal | PARTIAL | Lawyer review, DMCA policy, company formation |
+| Privacy review | PARTIAL | Lawyer review, telemetry opt-out UI (done), cookie consent (done) |
+| Legal | PARTIAL | Lawyer review, DMCA policy (done), company formation |
 | App store readiness | PARTIAL | Xcode, Android Studio, developer accounts |
 | Infrastructure | PARTIAL | Fly.io deploy, Tigris, CDN, production DB |
 | Monitoring | PARTIAL | Production error tracking, uptime, abuse alerting |

@@ -345,8 +345,8 @@ Launch a social reputation network at `ifarm.club` with two products: **The Farm
 - [x] **Abuse prevention — minimum effort threshold** — `endSession` in `ws.ts` requires ≥30 ticks (~3s at 10 Hz) before points count; sessions below threshold get 0 points
 - [x] **Abuse prevention — Sybil resistance** — Ed25519 keypairs, `anti-gaming.ts` middleware (point velocity, new-account limits, IP clustering, reciprocal farming detection)
 - [x] **Security audit** — completed 2026-08-05: 12 findings (1 critical, 3 high, 4 medium, 4 low). Critical + high fixed. See `docs/security/audit-2026-08-05.md`.
-- [~] **Privacy review** — Policy drafts exist, deletion flow implemented. Gap: lawyer review, telemetry opt-out UI, cookie consent
-- [~] **Legal** — ToS + Privacy Policy drafts exist (pending lawyer review). Gap: no DMCA/copyright policy, company not formed
+- [~] **Privacy review** — Policy drafts exist, deletion flow implemented. Gap: lawyer review, telemetry opt-out UI (done — PrivacySettingsScreen in Capacitor Farm), cookie consent (done — banner on all landing pages)
+- [~] **Legal** — ToS + Privacy Policy drafts exist (pending lawyer review). DMCA/copyright policy done (`docs/legal/dmca-policy.md`). Gap: company not formed
 - [~] **App store readiness** — Native projects created, icon done, guide written. Blocked: Xcode, Android Studio, developer accounts, screenshots
 - [~] **Infrastructure** — Dockerfile + fly.toml + CI ready. Blocked: Fly.io auth + payment method. Gap: Tigris deploy, CDN, production DB
 - [~] **Monitoring** — Cron stack + launchd watchdog exist. Gap: production error tracking, uptime monitoring, abuse alerting

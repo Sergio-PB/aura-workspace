@@ -91,5 +91,13 @@
   <p style="margin-top:0.5rem">Built in the open. <a href="https://github.com/Sergio-PB/aura-workspace">See the code</a>.</p>
 </footer>
 
+<div class="cookie-banner" id="cookie-banner">
+  <p>We don't use tracking cookies. This site uses a single localStorage key to remember your preference. <a href="/about">Learn more</a>.</p>
+  <button onclick="document.getElementById('cookie-banner').classList.add('hidden'); localStorage.setItem('aura-cookie-consent','1')">Got it</button>
+</div>
+<script>
+if (localStorage.getItem('aura-cookie-consent')) document.getElementById('cookie-banner').classList.add('hidden');
+</script>
+
 </body>
 </html>
