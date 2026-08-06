@@ -379,3 +379,173 @@ TypeError: undefined is not an object (evaluating 'websocketListeners.onClose')
 [startup] Aura Backend running on https://localhost:3000
 [http] GET /users → 200 (4ms)
 [http] GET /users → 200 (1ms)
+[startup] Aura Backend running on https://localhost:3000
+[startup] Aura Backend running on https://localhost:3000
+[startup] Aura Backend running on https://localhost:3000
+[startup] Aura Backend running on https://localhost:3000
+[startup] Aura Backend running on https://localhost:3000
+[startup] Aura Backend running on https://localhost:3000
+[startup] Aura Backend running on https://localhost:3000
+[startup] Aura Backend running on https://localhost:3000
+[startup] Aura Backend running on https://localhost:3000
+[http] GET /health → 200 (3ms)
+[http] POST /users → 201 (25ms)
+[http] POST /auth/login → 400 (6ms)
+[http] POST /api-keys → 401 (0ms)
+[http] GET /api-keys → 401 (0ms)
+[http] GET /leaderboard → 200 (4ms)
+[http] DELETE /api-keys/ → 401 (0ms)
+[http] GET /leaderboard → 200 (1ms)
+38 |   async queryWithCache(queryString, params, query) {
+39 |     if (this.cache === void 0 || is(this.cache, NoopCache) || this.queryMetadata === void 0) {
+40 |       try {
+41 |         return await query();
+42 |       } catch (e) {
+43 |         throw new DrizzleQueryError(queryString, params, e);
+                   ^
+error: Failed query: insert into "api_keys" ("id", "key_hash", "name", "user_id", "created_at", "last_used_at", "revoked_at") values (?, ?, ?, ?, ?, null, null)
+params: 0d7919b8-f41f-489e-aa61-e48681782729,83f9b4fb082300b64b42da759105f67800dddd4152b5f34707529b82becadc52,Test Key,3ee6c442-5620-449e-86e9-021ad1e0ba33,1786025545865
+  query: "insert into \"api_keys\" (\"id\", \"key_hash\", \"name\", \"user_id\", \"created_at\", \"last_used_at\", \"revoked_at\") values (?, ?, ?, ?, ?, null, null)",
+ params: [
+  "0d7919b8-f41f-489e-aa61-e48681782729", "83f9b4fb082300b64b42da759105f67800dddd4152b5f34707529b82becadc52",
+  "Test Key", "3ee6c442-5620-449e-86e9-021ad1e0ba33", 1786025545865
+],
+
+      at queryWithCache (/Users/sergio/aura-apps/node_modules/.pnpm/drizzle-orm@0.45.2_@libsql+client@0.17.4_bun-types@1.3.14_expo-sqlite@14.0.6_expo@52.0._f87e9e67ad0aab5964d9d6518e722543/node_modules/drizzle-orm/sqlite-core/session.js:43:15)
+      at async run (/Users/sergio/aura-apps/node_modules/.pnpm/drizzle-orm@0.45.2_@libsql+client@0.17.4_bun-types@1.3.14_expo-sqlite@14.0.6_expo@52.0._f87e9e67ad0aab5964d9d6518e722543/node_modules/drizzle-orm/libsql/session.js:121:23)
+
+430 | }
+431 | function mapSqliteError(e) {
+432 |     if (e instanceof Database.SqliteError) {
+433 |         const extendedCode = e.code;
+434 |         const code = mapToBaseCode(e.rawCode);
+435 |         return new LibsqlError(e.message, code, extendedCode, e.rawCode, e);
+                     ^
+LibsqlError: SQLITE_ERROR: no such table: api_keys
+ extendedCode: "SQLITE_ERROR",
+    rawCode: 1,
+       code: "SQLITE_ERROR"
+
+      at mapSqliteError (/Users/sergio/aura-apps/node_modules/.pnpm/@libsql+client@0.17.4/node_modules/@libsql/client/lib-esm/sqlite3.js:435:16)
+      at executeStmt (/Users/sergio/aura-apps/node_modules/.pnpm/@libsql+client@0.17.4/node_modules/@libsql/client/lib-esm/sqlite3.js:338:15)
+      at execute (/Users/sergio/aura-apps/node_modules/.pnpm/@libsql+client@0.17.4/node_modules/@libsql/client/lib-esm/sqlite3.js:83:16)
+      at <anonymous> (/Users/sergio/aura-apps/node_modules/.pnpm/drizzle-orm@0.45.2_@libsql+client@0.17.4_bun-types@1.3.14_expo-sqlite@14.0.6_expo@52.0._f87e9e67ad0aab5964d9d6518e722543/node_modules/drizzle-orm/libsql/session.js:123:60)
+      at queryWithCache (/Users/sergio/aura-apps/node_modules/.pnpm/drizzle-orm@0.45.2_@libsql+client@0.17.4_bun-types@1.3.14_expo-sqlite@14.0.6_expo@52.0._f87e9e67ad0aab5964d9d6518e722543/node_modules/drizzle-orm/sqlite-core/session.js:41:22)
+      at run (/Users/sergio/aura-apps/node_modules/.pnpm/drizzle-orm@0.45.2_@libsql+client@0.17.4_bun-types@1.3.14_expo-sqlite@14.0.6_expo@52.0._f87e9e67ad0aab5964d9d6518e722543/node_modules/drizzle-orm/libsql/session.js:121:23)
+      at execute (/Users/sergio/aura-apps/node_modules/.pnpm/drizzle-orm@0.45.2_@libsql+client@0.17.4_bun-types@1.3.14_expo-sqlite@14.0.6_expo@52.0._f87e9e67ad0aab5964d9d6518e722543/node_modules/drizzle-orm/sqlite-core/query-builders/insert.js:174:54)
+      at then (/Users/sergio/aura-apps/node_modules/.pnpm/drizzle-orm@0.45.2_@libsql+client@0.17.4_bun-types@1.3.14_expo-sqlite@14.0.6_expo@52.0._f87e9e67ad0aab5964d9d6518e722543/node_modules/drizzle-orm/query-promise.js:21:17)
+
+[http] POST /api-keys → 500 (15ms)
+38 |   async queryWithCache(queryString, params, query) {
+39 |     if (this.cache === void 0 || is(this.cache, NoopCache) || this.queryMetadata === void 0) {
+40 |       try {
+41 |         return await query();
+42 |       } catch (e) {
+43 |         throw new DrizzleQueryError(queryString, params, e);
+                   ^
+error: Failed query: select "id", "key_hash", "name", "user_id", "created_at", "last_used_at", "revoked_at" from "api_keys" where ("api_keys"."user_id" = ? and "api_keys"."revoked_at" is null)
+params: 3ee6c442-5620-449e-86e9-021ad1e0ba33
+  query: "select \"id\", \"key_hash\", \"name\", \"user_id\", \"created_at\", \"last_used_at\", \"revoked_at\" from \"api_keys\" where (\"api_keys\".\"user_id\" = ? and \"api_keys\".\"revoked_at\" is null)",
+ params: [
+  "3ee6c442-5620-449e-86e9-021ad1e0ba33"
+],
+
+      at queryWithCache (/Users/sergio/aura-apps/node_modules/.pnpm/drizzle-orm@0.45.2_@libsql+client@0.17.4_bun-types@1.3.14_expo-sqlite@14.0.6_expo@52.0._f87e9e67ad0aab5964d9d6518e722543/node_modules/drizzle-orm/sqlite-core/session.js:43:15)
+      at async values (/Users/sergio/aura-apps/node_modules/.pnpm/drizzle-orm@0.45.2_@libsql+client@0.17.4_bun-types@1.3.14_expo-sqlite@14.0.6_expo@52.0._f87e9e67ad0aab5964d9d6518e722543/node_modules/drizzle-orm/libsql/session.js:193:23)
+      at async all (/Users/sergio/aura-apps/node_modules/.pnpm/drizzle-orm@0.45.2_@libsql+client@0.17.4_bun-types@1.3.14_expo-sqlite@14.0.6_expo@52.0._f87e9e67ad0aab5964d9d6518e722543/node_modules/drizzle-orm/libsql/session.js:136:29)
+      at async <anonymous> (/Users/sergio/aura-apps/apps/backend/src/routes/api-keys.ts:88:8)
+      at async dispatch (/Users/sergio/aura-apps/node_modules/.pnpm/hono@4.12.32/node_modules/hono/dist/compose.js:22:23)
+      at async authMiddleware (/Users/sergio/aura-apps/apps/backend/src/middleware/auth.ts:95:9)
+      at async dispatch (/Users/sergio/aura-apps/node_modules/.pnpm/hono@4.12.32/node_modules/hono/dist/compose.js:22:23)
+
+430 | }
+431 | function mapSqliteError(e) {
+432 |     if (e instanceof Database.SqliteError) {
+433 |         const extendedCode = e.code;
+434 |         const code = mapToBaseCode(e.rawCode);
+435 |         return new LibsqlError(e.message, code, extendedCode, e.rawCode, e);
+                     ^
+LibsqlError: SQLITE_ERROR: no such table: api_keys
+ extendedCode: "SQLITE_ERROR",
+    rawCode: 1,
+       code: "SQLITE_ERROR"
+
+      at mapSqliteError (/Users/sergio/aura-apps/node_modules/.pnpm/@libsql+client@0.17.4/node_modules/@libsql/client/lib-esm/sqlite3.js:435:16)
+      at executeStmt (/Users/sergio/aura-apps/node_modules/.pnpm/@libsql+client@0.17.4/node_modules/@libsql/client/lib-esm/sqlite3.js:338:15)
+      at execute (/Users/sergio/aura-apps/node_modules/.pnpm/@libsql+client@0.17.4/node_modules/@libsql/client/lib-esm/sqlite3.js:83:16)
+      at <anonymous> (/Users/sergio/aura-apps/node_modules/.pnpm/drizzle-orm@0.45.2_@libsql+client@0.17.4_bun-types@1.3.14_expo-sqlite@14.0.6_expo@52.0._f87e9e67ad0aab5964d9d6518e722543/node_modules/drizzle-orm/libsql/session.js:195:61)
+      at queryWithCache (/Users/sergio/aura-apps/node_modules/.pnpm/drizzle-orm@0.45.2_@libsql+client@0.17.4_bun-types@1.3.14_expo-sqlite@14.0.6_expo@52.0._f87e9e67ad0aab5964d9d6518e722543/node_modules/drizzle-orm/sqlite-core/session.js:41:22)
+      at values (/Users/sergio/aura-apps/node_modules/.pnpm/drizzle-orm@0.45.2_@libsql+client@0.17.4_bun-types@1.3.14_expo-sqlite@14.0.6_expo@52.0._f87e9e67ad0aab5964d9d6518e722543/node_modules/drizzle-orm/libsql/session.js:193:23)
+      at all (/Users/sergio/aura-apps/node_modules/.pnpm/drizzle-orm@0.45.2_@libsql+client@0.17.4_bun-types@1.3.14_expo-sqlite@14.0.6_expo@52.0._f87e9e67ad0aab5964d9d6518e722543/node_modules/drizzle-orm/libsql/session.js:136:29)
+      at <anonymous> (/Users/sergio/aura-apps/apps/backend/src/routes/api-keys.ts:88:8)
+      at dispatch (/Users/sergio/aura-apps/node_modules/.pnpm/hono@4.12.32/node_modules/hono/dist/compose.js:22:23)
+      at authMiddleware (/Users/sergio/aura-apps/apps/backend/src/middleware/auth.ts:95:9)
+      at async dispatch (/Users/sergio/aura-apps/node_modules/.pnpm/hono@4.12.32/node_modules/hono/dist/compose.js:22:23)
+
+[http] GET /api-keys → 500 (5ms)
+[http] GET /leaderboard → 200 (1ms)
+[http] DELETE /api-keys/ → 404 (1ms)
+[http] GET /leaderboard → 200 (0ms)
+[startup] Aura Backend running on https://localhost:3000
+38 |   async queryWithCache(queryString, params, query) {
+39 |     if (this.cache === void 0 || is(this.cache, NoopCache) || this.queryMetadata === void 0) {
+40 |       try {
+41 |         return await query();
+42 |       } catch (e) {
+43 |         throw new DrizzleQueryError(queryString, params, e);
+                   ^
+error: Failed query: insert into "api_keys" ("id", "key_hash", "name", "user_id", "created_at", "last_used_at", "revoked_at") values (?, ?, ?, ?, ?, null, null)
+params: 3cde16f7-72a2-403a-8cc9-7a2c8402eabf,2fa84018426addcb81b463c45d309966174135bf86edad0571dd7637e8ddda96,Test Key,3ee6c442-5620-449e-86e9-021ad1e0ba33,1786025562581
+  query: "insert into \"api_keys\" (\"id\", \"key_hash\", \"name\", \"user_id\", \"created_at\", \"last_used_at\", \"revoked_at\") values (?, ?, ?, ?, ?, null, null)",
+ params: [
+  "3cde16f7-72a2-403a-8cc9-7a2c8402eabf", "2fa84018426addcb81b463c45d309966174135bf86edad0571dd7637e8ddda96",
+  "Test Key", "3ee6c442-5620-449e-86e9-021ad1e0ba33", 1786025562581
+],
+
+      at queryWithCache (/Users/sergio/aura-apps/node_modules/.pnpm/drizzle-orm@0.45.2_@libsql+client@0.17.4_bun-types@1.3.14_expo-sqlite@14.0.6_expo@52.0._f87e9e67ad0aab5964d9d6518e722543/node_modules/drizzle-orm/sqlite-core/session.js:43:15)
+      at async run (/Users/sergio/aura-apps/node_modules/.pnpm/drizzle-orm@0.45.2_@libsql+client@0.17.4_bun-types@1.3.14_expo-sqlite@14.0.6_expo@52.0._f87e9e67ad0aab5964d9d6518e722543/node_modules/drizzle-orm/libsql/session.js:121:23)
+
+430 | }
+431 | function mapSqliteError(e) {
+432 |     if (e instanceof Database.SqliteError) {
+433 |         const extendedCode = e.code;
+434 |         const code = mapToBaseCode(e.rawCode);
+435 |         return new LibsqlError(e.message, code, extendedCode, e.rawCode, e);
+                     ^
+LibsqlError: SQLITE_ERROR: no such table: api_keys
+ extendedCode: "SQLITE_ERROR",
+    rawCode: 1,
+       code: "SQLITE_ERROR"
+
+      at mapSqliteError (/Users/sergio/aura-apps/node_modules/.pnpm/@libsql+client@0.17.4/node_modules/@libsql/client/lib-esm/sqlite3.js:435:16)
+      at executeStmt (/Users/sergio/aura-apps/node_modules/.pnpm/@libsql+client@0.17.4/node_modules/@libsql/client/lib-esm/sqlite3.js:338:15)
+      at execute (/Users/sergio/aura-apps/node_modules/.pnpm/@libsql+client@0.17.4/node_modules/@libsql/client/lib-esm/sqlite3.js:83:16)
+      at <anonymous> (/Users/sergio/aura-apps/node_modules/.pnpm/drizzle-orm@0.45.2_@libsql+client@0.17.4_bun-types@1.3.14_expo-sqlite@14.0.6_expo@52.0._f87e9e67ad0aab5964d9d6518e722543/node_modules/drizzle-orm/libsql/session.js:123:60)
+      at queryWithCache (/Users/sergio/aura-apps/node_modules/.pnpm/drizzle-orm@0.45.2_@libsql+client@0.17.4_bun-types@1.3.14_expo-sqlite@14.0.6_expo@52.0._f87e9e67ad0aab5964d9d6518e722543/node_modules/drizzle-orm/sqlite-core/session.js:41:22)
+      at run (/Users/sergio/aura-apps/node_modules/.pnpm/drizzle-orm@0.45.2_@libsql+client@0.17.4_bun-types@1.3.14_expo-sqlite@14.0.6_expo@52.0._f87e9e67ad0aab5964d9d6518e722543/node_modules/drizzle-orm/libsql/session.js:121:23)
+      at execute (/Users/sergio/aura-apps/node_modules/.pnpm/drizzle-orm@0.45.2_@libsql+client@0.17.4_bun-types@1.3.14_expo-sqlite@14.0.6_expo@52.0._f87e9e67ad0aab5964d9d6518e722543/node_modules/drizzle-orm/sqlite-core/query-builders/insert.js:174:54)
+      at then (/Users/sergio/aura-apps/node_modules/.pnpm/drizzle-orm@0.45.2_@libsql+client@0.17.4_bun-types@1.3.14_expo-sqlite@14.0.6_expo@52.0._f87e9e67ad0aab5964d9d6518e722543/node_modules/drizzle-orm/query-promise.js:21:17)
+
+[http] POST /api-keys → 500 (10ms)
+[startup] Aura Backend running on https://localhost:3000
+[shutdown] Closing server...
+[startup] Aura Backend running on https://localhost:3000
+[startup] Aura Backend running on https://localhost:3000
+[http] POST /api-keys → 201 (11ms)
+[http] GET /api-keys → 200 (2ms)
+[http] POST /api-keys → 201 (3ms)
+[http] GET /leaderboard → 200 (8ms)
+[http] GET /feed → 200 (4ms)
+[http] DELETE /api-keys/49e44b9c-9c72-410b-a154-81afc8999608 → 200 (3ms)
+[http] GET /leaderboard → 200 (1ms)
+[http] DELETE /api-keys/49e44b9c-9c72-410b-a154-81afc8999608 → 409 (2ms)
+[shutdown] Closing server...
+[startup] Aura Backend running on https://localhost:3000
+[http] GET /users → 200 (6ms)
+[http] GET /users → 200 (0ms)
+[http] GET /users → 200 (62ms)
+[http] GET /users → 200 (3ms)
+[http] GET /users → 200 (7ms)
+[http] GET /users → 200 (3ms)
+[http] GET /users → 200 (4ms)
+[http] GET /users → 200 (2ms)
