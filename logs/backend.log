@@ -199,3 +199,183 @@ ENOENT: no such file or directory, open '/Users/sergio/aura-apps/apps/backend/sr
       at /Users/sergio/aura-apps/apps/backend/src/serve.ts:12:8
 [startup] Aura Backend running on https://localhost:3000
 [http] GET /health → 200 (0ms)
+[http] GET /health → 200 (0ms)
+[http] GET /favicon.ico → 404 (1ms)
+[http] GET /health → 200 (0ms)
+[http] GET /favicon.ico → 404 (1ms)
+[http] GET /ws → 200 (1ms)
+[http] GET /ws → 200 (1ms)
+[http] GET /health → 200 (1ms)
+[http] GET /health → 200 (0ms)
+[http] GET /health → 200 (0ms)
+[startup] Aura Backend running on https://localhost:3000
+[startup] Aura Backend running on https://localhost:3000
+[startup] Aura Backend running on https://localhost:3000
+[http] GET /health → 200 (1ms)
+35 |   return;
+36 | });
+37 | var websocket = {
+38 |   open(ws) {
+39 |     const websocketListeners = ws.data.events;
+40 |     if (websocketListeners.onOpen) {
+             ^
+TypeError: undefined is not an object (evaluating 'websocketListeners.onOpen')
+      at open (/Users/sergio/aura-apps/node_modules/.pnpm/hono@4.12.32/node_modules/hono/dist/adapter/bun/websocket.js:40:9)
+      at fetch (/Users/sergio/aura-apps/apps/backend/src/serve.ts:23:16)
+41 |       websocketListeners.onOpen(new Event("open"), createWSContext(ws));
+42 |     }
+43 |   },
+44 |   close(ws, code, reason) {
+45 |     const websocketListeners = ws.data.events;
+46 |     if (websocketListeners.onClose) {
+             ^
+TypeError: undefined is not an object (evaluating 'websocketListeners.onClose')
+      at close (/Users/sergio/aura-apps/node_modules/.pnpm/hono@4.12.32/node_modules/hono/dist/adapter/bun/websocket.js:46:9)
+[startup] Aura Backend running on https://localhost:3000
+[http] POST /users → 201 (9ms)
+[http] GET /users → 200 (9ms)
+[http] GET /users → 200 (1ms)
+35 |   return;
+36 | });
+37 | var websocket = {
+38 |   open(ws) {
+39 |     const websocketListeners = ws.data.events;
+40 |     if (websocketListeners.onOpen) {
+             ^
+TypeError: undefined is not an object (evaluating 'websocketListeners.onOpen')
+      at open (/Users/sergio/aura-apps/node_modules/.pnpm/hono@4.12.32/node_modules/hono/dist/adapter/bun/websocket.js:40:9)
+      at fetch (/Users/sergio/aura-apps/apps/backend/src/serve.ts:23:16)
+41 |       websocketListeners.onOpen(new Event("open"), createWSContext(ws));
+42 |     }
+43 |   },
+44 |   close(ws, code, reason) {
+45 |     const websocketListeners = ws.data.events;
+46 |     if (websocketListeners.onClose) {
+             ^
+TypeError: undefined is not an object (evaluating 'websocketListeners.onClose')
+      at close (/Users/sergio/aura-apps/node_modules/.pnpm/hono@4.12.32/node_modules/hono/dist/adapter/bun/websocket.js:46:9)
+[startup] Aura Backend running on https://localhost:3000
+35 |   return;
+36 | });
+37 | var websocket = {
+38 |   open(ws) {
+39 |     const websocketListeners = ws.data.events;
+40 |     if (websocketListeners.onOpen) {
+             ^
+TypeError: undefined is not an object (evaluating 'websocketListeners.onOpen')
+      at open (/Users/sergio/aura-apps/node_modules/.pnpm/hono@4.12.32/node_modules/hono/dist/adapter/bun/websocket.js:40:9)
+      at fetch (/Users/sergio/aura-apps/apps/backend/src/serve.ts:23:16)
+41 |       websocketListeners.onOpen(new Event("open"), createWSContext(ws));
+42 |     }
+43 |   },
+44 |   close(ws, code, reason) {
+45 |     const websocketListeners = ws.data.events;
+46 |     if (websocketListeners.onClose) {
+             ^
+TypeError: undefined is not an object (evaluating 'websocketListeners.onClose')
+      at close (/Users/sergio/aura-apps/node_modules/.pnpm/hono@4.12.32/node_modules/hono/dist/adapter/bun/websocket.js:46:9)
+[startup] Aura Backend running on https://localhost:3000
+35 |   return;
+36 | });
+37 | var websocket = {
+38 |   open(ws) {
+39 |     const websocketListeners = ws.data.events;
+40 |     if (websocketListeners.onOpen) {
+             ^
+TypeError: undefined is not an object (evaluating 'websocketListeners.onOpen')
+      at open (/Users/sergio/aura-apps/node_modules/.pnpm/hono@4.12.32/node_modules/hono/dist/adapter/bun/websocket.js:40:9)
+      at fetch (/Users/sergio/aura-apps/apps/backend/src/serve.ts:23:16)
+41 |       websocketListeners.onOpen(new Event("open"), createWSContext(ws));
+42 |     }
+43 |   },
+44 |   close(ws, code, reason) {
+45 |     const websocketListeners = ws.data.events;
+46 |     if (websocketListeners.onClose) {
+             ^
+TypeError: undefined is not an object (evaluating 'websocketListeners.onClose')
+      at close (/Users/sergio/aura-apps/node_modules/.pnpm/hono@4.12.32/node_modules/hono/dist/adapter/bun/websocket.js:46:9)
+[startup] Aura Backend running on https://localhost:3000
+35 |   return;
+36 | });
+37 | var websocket = {
+38 |   open(ws) {
+39 |     const websocketListeners = ws.data.events;
+40 |     if (websocketListeners.onOpen) {
+             ^
+TypeError: undefined is not an object (evaluating 'websocketListeners.onOpen')
+      at open (/Users/sergio/aura-apps/node_modules/.pnpm/hono@4.12.32/node_modules/hono/dist/adapter/bun/websocket.js:40:9)
+      at fetch (/Users/sergio/aura-apps/apps/backend/src/serve.ts:23:16)
+41 |       websocketListeners.onOpen(new Event("open"), createWSContext(ws));
+42 |     }
+43 |   },
+44 |   close(ws, code, reason) {
+45 |     const websocketListeners = ws.data.events;
+46 |     if (websocketListeners.onClose) {
+             ^
+TypeError: undefined is not an object (evaluating 'websocketListeners.onClose')
+      at close (/Users/sergio/aura-apps/node_modules/.pnpm/hono@4.12.32/node_modules/hono/dist/adapter/bun/websocket.js:46:9)
+[startup] Aura Backend running on https://localhost:3000
+35 |   return;
+36 | });
+37 | var websocket = {
+38 |   open(ws) {
+39 |     const websocketListeners = ws.data.events;
+40 |     if (websocketListeners.onOpen) {
+             ^
+TypeError: undefined is not an object (evaluating 'websocketListeners.onOpen')
+      at open (/Users/sergio/aura-apps/node_modules/.pnpm/hono@4.12.32/node_modules/hono/dist/adapter/bun/websocket.js:40:9)
+      at fetch (/Users/sergio/aura-apps/apps/backend/src/serve.ts:23:16)
+41 |       websocketListeners.onOpen(new Event("open"), createWSContext(ws));
+42 |     }
+43 |   },
+44 |   close(ws, code, reason) {
+45 |     const websocketListeners = ws.data.events;
+46 |     if (websocketListeners.onClose) {
+             ^
+TypeError: undefined is not an object (evaluating 'websocketListeners.onClose')
+      at close (/Users/sergio/aura-apps/node_modules/.pnpm/hono@4.12.32/node_modules/hono/dist/adapter/bun/websocket.js:46:9)
+[startup] Aura Backend running on https://localhost:3000
+[http] GET /users → 200 (3ms)
+[http] GET /users → 200 (3ms)
+[http] GET /users → 200 (1ms)
+35 |   return;
+36 | });
+37 | var websocket = {
+38 |   open(ws) {
+39 |     const websocketListeners = ws.data.events;
+40 |     if (websocketListeners.onOpen) {
+             ^
+TypeError: undefined is not an object (evaluating 'websocketListeners.onOpen')
+      at open (/Users/sergio/aura-apps/node_modules/.pnpm/hono@4.12.32/node_modules/hono/dist/adapter/bun/websocket.js:40:9)
+      at fetch (/Users/sergio/aura-apps/apps/backend/src/serve.ts:23:16)
+41 |       websocketListeners.onOpen(new Event("open"), createWSContext(ws));
+42 |     }
+43 |   },
+44 |   close(ws, code, reason) {
+45 |     const websocketListeners = ws.data.events;
+46 |     if (websocketListeners.onClose) {
+             ^
+TypeError: undefined is not an object (evaluating 'websocketListeners.onClose')
+      at close (/Users/sergio/aura-apps/node_modules/.pnpm/hono@4.12.32/node_modules/hono/dist/adapter/bun/websocket.js:46:9)
+[startup] Aura Backend running on https://localhost:3000
+[startup] Aura Backend running on https://localhost:3000
+[http] GET /health → 200 (0ms)
+[startup] Aura Backend running on https://localhost:3000
+[http] GET /health → 200 (1ms)
+[http] GET /users → 200 (19ms)
+[http] GET /users → 200 (4ms)
+[http] GET /users → 200 (2ms)
+[http] GET /users → 200 (11ms)
+[http] GET /users → 200 (8ms)
+[startup] Aura Backend running on https://localhost:3000
+[startup] Aura Backend running on https://localhost:3000
+[http] GET /leaderboard → 200 (9ms)
+[http] GET /leaderboard/user/3ee6c442-5620-449e-86e9-021ad1e0ba33 → 200 (10ms)
+[startup] Aura Backend running on https://localhost:3000
+[startup] Aura Backend running on https://localhost:3000
+[startup] Aura Backend running on https://localhost:3000
+[startup] Aura Backend running on https://localhost:3000
+[startup] Aura Backend running on https://localhost:3000
+[startup] Aura Backend running on https://localhost:3000
+[http] GET /users → 200 (4ms)
+[http] GET /users → 200 (1ms)

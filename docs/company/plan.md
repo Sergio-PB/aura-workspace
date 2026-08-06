@@ -383,6 +383,40 @@ points = Σ (rate × duration_seconds × moveMultiplier)
 
 ---
 
+### P-17: Game-Like GUI
+
+**Goal:** Transform the Farm UI from a functional debug panel into an addictive mobile game interface. Every screen should feel like a polished social game — particle effects, haptic-like visual feedback, satisfying transitions, score popups, combo streaks. This is a **standing requirement** for all future movement library additions: every new move must ship with its own visual identity (particle color, animation, sound cue placeholder).
+
+**Design principles:**
+- **Addictive feedback loops** — every gesture triggers immediate, satisfying visual/audio reward
+- **Mobile-first game feel** — large touch targets, gesture-friendly layout, no tiny text
+- **Dark theme with neon accents** — particles glow, scores pulse, combos flash
+- **Minimalist HUD** — only what matters: who you're scoring, current move, combo counter, total points
+- **60fps animations** — no jank, no flicker, smooth particle physics
+- **Sound design placeholders** — every move type has a designated sound slot (implement later, design now)
+
+**Checklist:**
+- [ ] **Game HUD overlay** — replaces debug panel. Shows: target user avatar, current move name, combo counter, aura points with animated counter
+- [ ] **Combo system** — consecutive moves within 2s window multiply points (×2, ×3, ×5, ×10). Visual streak indicator
+- [ ] **Move-specific particles** — each move type has unique particle color/shape/behavior (seesaw=gold waves, wave=blue ripples, clap=white burst, raise_roof=purple columns)
+- [ ] **Score popups** — "+24 aura" floats up and fades on each point award
+- [ ] **Level-up animations** — milestone thresholds (100, 500, 1000, 5000 points) trigger full-screen celebration
+- [ ] **Haptic feedback hooks** — placeholder API for vibration on move detection (implement when Capacitor plugin added)
+- [ ] **Sound cue slots** — each move type, combo, and level-up has a named sound slot (`.sfx.seesaw`, `.sfx.combo_x3`, etc.) for future audio integration
+- [ ] **Transition animations** — screen transitions (home→record, record→feed) use smooth slides/fades
+- [ ] **Loading states** — camera init, model loading, WebSocket connecting all have animated indicators (not blank screens)
+- [ ] **Dark theme polish** — consistent color palette, proper contrast ratios, no raw CSS defaults
+
+**Standing requirement:** Every new move added to the movement library (P-12) MUST include:
+1. Unique particle effect (color, shape, behavior)
+2. Sound cue slot name
+3. Combo multiplier integration
+4. Score popup style
+
+**Depends on:** P-11 (tracking working), P-12 (move library for per-move effects), P-13 (reward system for combo logic)
+
+---
+
 ### N-3: Network Effects
 
 **Goal:** The network grows on its own. Reputation becomes portable and valuable.
