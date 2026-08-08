@@ -272,3 +272,5 @@
       at /Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:13462:12
 3:06:26 PM [vite] (client) hmr update /src/screens/RecordScreen.tsx
 3:06:33 PM [vite] (client) hmr update /src/screens/RecordScreen.tsx
+3:46:39 PM [vite] (client) hmr update /src/components/EgoBurst.tsx
+3:46:47 PM [vite] (client) hmr update /src/components/EgoBurst.tsx

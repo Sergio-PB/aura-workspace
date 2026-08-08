@@ -1,16 +1,12 @@
 {
-  "consecutive_failures": 10,
+  "consecutive_failures": 0,
   "consecutive_timeouts": 0,
-  "last_error_type": "rate_limit",
-  "last_error_message": "RuntimeError: HTTP 429: you (sergiopb1998) have reached your weekly usage limit, upgrade for higher limits: https://ollama.com/upgrade or add extra usage: https://ollama.com/settings (ref: 49c0fffb-6b",
+  "last_error_type": null,
+  "last_error_message": null,
   "cooldown_until": null,
-  "last_alerted_failures": 10,
-  "last_alerted_at": "2026-08-08T18:24:42.119306+00:00",
+  "last_alerted_failures": 0,
+  "last_alerted_at": "2026-08-08T18:31:00.239948+00:00",
   "last_5_statuses": [
-    "F",
-    "F",
-    "F",
-    "F",
-    "F"
+    "R"
   ]
 }
