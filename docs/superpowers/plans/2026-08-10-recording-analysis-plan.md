@@ -54,7 +54,7 @@ Three responsibilities, clean split:
 **Interfaces:**
 - Produces: `NormalizedLandmark`, `FrameTrace`, `Trace`, `MoveName`, `GestureName` — used in Task 2 and 4
 
-- [ ] **Step 1: Write the failing test in `analyze.test.ts`** (full file, stub)
+- [x] **Step 1: Write the failing test in `analyze.test.ts`** (full file, stub)
 
 Create `apps/farm-capacitor/src/analyze/analyze.test.ts`:
 
@@ -134,7 +134,7 @@ if (typeof process !== "undefined" && process.argv[1]?.endsWith("analyze.test.ts
 
 Note: test imports `fromTraceJSON` and `frameIndexAt` which don't exist yet — those will fail at import time, satisfying the "fails first" rule. We're also missing `MoveName`, `GestureName`, `Trace.config` type, and `Trace.summary` shape. All of these ship in `types.ts` (next step).
 
-- [ ] **Step 2: Run the test, observe it fails**
+- [x] **Step 2: Run the test, observe it fails**
 
 Run:
 
@@ -144,7 +144,7 @@ cd /Users/sergio/aura-apps/apps/farm-capacitor && npx tsx src/analyze/analyze.te
 
 Expected: `ERR_MODULE_NOT_FOUND` or "Cannot find module './types'" (the file doesn't exist yet).
 
-- [ ] **Step 3: Create `apps/farm-capacitor/src/analyze/types.ts`**
+- [x] **Step 3: Create `apps/farm-capacitor/src/analyze/types.ts`**
 
 ```ts
 // src/analyze/types.ts
@@ -198,7 +198,7 @@ export interface Trace {
 
 Note: `TraceConfigSnapshot` is a narrow view of `TuningConfig` (from `store/tuning.ts`). We re-declare only the four fields the analyzer needs so this module doesn't import from the React-side store.
 
-- [ ] **Step 4: Verify the test still fails (types exist, traceIO still missing)**
+- [x] **Step 4: Verify the test still fails (types exist, traceIO still missing)**
 
 Run:
 
@@ -208,7 +208,7 @@ cd /Users/sergio/aura-apps/apps/farm-capacitor && npx tsx src/analyze/analyze.te
 
 Expected: still fails — `traceIO.ts` doesn't exist yet. The error should now be about `./traceIO`, not `./types`.
 
-- [ ] **Step 5: Commit**
+- [x] **Step 5: Commit**
 
 ```bash
 cd /Users/sergio/aura-apps && git add apps/farm-capacitor/src/analyze/types.ts apps/farm-capacitor/src/analyze/analyze.test.ts && git commit -m "feat(farm/analyze): add Trace + FrameTrace types and failing self-check"
@@ -226,7 +226,7 @@ cd /Users/sergio/aura-apps && git add apps/farm-capacitor/src/analyze/types.ts a
 - Consumes: types from `analyze/types.ts`
 - Produces: `toTraceJSON(trace): string`, `fromTraceJSON(json: unknown): Trace`, `frameIndexAt(trace: Trace, tMs: number): number`
 
-- [ ] **Step 1: Run the test, observe it still fails on missing `./traceIO`**
+- [x] **Step 1: Run the test, observe it still fails on missing `./traceIO`**
 
 ```bash
 cd /Users/sergio/aura-apps/apps/farm-capacitor && npx tsx src/analyze/analyze.test.ts
@@ -234,7 +234,7 @@ cd /Users/sergio/aura-apps/apps/farm-capacitor && npx tsx src/analyze/analyze.te
 
 Expected: error mentions `traceIO`.
 
-- [ ] **Step 2: Create `apps/farm-capacitor/src/analyze/traceIO.ts`**
+- [x] **Step 2: Create `apps/farm-capacitor/src/analyze/traceIO.ts`**
 
 ```ts
 // src/analyze/traceIO.ts
@@ -286,7 +286,7 @@ export function appendFrame(trace: Trace, frame: FrameTrace): void {
 
 Why a linear scan in `frameIndexAt`: the spec calls out clip lengths of ~120 frames. Binary search is the upgrade path if a 1×speed → 0.25×speed 4-minute clip ever lands. Marked `# ponytail: O(n) linear scan, add binary search if clip > 500 frames`.
 
-- [ ] **Step 3: Run the test, observe it passes**
+- [x] **Step 3: Run the test, observe it passes**
 
 ```bash
 cd /Users/sergio/aura-apps/apps/farm-capacitor && npx tsx src/analyze/analyze.test.ts
@@ -294,7 +294,7 @@ cd /Users/sergio/aura-apps/apps/farm-capacitor && npx tsx src/analyze/analyze.te
 
 Expected: 5 `PASS` lines, no errors. Exit code 0.
 
-- [ ] **Step 4: Commit**
+- [x] **Step 4: Commit**
 
 ```bash
 cd /Users/sergio/aura-apps && git add apps/farm-capacitor/src/analyze/traceIO.ts && git commit -m "feat(farm/analyze): traceIO JSON round-trip + frame index lookup"
