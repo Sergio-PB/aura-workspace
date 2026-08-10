@@ -48,46 +48,25 @@ Why this and not the alternatives:
 
 MediaPipe WASM is non-deterministic per-frame on the same input — that's an inherent property, not a Cypress limitation. Tolerance assertions (move spans present, in roughly the right window) are the correct shape for a vision pipeline. Exact-frame equality would be coincidental.
 
-Decisions recorded on user silence (no objection assumed, can flip):
-
-- **Playback model:** run-once + scrubber (vs. "play clip and overlay in sync"). Run-once avoids the race where CI is slower than the actual video — overlay frames are stamped against `video.currentTime`, not wall clock.
-- **A/B comparison location:** **CI-only** at first; browser-compare UI is a future milestone. Sergio's #1 priority is automation, and A/B was framed as "later in the future".
-
 ---
 
 ## 3. Architecture
 
 ```
 apps/farm-capacitor/src/
-├── screens/RecordScreen.tsx                  (extended — analyze state machine + scrubber;
-│                                                also hosts the `useAnalyzeRun` driver)
+├── screens/RecordScreen.tsx                  (extended — analyze state + layer-toggles panel)
 ├── analyze/                                  (NEW MODULE)
 │   ├── types.ts                              FrameTrace, Trace
-│   ├── runOnce.ts                            file → Trace (deterministic driver)
-│   ├── overlayDraw.ts                        FrameTrace + canvas → draw calls
-│   ├── kpis.ts                               Trace → per-move stats (counts, durations)
 │   ├── traceIO.ts                            Trace ⇄ JSON + window.__AURA_TRACE__
 │   └── analyze.test.ts                       stub-based self-check (matches audio.test.ts style)
-├── components/
-│   ├── AnalyzeOverlay.tsx                    (NEW — sibling canvas to ParticleOverlay)
-│   └── AnalyzeScrubber.tsx                   (NEW — slider + transport)
 └── hooks/
-    └── useMediaPipe.ts                       (UNCHANGED core + one new export:
-                                              a `sendOnce(video)` stepper that
-                                              bypasses the RAF pump when called from
-                                              analyze mode — does NOT change camera/file behavior)
+    └── useMediaPipe.ts                       (UNCHANGED)
 
 apps/farm-capacitor/cypress/
 ├── e2e/analyze/
 │   ├── smoke.cy.ts                           boots Farm, waits for MediaPipe ready
-│   ├── seesaw.cy.ts                          one fixture per move (5 total)
-│   ├── wave.cy.ts
-│   ├── clap.cy.ts
-│   ├── raise-roof.cy.ts
-│   └── point.cy.ts
-├── fixtures/
-│   ├── recordings/{seesaw,wave,clap,raise-roof,point}.webm   committed, ~50–150KB each
-│   └── expectations/{seesaw,wave,clap,raise-roof,point}.json  expected TraceSummary
+│   └── {seesaw,wave,clap,raise-roof,point}.cy.ts
+├── fixtures/recordings/{seesaw,wave,clap,raise-roof,point}.webm   committed binary
 ├── support/
 │   ├── commands.ts                           cy.loadFixture(name), cy.getAuraTrace()
 │   └── assert.ts                             tolerant span-match helpers
@@ -103,7 +82,7 @@ scripts/
 |---|---|---|---|
 | Live (unchanged) | camera | existing RAF pump | particles + game + live websocket |
 | File → Validate (unchanged) | file | existing RAF pump | ValidationSummary JSON (the buggy path we're fixing) |
-| File → Analyze (NEW) | file | `useAnalyzeRun` stepper (NEW) | Trace JSON + canvas overlay + scrubber |
+| File → Analyze (NEW) | file | existing RAF pump, with `analyze = on` accumulating frames | Trace JSON + paint layers (raw + per-move trails) drawn live over the video |
 
 **Bug hypothesis (requires verification before fix):**
 
@@ -112,11 +91,9 @@ scripts/
 
 **First implementation step (regardless of spec approval):** stand up the analyze pipeline + 5 Cypress tests against the existing file mode. The fix to the playback bug is whatever the Cypress tests reveal — if the tests pass against the current RAF pump, the bug is somewhere else; if they fail with `incomplete: "timeout"`, the root cause is the pump gating. Document the finding either way.
 
-**The Analyze mode adds an additional driver on top.** It pauses, then for each frame index N: `video.currentTime = N / fps`, wait for `requestVideoFrameCallback` (or a RAF-fallback polled 5x), call `hands.send({ image: video })`, await the next `onResults`, append `{ tMs, landmarks, gesture, move, moveRate }` to `frames`. When all frames are captured, swap transport to scrubber.
+**The Analyze mode is a side-effect of the existing tick loop.** When `analyze = on`, every MediaPipe `onResults` callback (which already runs per frame) appends to a Trace array in addition to the existing `moveLogRef` push. When `analyze = off` (default), the RAF pump behaves exactly as today. Analysis re-runs whenever the user presses Analyze again with `analyze = on`; the resulting Trace JSON is downloadable as an artifact.
 
-Note: the analyze driver **replaces** the file-mode RAF pump while running. Once analyze completes, scrubbing is driven by `requestVideoFrameCallback` (decoded-frame ticks), not by MediaPipe — scrubbing does not re-run hand tracking per frame. If a user wants per-scrub-frame re-detection, that's a future enhancement, not in MVP.
-
-**Why no changes inside `useMediaPipe` core.** It already exposes the right hooks (an `onResults` callback that fires per-frame, a `source: "file"` mode with a RAF pump). We add one escape hatch: a function `sendFrameOnce(videoEl)` exported from the hook ONLY when `source === "file"`. This calls `hands.send({ image: videoEl })` and is gated by the caller (not by the RAF pump racing with the analyze stepper). Camera mode is unaffected.
+**No changes inside `useMediaPipe`.** The hook already emits `onResults` per frame. RecordScreen subscribes a Trace-accumulator when analyze is on. Camera mode is unaffected.
 
 ---
 
@@ -159,37 +136,21 @@ interface Trace {
 
 ## 5. UX
 
-**File-mode controls bar (existing).** Pressing the existing ▶/⏸ button is always natural video playback. The ✅ Validate button keeps working and is unchanged.
+**Playback is unchanged.** The existing file-mode controls bar (▶/⏸ + slider + speed + ✅ Validate + 📁 Choose + 📷 switch-to-camera) stays as-is. The video plays normally; the user pauses, scrubs, speed-changes, switches back to camera — all the same.
 
-**Analyze button (new, in the file-mode controls bar, next to Validate):**
+**Two additions to the bar:**
 
-```
-┌── file mode controls bar ───────────────────────────────────────────┐
-│ [⏪ -1f] [▶ / ⏸ Play trace] [⏩ +1f]   ──◯───  1.20s / 4.00s       │
-│ [🔬 Analyze]   ← only enabled in "natural" file mode                │
-│ [💾 Copy Trace] [💾 Download Trace]    ← visible in scrub mode      │
-│ Layers: [✓ Raw landmarks] [✓ Move trail] [○ Particles]   Speed 1x    │
-└────────────────────────────────────────────────────────────────────┘
-```
+- **[🔬 Analyze]** — toggle. When on, MediaPipe frames accumulate into the Trace every time `onResults` fires. When off (default), the Trace stays empty. No waiting, no mode-switch, no special playback.
+- **Layer toggles** — a small panel above the bar, visible only when `Analyze = on AND Trace.frames.length > 0`. Three checkboxes, all defaulting OFF until Analyze runs:
+  - [ ] **Raw landmarks** — 21 dots per visible hand, MediaPipe stick-figure connections (cyan).
+  - [ ] **Seesaw trail** — polyline of wrist positions while move === `"seesaw"` (gold).
+  - [ ] **Other-move trails** — one checkbox + color per detected move (cyan wave / magenta clap / green raise_roof / orange point). The user said "XYZ-movement trail" — these are stable, one per move type, config-driven not hand-painted.
 
-Pressing 🔬 Analyze:
+**Painting happens at runtime** during natural playback. No pre-stepped frames. Each frame: read `Trace.frames[i]` where `i` indexes into the trace array by `tMs ≈ video.currentTime*1000`. The Trace is read-only from the canvas's perspective — playback drives `i`, paint reads `frames[i]`.
 
-1. Pauses natural playback (via `video.pause()`).
-2. Swaps transport to scrubber.
-3. Runs the deterministic stepper; while running, the button shows `🔬 Analyzing...` (disabled).
-4. On completion, scrubber becomes interactive, overlay renders frame 0, control bar shows the copy/download buttons.
+**Analyze button interaction.** Click → toggle on → Trace starts filling. Click again → toggle off → Trace is frozen and the layer toggles stay visible (cached trace). Click once more → toggle on again → Trace resets and starts filling anew.
 
-Re-pressing Analyze from scrub mode re-runs and replaces the trace. Validate JSON is independently available via the existing ✅ button (it consumes the same `moveLogRef`).
-
-**Overlay canvas (sibling to `ParticleOverlay` canvas).**
-
-- **Raw landmarks layer** — 21 dots per visible hand, MediaPipe stick-figure connections (cyan). Border becomes lime if `gesture !== 'unknown'`. Confidence shown above the bounding box.
-- **Move trail layer** — per move, a polyline of the last N wrist positions (gold seesaw / cyan wave / magenta clap / green raise_roof / orange point). Cleared on move change.
-- **Particles layer** — toggleable; OFF by default in analyze mode (keeps the overlay readable).
-
-Default layers: Raw + Move trail ON, Particles OFF.
-
-**Why a separate canvas.** `ParticleOverlay` is its own RAF loop with internal state. Sharing a canvas with a different draw API would tangle two renderers. Ponytail rungs 2 (existing patterns) and 4 (don't add a new dep): a sibling canvas is ~80 LOC, zero coupling.
+**A separate overlay canvas, sibling to `ParticleOverlay`.** Particles continue animating live (existing path); the overlay canvas paints raw landmarks + per-move trails on top, gated by the toggles. Both render under the file-mode controls bar.
 
 ---
 
@@ -200,7 +161,7 @@ Default layers: Raw + Move trail ON, Particles OFF.
 | File won't decode (codec/format) | red banner "Could not load video. Try MP4/WebM." | `window.__AURA_TRACE__ = { error: "decode" }` |
 | MediaPipe throws during pump | skip frame, log `[aura analyze] frame N failed: <err>`; trace `incomplete: "partial"` (frames array short of requested) | trace.frames[i] missing; Cypress uses span-presence on what exists |
 | Pump stalled (0 frames after 30s wall) | "Analysis stuck. Try a shorter clip or refresh." | `incomplete: "timeout"` |
-| User clicks Analyze twice | second click is no-op while `analyzeMode === "play-once"` | — |
+| User clicks Analyze twice (off→on while filling) | new push resets Trace; old frames are wiped | — |
 | File mode but no MediaPipe (network blocked CDN) | bubbled up from `useMediaPipe` `[mediapipe]` error | trace.frames empty + `incomplete: "timeout"` |
 
 Errors never fail silently. Cypress does NOT silently pass — a `timeout` trace fails the test with a clear message naming the failure mode.
@@ -211,76 +172,30 @@ Errors never fail silently. Cypress does NOT silently pass — a `timeout` trace
 
 **Unit-style self-check (`npx tsx src/analyze/analyze.test.ts`).**
 
-- `buildSummary` correctness (1 happy + 2 edge cases)
 - `toTraceJSON` round-trip (Trace → JSON → Trace equals)
-- `kpis` per-move counts (5 fixtures worth of synthetic frames)
-- `overlayDraw` draw-call counts per visible layer (stub canvas)
+- Layer-index helper — `(frames, tMs) => frameIndex` correctness on edge cases (frame before, frame after, exact match)
 
 Pattern matches `src/audio/sound.test.ts` (project convention). No Vitest. `package.json` script: `"test:analyze": "tsx src/analyze/analyze.test.ts"`.
 
-**Cypress end-to-end.**
-
-```
-cypress/
-├── cypress.config.ts                 vite dev server + HTTPS, headless, video off
-├── e2e/analyze/smoke.cy.ts           boots Farm, clicks 🔬 Analyze on a synthetic clip,
-│                                     waits for window.__AURA_TRACE__, asserts summary
-├── e2e/analyze/{seesaw,wave,clap,raise-roof,point}.cy.ts
-│                                     one per move — load fixture, run analyze, assert
-│                                     expected summary span
-├── support/commands.ts               cy.loadFixture(name), cy.getAuraTrace()
-└── support/assert.ts                 assertMoveSpan(trace, move, {minStartMs, maxStartMs, minDurationMs})
-```
+**Cypress end-to-end.** One spec per fixture; spec flow: load fixture, click ▶, click 🔬 Analyze, wait for `Trace.frames.length > N`, assert via tolerant span-match.
 
 **Tolerance-based assertions.** MediaPipe is non-deterministic frame-to-frame. The assertion shape is span-presence:
 
 ```ts
 cy.getAuraTrace().then((trace) => {
-  assertMoveSpan(trace, "seesaw", {
-    minStartMs: 200,
-    maxStartMs: 800,
-    minDurationMs: 500,
-  });
+  assertMoveSpan(trace, "seesaw", { minStartMs: 200, maxStartMs: 1500, minDurationMs: 300 });
 });
 ```
 
-Strict tMs equality is a known ceiling — the spec records it and the upgrade path is to swap MediaPipe for a deterministic fixed-point detector on the CI side. We don't go there now (YAGNI — the user's tolerance target is "the same fixture in CI has the same move landed roughly the same place", not "exact same frame").
+Strict tMs equality is a known ceiling — the upgrade path is to swap MediaPipe for a deterministic detector on the CI side. We don't go there now (YAGNI).
 
-**Fixtures.** Five `.webm` recordings at 320×240 @ ~30fps × 4s, total ~500KB committed binary. Built once via `scripts/build-fixtures.sh` (uses existing Farm recording path or a synthetic generator). Expected traces live next to the recordings as `.json` files.
+**Fixtures.** Five `.webm` recordings at 320×240 @ ~30fps × 4s, total ~500KB committed binary. Built once via `scripts/build-fixtures.sh`. No `.json` expectation files — type-checks against the Trace shape, that's enough.
 
-**CI integration.** Add `cypress run --browser chrome` to `.github/workflows/`. Cypress job uploads screenshots + traces on failure. Job name matches the existing test conventions.
+**CI integration.** Add `cypress run --browser chrome` to `.github/workflows/`. Cypress job uploads screenshots + traces on failure.
 
 ---
 
 ## 8. Migration / rollout
 
-1. Ship the analyze pipeline + 5 Cypress tests behind the existing file mode. (No UI change to Validate; it gets fixed as a side-effect of fixing the file-mode RAF pump.)
-2. Land 🔬 Analyze button + scrubber + overlay canvas as the same PR (visually distinct, can be hidden behind `?analyze` URL param while testing).
-3. Wire Cypress into CI once green locally.
-4. Later: A/B comparison UI reading CI-produced trace diffs.
-
----
-
-## 9. Out of scope
-
-- **A/B browser UI** — later. CI trace-diff is the first deliverable.
-- **Multi-move composite fixtures** — kept single-move per Sergio's request.
-- **Changing the live-mode pump** — works, untouched.
-- **Porting the engine to Node** — explicit non-goal. Two-engine drift is worse than tolerance-based assertions.
-
----
-
-## 10. Open questions
-
-- Should the scrubber auto-advance during "Play trace" mode, or always wait for user input? Spec assumes auto-advance; can flip.
-- Should the A/B config swap (B-section) be a single selector in the TuningPanel (one of N snapshots), or always the current live tuning? Spec assumes current live tuning; can flip.
-- Should fixtures be regenerated by `build-fixtures.sh` on every CI run (synthetic), or remain committed? Spec assumes committed for first rollout; can flip to synthetic later.
-
----
-
-## 11. Test deliverables (summary)
-
-- `analyze.test.ts` — 5 stub-based self-checks.
-- 5 Cypress fixture specs + 1 smoke spec.
-- 5 fixture `.webm` files + 5 `.json` expectations, committed.
-- 1 fixture-builder script (`scripts/build-fixtures.sh`), runnable manually.
+1. Ship the analyze pipeline + 5 Cypress tests behind a `?analyze` URL flag (default off).
+2. Wire Cypress into CI once green locally; flip default to on.
