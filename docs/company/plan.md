@@ -349,7 +349,7 @@ Launch a social reputation network at `ifarm.club` with two products: **The Farm
 - [~] **Legal** — ToS + Privacy Policy drafts exist (pending lawyer review). DMCA/copyright policy done (`docs/legal/dmca-policy.md`). Gap: company not formed
 - [~] **App store readiness** — Native projects created, icon done, guide written. Blocked: Xcode, Android Studio, developer accounts, screenshots
 - [~] **Infrastructure** — Dockerfile + fly.toml + CI ready. Blocked: Fly.io auth + payment method. Gap: Tigris deploy, CDN, production DB
-- [~] **Monitoring** — Cron stack + launchd watchdog exist. Production monitoring built: structured event ring buffer, abuse alerting, health check with DB probe (`/admin/events`, `/admin/alerts`, `/admin/healthz`). Webhook delivery done (`AURA_ALERT_WEBHOOK_URL`). Sentry error tracking added (2026-08-08): `@sentry/bun` init from `SENTRY_DSN`, `app.onError` captures all unhandled Hono errors. Gap: uptime monitoring (external ping).
+- [x] **Monitoring** — Cron stack + launchd watchdog exist. Production monitoring built: structured event ring buffer, abuse alerting, health check with DB probe (`/admin/events`, `/admin/alerts`, `/admin/healthz`). Webhook delivery done (`AURA_ALERT_WEBHOOK_URL`). Sentry error tracking added (2026-08-08): `@sentry/bun` init from `SENTRY_DSN`, `app.onError` captures all unhandled Hono errors. Uptime monitoring: `scripts/uptime-monitor.py` pings landing page every 5 min, logs response times, alerts on 2+ consecutive failures via webhook.
 - [x] **Community guidelines** — `docs/community/guidelines.md` v1.0 published with enforcement ladder
 - [x] **Launch plan** — `docs/product/launch-plan.md`: phased rollout (soft → friends → event → beta → public), comms plan, go/no-go criteria, post-launch metrics
 

@@ -130,7 +130,7 @@
 - [x] Structured event ring buffer + abuse alerting (`/admin/events`, `/admin/alerts`)
 - [x] Health check with DB probe (`/admin/healthz`)
 - [x] Webhook delivery for alerts (`AURA_ALERT_WEBHOOK_URL`)
-- [ ] **Gap:** No uptime monitoring (external ping service)
+- [x] **Gap:** No uptime monitoring (external ping service) — resolved: `scripts/uptime-monitor.py`
 
 ---
 
@@ -179,7 +179,7 @@
 | Legal | PARTIAL | Lawyer review, company formation |
 | App store readiness | PARTIAL | Xcode, Android Studio, developer accounts |
 | Infrastructure | PARTIAL | Fly.io deploy, Tigris, CDN, production DB |
-| Monitoring | DONE | External uptime ping only gap |
+| Monitoring | DONE | — |
 | Community guidelines | DONE | — |
 | Launch plan | DONE | — |
 
@@ -192,6 +192,5 @@
 6. Lawyer review of ToS + Privacy Policy (legal)
 
 **Next agent work (in dependency order):**
-1. External uptime monitoring (last monitoring gap)
-2. Tigris media storage integration (ADR-009)
-3. Production database migration (libSQL → Turso/Fly Postgres)
+1. Tigris media storage integration (ADR-009)
+2. Production database migration (libSQL → Turso/Fly Postgres)
