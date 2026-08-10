@@ -61,15 +61,15 @@ All items must be checked before Phase 1:
 
 - [x] Abuse prevention — duplicate detection
 - [x] Abuse prevention — rate limiting
-- [ ] Abuse prevention — device fingerprinting (browser fingerprint + anomaly detection)
+- [x] Abuse prevention — device fingerprinting (browser fingerprint + anomaly detection)
 - [x] Abuse prevention — minimum effort threshold
 - [x] Abuse prevention — Sybil resistance
 - [x] Security audit — critical + high fixed
-- [ ] Privacy review — telemetry opt-out UI, cookie consent
-- [ ] Legal — DMCA/copyright policy
-- [ ] App store readiness — Xcode, Android Studio, developer accounts
-- [ ] Infrastructure — Fly.io deploy, Tigris, production DB
-- [ ] Monitoring — production error tracking, uptime monitoring, abuse alerting
+- [~] Privacy review — telemetry opt-out UI (done), cookie consent (done). Gap: lawyer review.
+- [~] Legal — DMCA/copyright policy (done). Gap: company formation.
+- [~] App store readiness — native projects + icon + guide done. Blocked: Xcode, Android Studio, developer accounts.
+- [~] Infrastructure — Docker + fly.toml + CI ready. Blocked: Fly.io auth + payment method.
+- [x] Monitoring — production error tracking (Sentry), uptime monitoring (scripts/uptime-monitor.py), abuse alerting (webhook)
 - [x] Community guidelines
 - [x] Launch plan (this document)
 

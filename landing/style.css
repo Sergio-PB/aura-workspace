@@ -378,6 +378,12 @@ footer a {
 
 footer a:hover { color: var(--green); }
 
+footer .legal-links {
+  margin-top: 0.25rem;
+  font-size: 0.8rem;
+  opacity: 0.7;
+}
+
 /* ── Cookie Consent Banner ── */
 .cookie-banner {
   position: fixed;
