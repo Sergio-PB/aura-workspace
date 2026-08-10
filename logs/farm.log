@@ -479,3 +479,30 @@
 12:02:28 AM [vite] (client) hmr update /src/App.tsx
 12:03:03 AM [vite] (client) hmr update /src/screens/RecordScreen.tsx
 12:03:03 AM [vite] (client) hmr update /src/screens/RecordScreen.tsx, /src/App.tsx
+12:05:10 AM [vite] (client) hmr update /src/screens/RecordScreen.tsx
+12:05:35 AM [vite] (client) hmr update /src/components/BottomDock.tsx
+12:05:37 AM [vite] (client) hmr update /src/components/BottomDock.tsx
+12:05:38 AM [vite] (client) hmr update /src/components/BottomDock.tsx
+1:30:31 AM [vite] (client) hmr update /src/screens/RecordScreen.tsx, /src/App.tsx, /src/components/BottomDock.tsx
+1:30:31 AM [vite] (client) hmr update /src/screens/RecordScreen.tsx, /src/App.tsx, /src/components/BottomDock.tsx
+1:30:31 AM [vite] (client) hmr update /src/screens/RecordScreen.tsx, /src/App.tsx, /src/components/BottomDock.tsx
+1:30:31 AM [vite] (client) hmr update /src/components/BottomDock.tsx
+1:30:31 AM [vite] (client) hmr update /src/components/EgoBurst.tsx
+1:30:31 AM [vite] (client) hmr update /src/components/DebugPanel.tsx
+1:30:31 AM [vite] (client) hmr update /src/screens/RecordScreen.tsx
+1:30:31 AM [vite] (client) hmr update /src/screens/RecordScreen.tsx
+1:30:31 AM [vite] (client) hmr update /src/components/TuningPanel.tsx
+1:30:31 AM [vite] (client) hmr update /src/screens/RecordScreen.tsx, /src/components/TuningPanel.tsx, /src/components/EgoBurst.tsx
+1:30:31 AM [vite] (client) hmr update /src/screens/RecordScreen.tsx
+1:30:31 AM [vite] (client) hmr update /src/screens/RecordScreen.tsx, /src/components/TuningPanel.tsx, /src/components/EgoBurst.tsx, /src/App.tsx, /src/components/BottomDock.tsx
+1:30:31 AM [vite] (client) hmr update /src/screens/RecordScreen.tsx, /src/components/TuningPanel.tsx, /src/components/EgoBurst.tsx
+1:30:31 AM [vite] (client) hmr update /src/screens/RecordScreen.tsx
+1:30:31 AM [vite] (client) hmr update /src/screens/RecordScreen.tsx
+1:30:56 AM [vite] (client) hmr invalidate /src/components/EgoBurst.tsx Could not Fast Refresh ("getTierByLabel" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+1:30:56 AM [vite] (client) hmr update /src/screens/RecordScreen.tsx
+1:32:52 AM [vite] (client) hmr update /src/screens/RecordScreen.tsx, /src/components/TuningPanel.tsx, /src/components/EgoBurst.tsx
+1:32:54 AM [vite] (client) hmr update /src/screens/RecordScreen.tsx
+1:32:54 AM [vite] (client) hmr update /src/screens/RecordScreen.tsx
+1:32:54 AM [vite] (client) hmr update /src/screens/RecordScreen.tsx
+1:33:23 AM [vite] (client) hmr invalidate /src/components/EgoBurst.tsx Could not Fast Refresh ("getTierByLabel" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+1:33:23 AM [vite] (client) hmr update /src/screens/RecordScreen.tsx
