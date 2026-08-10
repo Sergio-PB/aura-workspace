@@ -281,3 +281,201 @@
 4:38:59 PM [vite] (client) hmr update /src/screens/RecordScreen.tsx
 4:39:00 PM [vite] (client) hmr update /src/screens/RecordScreen.tsx
 4:39:27 PM [vite] (client) hmr update /src/screens/RecordScreen.tsx
+4:50:34 PM [vite] (client) hmr update /src/screens/RecordScreen.tsx
+4:50:37 PM [vite] (client) hmr update /src/screens/RecordScreen.tsx
+4:50:37 PM [vite] (client) hmr update /src/components/EgoBurst.tsx
+4:55:58 PM [vite] (client) hmr update /src/screens/RecordScreen.tsx
+4:55:58 PM [vite] (client) ✨ new dependencies optimized: zustand
+4:55:58 PM [vite] (client) ✨ optimized dependencies changed. reloading
+4:57:07 PM [vite] (client) hmr update /src/screens/RecordScreen.tsx
+4:57:20 PM [vite] (client) hmr update /src/screens/RecordScreen.tsx
+4:57:23 PM [vite] (client) hmr update /src/screens/RecordScreen.tsx
+4:57:26 PM [vite] (client) hmr update /src/screens/RecordScreen.tsx
+4:57:33 PM [vite] (client) hmr update /src/screens/RecordScreen.tsx
+4:58:15 PM [vite] (client) hmr update /src/components/TuningPanel.tsx
+4:58:18 PM [vite] (client) hmr update /src/components/TuningPanel.tsx
+5:05:11 PM [vite] (client) hmr update /src/screens/RecordScreen.tsx
+5:05:11 PM [vite] (client) hmr update /src/screens/RecordScreen.tsx
+5:05:57 PM [vite] (client) hmr update /src/screens/RecordScreen.tsx
+5:06:07 PM [vite] (client) hmr update /src/screens/RecordScreen.tsx
+9:51:05 PM [vite] (client) hmr update /src/screens/RecordScreen.tsx
+9:51:17 PM [vite] (client) hmr update /src/screens/RecordScreen.tsx
+9:58:59 PM [vite] (client) hmr update /src/screens/RecordScreen.tsx, /src/components/TuningPanel.tsx
+9:59:04 PM [vite] (client) hmr update /src/screens/RecordScreen.tsx, /src/components/TuningPanel.tsx
+9:59:08 PM [vite] (client) hmr update /src/screens/RecordScreen.tsx, /src/components/TuningPanel.tsx
+9:59:18 PM [vite] (client) hmr update /src/screens/RecordScreen.tsx, /src/components/TuningPanel.tsx
+9:59:27 PM [vite] (client) hmr update /src/screens/RecordScreen.tsx, /src/components/TuningPanel.tsx
+9:59:35 PM [vite] (client) hmr update /src/screens/RecordScreen.tsx
+9:59:42 PM [vite] (client) hmr update /src/screens/RecordScreen.tsx
+9:59:43 PM [vite] (client) hmr update /src/screens/RecordScreen.tsx
+9:59:47 PM [vite] (client) hmr update /src/components/TuningPanel.tsx
+9:59:50 PM [vite] (client) hmr update /src/components/TuningPanel.tsx
+10:00:00 PM [vite] (client) hmr update /src/components/TuningPanel.tsx
+10:00:05 PM [vite] (client) hmr update /src/components/TuningPanel.tsx
+10:00:26 PM [vite] (client) hmr update /src/screens/RecordScreen.tsx, /src/components/TuningPanel.tsx
+10:00:37 PM [vite] (client) hmr update /src/screens/RecordScreen.tsx, /src/components/TuningPanel.tsx
+10:00:46 PM [vite] (client) hmr update /src/components/TuningPanel.tsx
+10:00:53 PM [vite] (client) hmr update /src/components/TuningPanel.tsx
+10:00:57 PM [vite] (client) hmr update /src/components/TuningPanel.tsx
+10:09:44 PM [vite] (client) hmr update /src/screens/RecordScreen.tsx, /src/components/TuningPanel.tsx
+10:09:51 PM [vite] (client) hmr update /src/screens/RecordScreen.tsx, /src/components/TuningPanel.tsx
+10:09:58 PM [vite] (client) hmr update /src/screens/RecordScreen.tsx
+10:10:08 PM [vite] (client) hmr update /src/screens/RecordScreen.tsx
+10:10:24 PM [vite] (client) hmr update /src/components/EgoBurst.tsx
+10:10:24 PM [vite] (client) hmr invalidate /src/components/EgoBurst.tsx Could not Fast Refresh (new export)
+10:10:24 PM [vite] (client) hmr update /src/screens/RecordScreen.tsx
+10:10:31 PM [vite] (client) hmr update /src/screens/RecordScreen.tsx
+10:10:32 PM [vite] (client) hmr update /src/screens/RecordScreen.tsx
+10:10:34 PM [vite] (client) hmr update /src/screens/RecordScreen.tsx
+10:10:40 PM [vite] (client) hmr update /src/screens/RecordScreen.tsx
+10:10:42 PM [vite] (client) hmr update /src/screens/RecordScreen.tsx
+10:10:49 PM [vite] (client) hmr update /src/screens/RecordScreen.tsx
+10:10:57 PM [vite] (client) hmr update /src/components/DebugPanel.tsx
+10:10:58 PM [vite] (client) hmr update /src/components/DebugPanel.tsx
+10:11:27 PM [vite] (client) hmr update /src/components/TuningPanel.tsx
+10:11:37 PM [vite] (client) hmr update /src/screens/RecordScreen.tsx
+10:11:38 PM [vite] (client) hmr update /src/screens/RecordScreen.tsx
+10:21:09 PM [vite] (client) hmr update /src/screens/RecordScreen.tsx
+10:21:14 PM [vite] (client) hmr update /src/screens/RecordScreen.tsx
+10:21:29 PM [vite] (client) hmr update /src/screens/RecordScreen.tsx
+10:21:38 PM [vite] (client) hmr update /src/screens/RecordScreen.tsx
+10:21:39 PM [vite] (client) hmr update /src/screens/RecordScreen.tsx
+10:21:48 PM [vite] (client) hmr update /src/screens/RecordScreen.tsx
+10:22:20 PM [vite] (client) hmr update /src/screens/RecordScreen.tsx
+10:22:20 PM [vite] (client) hmr update /src/screens/RecordScreen.tsx
+10:22:23 PM [vite] (client) hmr update /src/screens/RecordScreen.tsx
+10:22:37 PM [vite] (client) hmr update /src/screens/RecordScreen.tsx
+10:22:44 PM [vite] (client) hmr update /src/screens/RecordScreen.tsx
+10:22:53 PM [vite] (client) hmr update /src/screens/RecordScreen.tsx
+10:23:04 PM [vite] (client) hmr update /src/screens/RecordScreen.tsx
+10:23:26 PM [vite] (client) hmr update /src/screens/RecordScreen.tsx
+10:23:33 PM [vite] (client) hmr update /src/screens/RecordScreen.tsx
+10:23:33 PM [vite] Internal server error: /Users/sergio/aura-apps/apps/farm-capacitor/src/screens/RecordScreen.tsx: Adjacent JSX elements must be wrapped in an enclosing tag. Did you want a JSX fragment <>...</>? (834:12)
+
+  832 |                 ))}
+  833 |               </div>
+> 834 |             </div>
+      |             ^
+  835 |             <button
+  836 |               onClick={() => {
+  837 |                 const json = JSON.stringify(validation, null, 2);
+  Plugin: vite:react-babel
+  File: /Users/sergio/aura-apps/apps/farm-capacitor/src/screens/RecordScreen.tsx:834:12
+  832|                  ))}
+  833|                </div>
+  834|              </div>
+     |              ^
+  835|              <button
+  836|                onClick={() => {
+      at constructor (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:365:19)
+      at TypeScriptParserMixin.raise (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:6616:19)
+      at TypeScriptParserMixin.jsxParseElementAt (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:4754:18)
+      at TypeScriptParserMixin.jsxParseElement (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:4761:17)
+      at TypeScriptParserMixin.parseExprAtom (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:4771:19)
+      at TypeScriptParserMixin.parseExprSubscripts (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:11098:23)
+      at TypeScriptParserMixin.parseUpdate (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:11083:21)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:11063:23)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:9854:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:10916:61)
+      at TypeScriptParserMixin.parseExprOps (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:10921:23)
+      at TypeScriptParserMixin.parseMaybeConditional (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:10898:23)
+      at TypeScriptParserMixin.parseMaybeAssign (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:10848:21)
+      at /Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:9792:39
+      at TypeScriptParserMixin.tryParse (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:6924:20)
+      at TypeScriptParserMixin.parseMaybeAssign (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:9792:18)
+      at /Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:10817:39
+      at TypeScriptParserMixin.allowInAnd (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:12443:12)
+      at TypeScriptParserMixin.parseMaybeAssignAllowIn (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:10817:17)
+      at TypeScriptParserMixin.parseMaybeAssignAllowInOrVoidPattern (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:12510:17)
+      at TypeScriptParserMixin.parseParenAndDistinguishExpression (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:11692:28)
+      at TypeScriptParserMixin.parseExprAtom (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:11348:23)
+      at TypeScriptParserMixin.parseExprAtom (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:4776:20)
+      at TypeScriptParserMixin.parseExprSubscripts (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:11098:23)
+      at TypeScriptParserMixin.parseUpdate (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:11083:21)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:11063:23)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:9854:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:10916:61)
+      at TypeScriptParserMixin.parseExprOps (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:10921:23)
+      at TypeScriptParserMixin.parseMaybeConditional (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:10898:23)
+      at TypeScriptParserMixin.parseMaybeAssign (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:10848:21)
+      at TypeScriptParserMixin.parseMaybeAssign (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:9803:20)
+      at TypeScriptParserMixin.parseConditional (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:10910:29)
+      at TypeScriptParserMixin.parseConditional (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:9620:18)
+      at TypeScriptParserMixin.parseMaybeConditional (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:10902:17)
+      at TypeScriptParserMixin.parseMaybeAssign (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:10848:21)
+      at TypeScriptParserMixin.parseMaybeAssign (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:9803:20)
+      at TypeScriptParserMixin.parseExpressionBase (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:10801:23)
+      at /Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:10797:39
+      at TypeScriptParserMixin.allowInAnd (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:12443:12)
+      at TypeScriptParserMixin.parseExpression (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:10797:17)
+      at TypeScriptParserMixin.jsxParseExpressionContainer (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:4644:31)
+      at TypeScriptParserMixin.jsxParseElementAt (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:4723:36)
+      at TypeScriptParserMixin.jsxParseElementAt (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:4710:32)
+      at TypeScriptParserMixin.jsxParseElementAt (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:4710:32)
+      at TypeScriptParserMixin.jsxParseElement (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:4761:17)
+      at TypeScriptParserMixin.parseExprAtom (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:4771:19)
+      at TypeScriptParserMixin.parseExprSubscripts (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:11098:23)
+      at TypeScriptParserMixin.parseUpdate (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:11083:21)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:11063:23)
+10:23:34 PM [vite] (client) hmr update /src/screens/RecordScreen.tsx
+10:36:23 PM [vite] (client) hmr update /src/components/EgoBurst.tsx
+10:36:24 PM [vite] (client) hmr invalidate /src/components/EgoBurst.tsx Could not Fast Refresh ("getTierByLabel" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+10:36:24 PM [vite] (client) hmr update /src/screens/RecordScreen.tsx
+10:46:44 PM [vite] (client) hmr update /src/screens/RecordScreen.tsx, /src/components/TuningPanel.tsx, /src/components/EgoBurst.tsx
+10:46:44 PM [vite] (client) hmr invalidate /src/components/EgoBurst.tsx Could not Fast Refresh ("getTierByLabel" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+10:46:44 PM [vite] (client) hmr update /src/screens/RecordScreen.tsx
+10:47:00 PM [vite] (client) hmr update /src/screens/RecordScreen.tsx, /src/components/TuningPanel.tsx, /src/components/EgoBurst.tsx
+10:47:01 PM [vite] (client) hmr invalidate /src/components/EgoBurst.tsx Could not Fast Refresh ("getTierByLabel" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+10:47:01 PM [vite] (client) hmr update /src/screens/RecordScreen.tsx
+10:47:15 PM [vite] (client) hmr update /src/screens/RecordScreen.tsx, /src/components/TuningPanel.tsx, /src/components/EgoBurst.tsx
+10:47:15 PM [vite] (client) hmr invalidate /src/components/EgoBurst.tsx Could not Fast Refresh ("getTierByLabel" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+10:47:15 PM [vite] (client) hmr update /src/screens/RecordScreen.tsx
+10:47:43 PM [vite] (client) hmr update /src/components/EgoBurst.tsx
+10:47:43 PM [vite] (client) hmr invalidate /src/components/EgoBurst.tsx Could not Fast Refresh ("getTierByLabel" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+10:47:43 PM [vite] (client) hmr update /src/screens/RecordScreen.tsx
+10:47:45 PM [vite] (client) hmr update /src/components/EgoBurst.tsx
+10:47:45 PM [vite] (client) hmr invalidate /src/components/EgoBurst.tsx Could not Fast Refresh ("getTierByLabel" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+10:47:45 PM [vite] (client) hmr update /src/screens/RecordScreen.tsx
+10:47:52 PM [vite] (client) hmr update /src/components/EgoBurst.tsx
+10:47:52 PM [vite] (client) hmr invalidate /src/components/EgoBurst.tsx Could not Fast Refresh ("getTierByLabel" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+10:47:52 PM [vite] (client) hmr update /src/screens/RecordScreen.tsx
+10:50:56 PM [vite] (client) hmr update /src/components/EgoBurst.tsx
+10:50:56 PM [vite] (client) hmr invalidate /src/components/EgoBurst.tsx Could not Fast Refresh ("getTierByLabel" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+10:50:56 PM [vite] (client) hmr update /src/screens/RecordScreen.tsx
+10:51:15 PM [vite] (client) hmr update /src/components/EgoBurst.tsx
+10:51:15 PM [vite] (client) hmr invalidate /src/components/EgoBurst.tsx Could not Fast Refresh ("getTierByLabel" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+10:51:15 PM [vite] (client) hmr update /src/screens/RecordScreen.tsx
+10:58:06 PM [vite] (client) hmr update /src/screens/RecordScreen.tsx, /src/components/TuningPanel.tsx, /src/components/EgoBurst.tsx
+10:58:07 PM [vite] (client) hmr invalidate /src/components/EgoBurst.tsx Could not Fast Refresh ("getTierByLabel" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+10:58:07 PM [vite] (client) hmr update /src/screens/RecordScreen.tsx
+10:58:22 PM [vite] (client) hmr update /src/screens/RecordScreen.tsx, /src/components/TuningPanel.tsx, /src/components/EgoBurst.tsx
+10:58:23 PM [vite] (client) hmr invalidate /src/components/EgoBurst.tsx Could not Fast Refresh ("getTierByLabel" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+10:58:23 PM [vite] (client) hmr update /src/screens/RecordScreen.tsx
+10:58:58 PM [vite] (client) hmr update /src/components/TuningPanel.tsx
+10:59:15 PM [vite] (client) hmr update /src/screens/RecordScreen.tsx
+11:02:03 PM [vite] (client) hmr update /src/screens/RecordScreen.tsx, /src/components/TuningPanel.tsx, /src/components/EgoBurst.tsx
+11:02:03 PM [vite] (client) hmr invalidate /src/components/EgoBurst.tsx Could not Fast Refresh ("getTierByLabel" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+11:02:03 PM [vite] (client) hmr update /src/screens/RecordScreen.tsx
+11:13:55 PM [vite] (client) hmr update /src/components/BottomDock.tsx
+11:14:01 PM [vite] (client) hmr update /src/screens/RecordScreen.tsx
+11:14:03 PM [vite] (client) hmr update /src/screens/RecordScreen.tsx
+11:14:11 PM [vite] (client) hmr update /src/screens/RecordScreen.tsx
+11:20:10 PM [vite] (client) hmr update /src/screens/RecordScreen.tsx
+11:20:28 PM [vite] (client) hmr update /src/screens/RecordScreen.tsx
+11:20:28 PM [vite] (client) hmr update /src/screens/RecordScreen.tsx
+11:24:54 PM [vite] (client) hmr update /src/screens/RecordScreen.tsx
+11:24:54 PM [vite] (client) hmr update /src/screens/RecordScreen.tsx
+11:28:51 PM [vite] (client) hmr update /src/screens/RecordScreen.tsx
+11:29:09 PM [vite] (client) hmr update /src/screens/RecordScreen.tsx, /src/components/TuningPanel.tsx, /src/components/EgoBurst.tsx
+11:29:09 PM [vite] (client) hmr invalidate /src/components/EgoBurst.tsx Could not Fast Refresh ("getTierByLabel" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+11:29:09 PM [vite] (client) hmr update /src/screens/RecordScreen.tsx
+11:29:24 PM [vite] (client) hmr update /src/screens/RecordScreen.tsx
+11:29:25 PM [vite] (client) hmr update /src/screens/RecordScreen.tsx
+11:37:30 PM [vite] (client) hmr update /src/screens/RecordScreen.tsx
+11:37:40 PM [vite] (client) hmr update /src/screens/RecordScreen.tsx
+11:38:05 PM [vite] (client) hmr update /src/screens/RecordScreen.tsx
+12:02:12 AM [vite] (client) hmr update /src/screens/RecordScreen.tsx
+12:02:24 AM [vite] (client) hmr update /src/App.tsx
+12:02:28 AM [vite] (client) hmr update /src/App.tsx
+12:03:03 AM [vite] (client) hmr update /src/screens/RecordScreen.tsx
+12:03:03 AM [vite] (client) hmr update /src/screens/RecordScreen.tsx, /src/App.tsx
