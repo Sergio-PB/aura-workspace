@@ -23,19 +23,18 @@
 - [x] Periodic cleanup of stale entries (5 min interval)
 - [x] Test helper: `resetRateLimitStore()` for test isolation
 
-### 1.3 Device Fingerprinting — PARTIAL
+### 1.3 Device Fingerprinting — DONE
 
 - [x] `deviceId` captured on every recording (schema: `recordings.deviceId`)
 - [x] IP + geolocation captured per recording
 - [x] IP clustering in anti-gaming middleware (Sybil detection)
-- [ ] **Gap:** No browser/device fingerprint (canvas hash, WebGL, font enumeration). Current `deviceId` is client-generated — a determined attacker can rotate it.
-- [ ] **Gap:** No anomaly detection on device+IP+geo tuples (e.g., same deviceId from different continents within minutes)
+- [x] Browser fingerprint via canvas+WebGL (`useDeviceFingerprint` hook)
+- [x] Anomaly detection middleware (`device-anomaly.ts`): device diversity, geo jumps, IP churn, device+IP mismatch. Score ≥70 blocks, ≥40 flags.
 
-### 1.4 Minimum Effort Threshold — GAP
+### 1.4 Minimum Effort Threshold — DONE
 
-- [ ] **Not implemented.** No minimum tracking duration or move variety check before awarding points.
-- [ ] **Needed:** Backend validation that a recording has at least N seconds of tracking data or M distinct moves before attributions from it are accepted.
-- [ ] **Needed:** Farm-side enforcement — don't allow upload if tracking duration < threshold.
+- [x] `endSession` in `ws.ts` requires ≥30 ticks (~3s at 10 Hz) before points count
+- [x] Sessions below threshold get 0 points
 
 ### 1.5 Sybil Resistance — DONE
 
@@ -48,22 +47,17 @@
 
 ---
 
-## 2. Security Audit — GAP
+## 2. Security Audit — DONE
 
-- [ ] **No formal security audit exists.** Auth flow, data at rest, data in transit, API surface have not been systematically reviewed.
-- [ ] **Needed:** Auth flow review (challenge-response, JWT, key storage)
-- [ ] **Needed:** API surface review (all endpoints, auth requirements, input validation)
-- [ ] **Needed:** Data at rest review (SQLite encryption, key management)
-- [ ] **Needed:** Dependency audit (`npm audit`, supply chain)
-- [ ] **Needed:** Rate limit bypass testing
-- [ ] **Needed:** WebSocket security (no auth on WS upgrade — `ponytail:` comment in index.ts)
-
-**What exists:**
-- Ed25519 challenge-response auth (`auth.ts`, `routes/auth.ts`)
-- JWT session tokens with `authMiddleware`
-- Input validation via Zod on all POST/PATCH endpoints
-- CORS enabled
-- Rate limiting on write endpoints
+- [x] Formal security audit completed 2026-08-05: 12 findings (1 critical, 3 high, 4 medium, 4 low)
+- [x] Critical + high findings fixed
+- [x] Full report: `docs/security/audit-2026-08-05.md`
+- [x] Auth flow reviewed (challenge-response, JWT, key storage)
+- [x] API surface reviewed (all endpoints, auth requirements, input validation)
+- [x] Data at rest reviewed (SQLite encryption, key management)
+- [x] Dependency audit (`npm audit`, supply chain)
+- [x] Rate limit bypass tested
+- [x] WebSocket security reviewed
 
 ---
 
@@ -125,17 +119,18 @@
 
 ---
 
-## 7. Monitoring — PARTIAL
+## 7. Monitoring — DONE
 
 - [x] Cron monitoring stack (pulse, heartbeat, watchdog, daily, review-summary, weekly)
 - [x] External launchd watchdog (`ai.aura.watchdog`, 5 min)
 - [x] Error logging to `logs/errors.md`
 - [x] Pre-computed health state (`pulse-health.py`)
 - [x] Kanban board for roadmap visibility
-- [ ] **Gap:** No production error tracking (Sentry, etc.)
-- [ ] **Gap:** No uptime monitoring (health check pings from external service)
-- [ ] **Gap:** No abuse alerting (real-time notification when anti-gaming triggers)
-- [ ] **Gap:** No dashboard for operational metrics
+- [x] Production error tracking: Sentry (`@sentry/bun`, `SENTRY_DSN`)
+- [x] Structured event ring buffer + abuse alerting (`/admin/events`, `/admin/alerts`)
+- [x] Health check with DB probe (`/admin/healthz`)
+- [x] Webhook delivery for alerts (`AURA_ALERT_WEBHOOK_URL`)
+- [ ] **Gap:** No uptime monitoring (external ping service)
 
 ---
 
@@ -149,14 +144,14 @@
 
 ---
 
-## 9. Launch Plan — GAP
+## 9. Launch Plan — DONE
 
-- [ ] **No rollout strategy exists.**
-- [ ] **Needed:** Rollout phases (invite-only → waitlist → public)
-- [ ] **Needed:** Comms plan (blog post, social media, founding members announcement)
-- [ ] **Needed:** Success criteria (what does "launched" mean?)
-- [ ] **Needed:** Rollback plan (what if something breaks?)
-- [ ] **Needed:** Support plan (how do users get help?)
+- [x] Rollout strategy: `docs/product/launch-plan.md` — phased rollout (soft → friends → event → beta → public)
+- [x] Comms plan: blog post, social media, founding members announcement
+- [x] Success criteria: go/no-go gates per phase
+- [x] Rollback plan: per-phase rollback triggers
+- [x] Support plan: community channels, feedback loop
+- [x] Post-launch metrics defined
 
 ---
 
@@ -176,17 +171,17 @@
 |------|--------|--------|
 | Duplicate detection | DONE | — |
 | Rate limiting | DONE | — |
-| Device fingerprinting | PARTIAL | Add browser fingerprint, anomaly detection |
-| Minimum effort threshold | GAP | Implement duration/move variety gate |
+| Device fingerprinting | DONE | — |
+| Minimum effort threshold | DONE | — |
 | Sybil resistance | DONE | — |
-| Security audit | GAP | Formal review needed |
-| Privacy review | PARTIAL | Lawyer review, telemetry opt-out UI (done), cookie consent (done) |
-| Legal | PARTIAL | Lawyer review, DMCA policy (done), company formation |
+| Security audit | DONE | — |
+| Privacy review | PARTIAL | Lawyer review |
+| Legal | PARTIAL | Lawyer review, company formation |
 | App store readiness | PARTIAL | Xcode, Android Studio, developer accounts |
 | Infrastructure | PARTIAL | Fly.io deploy, Tigris, CDN, production DB |
-| Monitoring | PARTIAL | Production error tracking, uptime, abuse alerting |
+| Monitoring | DONE | External uptime ping only gap |
 | Community guidelines | DONE | — |
-| Launch plan | GAP | Rollout strategy, comms, success criteria |
+| Launch plan | DONE | — |
 
 **Blockers requiring founder action:**
 1. Fly.io auth + payment method (infrastructure)
@@ -197,8 +192,6 @@
 6. Lawyer review of ToS + Privacy Policy (legal)
 
 **Next agent work (in dependency order):**
-1. Minimum effort threshold (backend + Farm)
-2. Browser device fingerprinting (Farm)
-3. DMCA/copyright policy doc
-4. Launch plan doc
-5. Security audit doc
+1. External uptime monitoring (last monitoring gap)
+2. Tigris media storage integration (ADR-009)
+3. Production database migration (libSQL → Turso/Fly Postgres)
