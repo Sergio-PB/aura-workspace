@@ -434,11 +434,11 @@ points = Σ (rate × duration_seconds × moveMultiplier)
 
 **Goal:** Every screen works correctly on mobile (portrait + landscape) and small viewports. No horizontal scroll, no clipped controls, no tiny tap targets. Mobile-first by default, desktop as a fallback layout.
 
-- [ ] Audit all Farm screens at 360×640, 414×896, 768×1024 (portrait + landscape)
+- [~] Audit all Farm screens at 360×640, 414×896, 768×1024 (portrait + landscape) — code audit done, visual testing pending
 - [ ] Audit all Card screens at the same breakpoints
 - [ ] Audit landing page + onboarding flow at mobile breakpoints
-- [ ] Fix layout, font, touch-target, and overflow issues found
-- [ ] Verify HUD overlays respect safe areas (notch, home indicator, gesture bar)
+- [x] Fix layout, font, touch-target, and overflow issues found — 5 fixes applied (2026-08-11): BottomDock narrow-screen sizing (64px width, 10px font on <400px), file mode controls flexWrap, safe-area insets (GameHUD bottom, UserCarousel top), EgoBurst font clamp (min(56px, 15vw)), camera dropdown minWidth reduction
+- [x] Verify HUD overlays respect safe areas (notch, home indicator, gesture bar) — env(safe-area-inset-*) added to GameHUD and UserCarousel
 - [ ] Verify on real iOS Safari + Android Chrome, not just desktop emulation
 
 **Depends on:** P-17 (Game-Like GUI baseline)
