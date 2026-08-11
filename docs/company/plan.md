@@ -408,8 +408,42 @@ points = Σ (rate × duration_seconds × moveMultiplier)
 - [x] **Haptic feedback hooks** — placeholder API for vibration on move detection, streak milestones, combo hits, ego bursts (implement when Capacitor plugin added)
 - [x] **Sound cue slots** — each move type, combo tier, streak milestone, and ego burst has a named sound slot (`.sfx.seesaw`, `.sfx.combo_x3`, `.sfx.streak_10`, `.sfx.ego_x2`, etc.) for future audio integration
 - [x] **Transition animations** — screen transitions (home→record, record→feed) use smooth slides/fades
-- [x] **Loading states** — camera init, model loading, WebSocket connecting all have animated indicators (not blank screens)
-- [x] **Dark theme polish** — consistent color palette, proper contrast ratios, no raw CSS defaults
+- [x] Loading states — camera init, model loading, WebSocket connecting all have animated indicators (not blank screens)
+- [x] Dark theme polish — consistent color palette, proper contrast ratios, no raw CSS defaults
+
+---
+
+### P-18: Pose Tracking
+
+**Goal:** Full-body tracking as the default mode; hand tracking kept as the granular opt-in. Pose captures arms, legs, and full-body movement; hand tracking stays for fine gestures (thumbs up, etc.).
+
+- [ ] MediaPipe Pose integration (33 body landmarks, skeleton) alongside the existing Hands pipeline
+- [ ] Pose is the default tracking mode; hand tracking is the opt-in alternate
+- [ ] HUD toggle to switch modes (hand ↔ pose) mid-session, without restarting the camera
+- [ ] Analyze feature accepts `trackingMode: 'hand' | 'pose'` as input; output is the existing telemetry envelope, just sourced from pose landmarks
+- [ ] Per-move visual feedback adapts to pose landmarks (body-anchored emitters, full-body particle flows) where applicable
+- [ ] **E2E test cases — user-recorded and supplied:** sample videos covering major movement classes (wave-arm, jump, squat, dance, full-body rotation). One per class minimum. Founder records and drops files in; pipeline runs Analyze against each and validates landmark output.
+
+**Reasoning:** Hand tracking is too granular for full-body expression — it only sees the hands. Pose tracking should be the default so the system sees what the body is actually doing; hand tracking stays available for fine gesture work (thumbs up, point, pinch).
+
+**Depends on:** P-11 (MediaPipe pipeline), P-14 (Analyze feature input plumbing)
+
+---
+
+### P-19: Responsive & Mobile-First UI Audit
+
+**Goal:** Every screen works correctly on mobile (portrait + landscape) and small viewports. No horizontal scroll, no clipped controls, no tiny tap targets. Mobile-first by default, desktop as a fallback layout.
+
+- [ ] Audit all Farm screens at 360×640, 414×896, 768×1024 (portrait + landscape)
+- [ ] Audit all Card screens at the same breakpoints
+- [ ] Audit landing page + onboarding flow at mobile breakpoints
+- [ ] Fix layout, font, touch-target, and overflow issues found
+- [ ] Verify HUD overlays respect safe areas (notch, home indicator, gesture bar)
+- [ ] Verify on real iOS Safari + Android Chrome, not just desktop emulation
+
+**Depends on:** P-17 (Game-Like GUI baseline)
+
+---
 
 **User stats (persistent, no levels):**
 - Total aura points
@@ -455,6 +489,11 @@ W-1 ──→ C-1 ──→ P-1 ──→ P-2 ──→ P-3 ──┐
                          │                          P-9 ────────────┤
                          │                                           ↓
                          │                                        N-2 ──→ C-2 ──→ P-10 ──→ N-3
+                         │
+                         └─→ P-11 ──→ P-12 ──→ P-13 ──→ P-17 ──→ P-19
+                                │                          │
+                                └─→ P-14 ──→ P-16 ────────┤
+                                                           └─→ P-18
 ```
 
 ---
