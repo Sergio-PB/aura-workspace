@@ -772,3 +772,5 @@ You or a plugin you are using have set `optimizeDeps.esbuildOptions` but this op
 12:08:01 PM [vite] (client) hmr update /src/components/GameHUD.tsx
 12:08:01 PM [vite] (client) hmr update /src/screens/RecordScreen.tsx
 12:08:56 PM [vite] (client) hmr update /src/screens/RecordScreen.tsx
+11:12:28 PM [vite] (client) hmr update /src/components/TuningPanel.tsx
+11:12:42 PM [vite] (client) hmr update /src/screens/RecordScreen.tsx
