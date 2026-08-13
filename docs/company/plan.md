@@ -445,27 +445,30 @@ points = Σ (rate × duration_seconds × moveMultiplier)
 
 ---
 
-**User stats (persistent, no levels):**
-- Total aura points
-- Max streak (longest continuous movement)
-- Max combo (highest combo multiplier achieved)
-- Max ego (highest ego tier reached in a single session)
-- Sessions completed
+### P-20: Predictive Particle Smoothing
 
-**Standing requirement:** Every new move added to the movement library (P-12) MUST include:
-1. Unique particle effect (color, shape, behavior)
-2. Sound cue slot name
-3. Streak compatibility (does it chain well?)
-4. Combo multiplier integration
-5. Score popup style
+**Goal:** Cheap, smooth particle motion between tracking frames. Today particles are emitted on every detection — but detection rate is device-and-library-bound (e.g. 0.5/s). The user sees jerky bursts at T₀, T_real rather than a continuous flow. We bridge the gap by predicting intermediate positions from recent detections and emitting interpolated particles between T₀ and T_prediction (the next expected detection).
 
-**Depends on:** P-11 (tracking working), P-12 (move library for per-move effects), P-13 (reward system for combo logic)
+**Mechanism:**
+- Track the device's effective tracking rate (true-positive detections / second) for each active move.
+- Keep a rolling buffer of the last **K_sampleSize** detected landmark positions (default 10) per move.
+- Apply a regression model **F_regressionModel** to that buffer to predict the next position at T_prediction.
+- Emit **X** interpolated particles at evenly spaced sub-times between T₀ and T_prediction (e.g. X=3 → particles at T₀.₅, T₀.₇₅ of the interval).
+- Tunable from the HUD: `K_sampleSize` and `X`. Rate auto-measured.
+
+**Deliverables:**
+1. Interpolated particle emission between detections, driven by the regression of the last K landmarks.
+2. `K_sampleSize` and `X` exposed as live HUD controls in the existing tuning panel (alongside the other move tunables).
+
+**Defaults:** K_sampleSize=10, X=3, F_regressionModel=linear least-squares. Single source of truth for the regression lives in one function so a future Kalman / spline upgrade swaps in without touching the emitter.
+
+**Depends on:** P-12 (move library — emitters live per-move), P-17 (tuning HUD already exists)
 
 ---
 
 ### N-3: Network Effects
 
-**Goal:** The network grows on its own. Reputation becomes portable and valuable.
+**User stats (persistent, no levels):**
 
 - [x] Public profiles and shareable cards
 - [x] Cross-event reputation (points carry across events) — global leaderboard endpoint: `GET /leaderboard` + `GET /leaderboard/user/:userId`
@@ -491,9 +494,10 @@ W-1 ──→ C-1 ──→ P-1 ──→ P-2 ──→ P-3 ──┐
                          │                                        N-2 ──→ C-2 ──→ P-10 ──→ N-3
                          │
                          └─→ P-11 ──→ P-12 ──→ P-13 ──→ P-17 ──→ P-19
-                                │                          │
-                                └─→ P-14 ──→ P-16 ────────┤
-                                                           └─→ P-18
+                                │                    │         │
+                                │                    └─→ P-20 ┘
+                                └─→ P-14 ──→ P-16
+                                                  └─→ P-18
 ```
 
 ---
