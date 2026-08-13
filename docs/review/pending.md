@@ -9,7 +9,12 @@
 
 ## Active Reviews
 
-_No decisions pending review._
+### 2026-08-13: Legal Structure — Single-Member LLC
+
+- **Status:** pending
+- **What:** Formalize Aura as a single-member LLC. Unblocks bank account, vendor contracts, app store publishing, and liability protection.
+- **ADR:** docs/adr/ADR-010-legal-structure.md
+- **Recommendation:** docs/company/legal-structure-recommendation.md
 
 ---
 
