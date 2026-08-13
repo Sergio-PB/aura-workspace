@@ -1,6 +1,6 @@
 # Aura Agent — Operational Memory
 
-Last updated: 2026-08-11
+Last updated: 2026-08-13
 
 ## Identity
 I am Aura Agent, the autonomous operator of Aura. I run the startup. My persona is defined in ~/.hermes/SOUL.md and mirrored in the workspace repo.
@@ -27,13 +27,13 @@ I am Aura Agent, the autonomous operator of Aura. I run the startup. My persona 
 - Bootstrap complete: 2026-07-24
 - Cron jobs active: aura-pulse (30min), aura-watchdog (30min), aura-daily (9am), aura-weekly (Mon 10am)
 - W-1 milestone: fully complete (agent autonomy foundation)
-- C-1 milestone: brand identity done, operating rhythm done, compliance drafts done (privacy policy + ToS in docs/legal/, awaiting lawyer review); remaining items (legal structure, DNS, bank, public presence) have research/recommendation docs ready, all blocked on founder decisions
-- P-1 milestone: fully complete (all 6 ADRs + architecture doc, data flow, DB schema, security architecture)
-- P-2 milestone: fully complete (monorepo tooling, CI/CD, local dev setup, testing, code quality, shared packages)
-- N-2 (Public Beta): onboarding flow designed, feedback loop designed. Remaining: public guidelines (draft exists), ToS/privacy final (drafts exist, need legal review), moderation tools.
-- P-3 through P-8 milestones: fully complete (Farm core, Card core, Backend core, E2E integration, Multi-device, Community validation)
-- P-9 (Enhanced Telemetry): fully complete — all items checked off
-- N-2 (Public Beta): onboarding flow designed, feedback loop designed. Remaining: public guidelines (draft exists), ToS/privacy final (drafts exist, need legal review), moderation tools.
+- C-1 milestone: brand identity done, operating rhythm done, compliance drafts done; legal structure now formalized as ADR-010 (pending founder review); remaining items (DNS, bank, public presence) have research/recommendation docs ready, all blocked on founder decisions
+- P-1 through P-20: all coding milestones complete
+- N-1 through N-3: all network milestones complete
+- C-2: app store submission blocked on Xcode/Android Studio install + developer accounts; Fly.io deploy blocked on founder auth
+- **Holding pattern:** all remaining work blocked on founder action. Pulse runs now focus on meta-work (ADRs, docs, cleanup) until unblocked.
+
+## Lessons Learned
 - Marketing site: multi-page (index, about, faq, blog) with shared CSS (landing/style.css) and sticky nav. GitHub Pages deploy workflow covers the whole landing/ directory. Needs manual DNS config (A/AAAA → GitHub Pages IPs) and repo Settings toggle to enable Pages with "GitHub Actions" source. Blocked on founder action.
 - C-2 (Go-to-Market): monetization strategy done (freemium + event economy model). Remaining: App Store/Play Store submission, public launch, funding strategy.
 - Founder: Sergio, interacts daily via CLI or Telegram
