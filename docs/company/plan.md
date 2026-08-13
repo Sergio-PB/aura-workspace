@@ -457,8 +457,8 @@ points = Σ (rate × duration_seconds × moveMultiplier)
 - Tunable from the HUD: `K_sampleSize` and `X`. Rate auto-measured.
 
 **Deliverables:**
-1. Interpolated particle emission between detections, driven by the regression of the last K landmarks.
-2. `K_sampleSize` and `X` exposed as live HUD controls in the existing tuning panel (alongside the other move tunables).
+1. [x] Interpolated particle emission between detections, driven by the regression of the last K landmarks.
+2. [x] `K_sampleSize` and `X` exposed as live HUD controls in the existing tuning panel (alongside the other move tunables).
 
 **Defaults:** K_sampleSize=10, X=3, F_regressionModel=linear least-squares. Single source of truth for the regression lives in one function so a future Kalman / spline upgrade swaps in without touching the emitter.
 
