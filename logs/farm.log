@@ -787,3 +787,234 @@ You or a plugin you are using have set `optimizeDeps.esbuildOptions` but this op
 2:35:06 AM [vite] (client) hmr update /src/screens/RecordScreen.tsx
 2:35:16 AM [vite] (client) hmr update /src/screens/RecordScreen.tsx
 2:35:28 AM [vite] (client) hmr update /src/screens/RecordScreen.tsx
+1:08:00 AM [vite] (client) page reload index.html
+1:08:00 AM [vite] (client) hmr update /src/theme.css
+1:08:13 AM [vite] (client) hmr update /src/components/GameHUD.tsx
+1:08:24 AM [vite] (client) hmr update /src/components/GameHUD.tsx
+1:08:26 AM [vite] (client) hmr update /src/components/GameHUD.tsx
+1:08:29 AM [vite] (client) hmr update /src/components/GameHUD.tsx
+1:08:39 AM [vite] (client) hmr update /src/components/GameHUD.tsx
+1:08:50 AM [vite] (client) hmr update /src/components/GameHUD.tsx
+1:09:13 AM [vite] (client) hmr update /src/components/EgoBurst.tsx
+1:09:14 AM [vite] (client) hmr invalidate /src/components/EgoBurst.tsx Could not Fast Refresh ("getTierByLabel" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+1:09:14 AM [vite] (client) hmr update /src/screens/RecordScreen.tsx
+1:09:15 AM [vite] (client) hmr update /src/components/EgoBurst.tsx
+1:09:15 AM [vite] (client) hmr invalidate /src/components/EgoBurst.tsx Could not Fast Refresh ("getTierByLabel" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+1:09:15 AM [vite] (client) hmr update /src/screens/RecordScreen.tsx
+1:09:19 AM [vite] (client) hmr update /src/screens/RecordScreen.tsx
+1:09:38 AM [vite] (client) hmr update /src/components/BottomDock.tsx
+1:09:40 AM [vite] (client) hmr update /src/components/BottomDock.tsx
+1:09:42 AM [vite] (client) hmr update /src/components/BottomDock.tsx
+1:09:45 AM [vite] (client) hmr update /src/components/BottomDock.tsx
+1:09:55 AM [vite] (client) hmr update /src/components/BottomDock.tsx
+1:10:07 AM [vite] (client) hmr update /src/components/BottomDock.tsx
+1:10:18 AM [vite] (client) hmr update /src/components/BottomDock.tsx
+1:10:30 AM [vite] (client) hmr update /src/components/BottomDock.tsx
+1:11:04 AM [vite] (client) hmr update /src/components/GameHUD.tsx
+1:11:19 AM [vite] (client) hmr update /src/components/BottomDock.tsx
+1:11:20 AM [vite] Internal server error: /Users/sergio/aura-apps/apps/farm-capacitor/src/components/BottomDock.tsx: Expected corresponding JSX closing tag for <button>. (193:12)
+
+  191 |                 {props.trackingMode === "pose" ? "Pose" : "Hand"}
+  192 |               </button>
+> 193 |             </div>
+      |             ^
+  194 |           )}
+  195 |         </div>
+  196 |
+  Plugin: vite:react-babel
+  File: /Users/sergio/aura-apps/apps/farm-capacitor/src/components/BottomDock.tsx:193:12
+  191 |                  {props.trackingMode === "pose" ? "Pose" : "Hand"}
+  192 |                </button>
+  193 |              </div>
+      |              ^
+  194 |            )}
+  195 |          </div>
+      at constructor (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:365:19)
+      at TypeScriptParserMixin.raise (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:6616:19)
+      at TypeScriptParserMixin.jsxParseElementAt (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:4739:16)
+      at TypeScriptParserMixin.jsxParseElementAt (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:4710:32)
+      at TypeScriptParserMixin.jsxParseElement (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:4761:17)
+      at TypeScriptParserMixin.parseExprAtom (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:4771:19)
+      at TypeScriptParserMixin.parseExprSubscripts (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:11098:23)
+      at TypeScriptParserMixin.parseUpdate (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:11083:21)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:11063:23)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:9854:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:10916:61)
+      at TypeScriptParserMixin.parseExprOps (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:10921:23)
+      at TypeScriptParserMixin.parseMaybeConditional (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:10898:23)
+      at TypeScriptParserMixin.parseMaybeAssign (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:10848:21)
+      at /Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:9792:39
+      at TypeScriptParserMixin.tryParse (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:6924:20)
+      at TypeScriptParserMixin.parseMaybeAssign (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:9792:18)
+      at /Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:10817:39
+      at TypeScriptParserMixin.allowInAnd (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:12443:12)
+      at TypeScriptParserMixin.parseMaybeAssignAllowIn (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:10817:17)
+      at TypeScriptParserMixin.parseMaybeAssignAllowInOrVoidPattern (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:12510:17)
+      at TypeScriptParserMixin.parseParenAndDistinguishExpression (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:11692:28)
+      at TypeScriptParserMixin.parseExprAtom (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:11348:23)
+      at TypeScriptParserMixin.parseExprAtom (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:4776:20)
+      at TypeScriptParserMixin.parseExprSubscripts (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:11098:23)
+      at TypeScriptParserMixin.parseUpdate (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:11083:21)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:11063:23)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:9854:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:10916:61)
+      at TypeScriptParserMixin.parseExprOpBaseRightExpr (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:11003:34)
+      at TypeScriptParserMixin.parseExprOpRightExpr (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:10998:21)
+      at TypeScriptParserMixin.parseExprOp (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:10964:27)
+      at TypeScriptParserMixin.parseExprOp (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:9323:18)
+      at TypeScriptParserMixin.parseExprOps (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:10925:17)
+      at TypeScriptParserMixin.parseMaybeConditional (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:10898:23)
+      at TypeScriptParserMixin.parseMaybeAssign (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:10848:21)
+      at TypeScriptParserMixin.parseMaybeAssign (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:9803:20)
+      at TypeScriptParserMixin.parseExpressionBase (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:10801:23)
+      at /Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:10797:39
+      at TypeScriptParserMixin.allowInAnd (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:12443:12)
+      at TypeScriptParserMixin.parseExpression (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:10797:17)
+      at TypeScriptParserMixin.jsxParseExpressionContainer (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:4644:31)
+      at TypeScriptParserMixin.jsxParseElementAt (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:4723:36)
+      at TypeScriptParserMixin.jsxParseElementAt (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:4710:32)
+      at TypeScriptParserMixin.jsxParseElementAt (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:4710:32)
+      at TypeScriptParserMixin.jsxParseElement (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:4761:17)
+      at TypeScriptParserMixin.parseExprAtom (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:4771:19)
+      at TypeScriptParserMixin.parseExprSubscripts (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:11098:23)
+      at TypeScriptParserMixin.parseUpdate (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:11083:21)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:11063:23)
+1:11:21 AM [vite] (client) hmr update /src/components/BottomDock.tsx
+1:11:21 AM [vite] Internal server error: /Users/sergio/aura-apps/apps/farm-capacitor/src/components/BottomDock.tsx: Expected corresponding JSX closing tag for <button>. (192:12)
+
+  190 |                 {props.trackingMode === "pose" ? "🧍" : "✋"}{" "}
+  191 |                 {props.trackingMode === "pose" ? "Pose" : "Hand"}
+> 192 |             </div>
+      |             ^
+  193 |           )}
+  194 |         </div>
+  195 |
+  Plugin: vite:react-babel
+  File: /Users/sergio/aura-apps/apps/farm-capacitor/src/components/BottomDock.tsx:192:12
+  190 |                  {props.trackingMode === "pose" ? "🧍" : "✋"}{" "}
+  191 |                  {props.trackingMode === "pose" ? "Pose" : "Hand"}
+  192 |              </div>
+      |              ^
+  193 |            )}
+  194 |          </div>
+      at constructor (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:365:19)
+      at TypeScriptParserMixin.raise (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:6616:19)
+      at TypeScriptParserMixin.jsxParseElementAt (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:4739:16)
+      at TypeScriptParserMixin.jsxParseElementAt (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:4710:32)
+      at TypeScriptParserMixin.jsxParseElementAt (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:4710:32)
+      at TypeScriptParserMixin.jsxParseElement (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:4761:17)
+      at TypeScriptParserMixin.parseExprAtom (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:4771:19)
+      at TypeScriptParserMixin.parseExprSubscripts (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:11098:23)
+      at TypeScriptParserMixin.parseUpdate (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:11083:21)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:11063:23)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:9854:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:10916:61)
+      at TypeScriptParserMixin.parseExprOps (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:10921:23)
+      at TypeScriptParserMixin.parseMaybeConditional (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:10898:23)
+      at TypeScriptParserMixin.parseMaybeAssign (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:10848:21)
+      at /Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:9792:39
+      at TypeScriptParserMixin.tryParse (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:6924:20)
+      at TypeScriptParserMixin.parseMaybeAssign (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:9792:18)
+      at /Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:10817:39
+      at TypeScriptParserMixin.allowInAnd (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:12443:12)
+      at TypeScriptParserMixin.parseMaybeAssignAllowIn (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:10817:17)
+      at TypeScriptParserMixin.parseMaybeAssignAllowInOrVoidPattern (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:12510:17)
+      at TypeScriptParserMixin.parseParenAndDistinguishExpression (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:11692:28)
+      at TypeScriptParserMixin.parseExprAtom (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:11348:23)
+      at TypeScriptParserMixin.parseExprAtom (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:4776:20)
+      at TypeScriptParserMixin.parseExprSubscripts (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:11098:23)
+      at TypeScriptParserMixin.parseUpdate (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:11083:21)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:11063:23)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:9854:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:10916:61)
+      at TypeScriptParserMixin.parseExprOpBaseRightExpr (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:11003:34)
+      at TypeScriptParserMixin.parseExprOpRightExpr (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:10998:21)
+      at TypeScriptParserMixin.parseExprOp (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:10964:27)
+      at TypeScriptParserMixin.parseExprOp (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:9323:18)
+      at TypeScriptParserMixin.parseExprOps (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:10925:17)
+      at TypeScriptParserMixin.parseMaybeConditional (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:10898:23)
+      at TypeScriptParserMixin.parseMaybeAssign (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:10848:21)
+      at TypeScriptParserMixin.parseMaybeAssign (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:9803:20)
+      at TypeScriptParserMixin.parseExpressionBase (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:10801:23)
+      at /Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:10797:39
+      at TypeScriptParserMixin.allowInAnd (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:12443:12)
+      at TypeScriptParserMixin.parseExpression (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:10797:17)
+      at TypeScriptParserMixin.jsxParseExpressionContainer (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:4644:31)
+      at TypeScriptParserMixin.jsxParseElementAt (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:4723:36)
+      at TypeScriptParserMixin.jsxParseElementAt (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:4710:32)
+      at TypeScriptParserMixin.jsxParseElementAt (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:4710:32)
+      at TypeScriptParserMixin.jsxParseElement (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:4761:17)
+      at TypeScriptParserMixin.parseExprAtom (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:4771:19)
+      at TypeScriptParserMixin.parseExprSubscripts (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:11098:23)
+      at TypeScriptParserMixin.parseUpdate (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:11083:21)
+1:11:32 AM [vite] (client) hmr update /src/components/BottomDock.tsx
+1:11:32 AM [vite] Internal server error: /Users/sergio/aura-apps/apps/farm-capacitor/src/components/BottomDock.tsx: Expected corresponding JSX closing tag for <button>. (193:12)
+
+  191 |                 {props.trackingMode === "pose" ? "🧍" : "✋"}{" "}
+  192 |                 {props.trackingMode === "pose" ? "Pose" : "Hand"}
+> 193 |             </div>
+      |             ^
+  194 |           )}
+  195 |         </div>
+  196 |
+  Plugin: vite:react-babel
+  File: /Users/sergio/aura-apps/apps/farm-capacitor/src/components/BottomDock.tsx:193:12
+  191 |                  {props.trackingMode === "pose" ? "🧍" : "✋"}{" "}
+  192 |                  {props.trackingMode === "pose" ? "Pose" : "Hand"}
+  193 |              </div>
+      |              ^
+  194 |            )}
+  195 |          </div>
+      at constructor (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:365:19)
+      at TypeScriptParserMixin.raise (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:6616:19)
+      at TypeScriptParserMixin.jsxParseElementAt (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:4739:16)
+      at TypeScriptParserMixin.jsxParseElementAt (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:4710:32)
+      at TypeScriptParserMixin.jsxParseElement (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:4761:17)
+      at TypeScriptParserMixin.parseExprAtom (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:4771:19)
+      at TypeScriptParserMixin.parseExprSubscripts (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:11098:23)
+      at TypeScriptParserMixin.parseUpdate (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:11083:21)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:11063:23)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:9854:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:10916:61)
+      at TypeScriptParserMixin.parseExprOps (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:10921:23)
+      at TypeScriptParserMixin.parseMaybeConditional (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:10898:23)
+      at TypeScriptParserMixin.parseMaybeAssign (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:10848:21)
+      at /Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:9792:39
+      at TypeScriptParserMixin.tryParse (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:6924:20)
+      at TypeScriptParserMixin.parseMaybeAssign (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:9792:18)
+      at /Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:10817:39
+      at TypeScriptParserMixin.allowInAnd (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:12443:12)
+      at TypeScriptParserMixin.parseMaybeAssignAllowIn (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:10817:17)
+      at TypeScriptParserMixin.parseMaybeAssignAllowInOrVoidPattern (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:12510:17)
+      at TypeScriptParserMixin.parseParenAndDistinguishExpression (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:11692:28)
+      at TypeScriptParserMixin.parseExprAtom (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:11348:23)
+      at TypeScriptParserMixin.parseExprAtom (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:4776:20)
+      at TypeScriptParserMixin.parseExprSubscripts (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:11098:23)
+      at TypeScriptParserMixin.parseUpdate (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:11083:21)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:11063:23)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:9854:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:10916:61)
+      at TypeScriptParserMixin.parseExprOpBaseRightExpr (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:11003:34)
+      at TypeScriptParserMixin.parseExprOpRightExpr (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:10998:21)
+      at TypeScriptParserMixin.parseExprOp (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:10964:27)
+      at TypeScriptParserMixin.parseExprOp (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:9323:18)
+      at TypeScriptParserMixin.parseExprOps (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:10925:17)
+      at TypeScriptParserMixin.parseMaybeConditional (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:10898:23)
+      at TypeScriptParserMixin.parseMaybeAssign (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:10848:21)
+      at TypeScriptParserMixin.parseMaybeAssign (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:9803:20)
+      at TypeScriptParserMixin.parseExpressionBase (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:10801:23)
+      at /Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:10797:39
+      at TypeScriptParserMixin.allowInAnd (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:12443:12)
+      at TypeScriptParserMixin.parseExpression (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:10797:17)
+      at TypeScriptParserMixin.jsxParseExpressionContainer (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:4644:31)
+      at TypeScriptParserMixin.jsxParseElementAt (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:4723:36)
+      at TypeScriptParserMixin.jsxParseElementAt (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:4710:32)
+      at TypeScriptParserMixin.jsxParseElementAt (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:4710:32)
+      at TypeScriptParserMixin.jsxParseElement (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:4761:17)
+      at TypeScriptParserMixin.parseExprAtom (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:4771:19)
+      at TypeScriptParserMixin.parseExprSubscripts (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:11098:23)
+      at TypeScriptParserMixin.parseUpdate (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:11083:21)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/sergio/aura-apps/node_modules/.pnpm/@babel+parser@7.29.7/node_modules/@babel/parser/lib/index.js:11063:23)
+1:11:34 AM [vite] (client) hmr update /src/components/BottomDock.tsx
+1:11:52 AM [vite] (client) hmr update /src/components/BottomDock.tsx
+1:12:04 AM [vite] (client) hmr update /src/components/BottomDock.tsx
