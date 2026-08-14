@@ -504,7 +504,7 @@ W-1 ──→ C-1 ──→ P-1 ──→ P-2 ──→ P-3 ──┐
 
 ## Key Decisions (All Resolved)
 
-All 9 ADRs written and approved. See `docs/adr/` for full records. One pending: ADR-009 (Media Storage — Tigris).
+All 10 ADRs written and approved. See `docs/adr/` for full records. One pending: ADR-010 (Legal Structure — Single-Member LLC).
 
 ---
 

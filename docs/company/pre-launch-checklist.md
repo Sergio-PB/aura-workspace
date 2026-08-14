@@ -113,7 +113,7 @@
 - [x] 103 backend tests passing
 - [ ] **Blocked:** Fly.io auth — founder must run `fly auth login`
 - [ ] **Blocked:** Fly.io payment method — card needed even for free tier
-- [ ] **Gap:** Tigris media storage not deployed (ADR-009 approved, not implemented)
+- [x] **Gap:** Tigris media storage not deployed (ADR-009 approved, implemented in `media.ts` + `routes/media.ts`)
 - [ ] **Gap:** No CDN configured
 - [ ] **Gap:** No production database (currently libSQL file-based; needs Fly Postgres or Turso for prod)
 
