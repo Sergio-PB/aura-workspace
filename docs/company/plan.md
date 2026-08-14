@@ -422,7 +422,7 @@ points = Σ (rate × duration_seconds × moveMultiplier)
 - [x] HUD toggle to switch modes (hand ↔ pose) mid-session, without restarting the camera
 - [x] Analyze feature accepts `trackingMode: 'hand' | 'pose'` as input; output is the existing telemetry envelope, just sourced from pose landmarks
 - [x] Per-move visual feedback adapts to pose landmarks (body-anchored emitters, full-body particle flows) where applicable
-- [~] **E2E test cases — user-recorded and supplied:** sample videos covering major movement classes (wave-arm, jump, squat, dance, full-body rotation). One per class minimum. Founder records and drops files in; pipeline runs Analyze against each and validates landmark output.
+- [~] **E2E test cases — user-recorded and supplied:** sample videos covering major movement classes (wave-arm, jump, squat, dance, full-body rotation). One per class minimum. Founder records and drops files in; pipeline runs Analyze against each and validates landmark output. **Pose-mode test infrastructure done** (analyze-pose-raise_roof.cy.ts passes against existing raise_roof fixture). Remaining: founder-supplied videos for other movement classes.
 
 **Reasoning:** Hand tracking is too granular for full-body expression — it only sees the hands. Pose tracking should be the default so the system sees what the body is actually doing; hand tracking stays available for fine gesture work (thumbs up, point, pinch).
 
