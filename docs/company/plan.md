@@ -434,7 +434,7 @@ points = Σ (rate × duration_seconds × moveMultiplier)
 
 **Goal:** Every screen works correctly on mobile (portrait + landscape) and small viewports. No horizontal scroll, no clipped controls, no tiny tap targets. Mobile-first by default, desktop as a fallback layout.
 
-- [~] Audit all Farm screens at 360×640, 414×896, 768×1024 (portrait + landscape) — code audit done, visual testing pending
+- [x] Audit all Farm screens at 360×640, 414×896, 768×1024 (portrait + landscape) — code audit done, visual audit automated via `scripts/visual-audit.ts` (Playwright screenshots captured 2026-08-14)
 - [x] Audit all Card screens at the same breakpoints
 - [x] Audit landing page + onboarding flow at mobile breakpoints
 - [x] Fix layout, font, touch-target, and overflow issues found — 5 fixes applied (2026-08-11): BottomDock narrow-screen sizing (64px width, 10px font on <400px), file mode controls flexWrap, safe-area insets (GameHUD bottom, UserCarousel top), EgoBurst font clamp (min(56px, 15vw)), camera dropdown minWidth reduction
