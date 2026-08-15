@@ -70,7 +70,7 @@
 - [x] Audit log table
 - [x] Biometric data notice (Appendix A in privacy policy)
 - [ ] **Gap:** No GDPR/CCPA compliance review by a lawyer
-- [ ] **Gap:** No data deletion verification flow (user can request deletion — can we prove it happened?)
+- [x] **Gap:** No data deletion verification flow (user can request deletion — can we prove it happened?) — DONE (`GET /deletion-status/:userId` returns `erased` + audit-log evidence; test `deletion-status.test.ts`)
 - [x] **Gap:** No telemetry opt-out UI in Farm — DONE (PrivacySettingsScreen in Capacitor Farm, wired into RecordScreen)
 - [x] **Gap:** No cookie consent / tracking disclosure on landing page — DONE (banner on all 8 pages)
 
