@@ -11,9 +11,14 @@ HERMES_HOME="/Users/sergio/.hermes"
 LOG_FILE="/Users/sergio/aura-workspace/logs/watchdog-external.log"
 CRON_JOBS="$HERMES_HOME/cron/jobs.json"
 MAX_PULSE_AGE_MINUTES=45
+MAX_LOG_LINES=2000
 
 log() {
     echo "[$(date -u +%Y-%m-%dT%H:%M:%SZ)] $1" >> "$LOG_FILE"
+    # ponytail: keep log bounded — truncate to last 1000 lines past 2000
+    if [ "$(wc -l < "$LOG_FILE" 2>/dev/null || echo 0)" -gt "$MAX_LOG_LINES" ]; then
+        tail -n 1000 "$LOG_FILE" > "$LOG_FILE.tmp" && mv "$LOG_FILE.tmp" "$LOG_FILE"
+    fi
 }
 
 alert() {
