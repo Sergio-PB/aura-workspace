@@ -100,7 +100,7 @@
 - [ ] **Blocked:** No Apple Developer account ($99/year)
 - [ ] **Blocked:** No Google Play Developer account ($25 one-time)
 - [ ] **Gap:** No screenshots (need app running on device)
-- [ ] **Gap:** App Store metadata not prepared (description, keywords, age rating)
+- [x] **Gap:** App Store metadata not prepared (description, keywords, age rating) — DONE (copy drafted in `docs/product/app-store-submission.md`; screenshots still founder-gated)
 
 ---
 
