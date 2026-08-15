@@ -30,6 +30,11 @@ Thumbs.db
 # Hermes
 .hermes/
 
+# Runtime logs & state (change every pulse; errors.md stays tracked)
+logs/*.log
+logs/*.jsonl
+logs/*.json
+
 # Secrets
 *.pem
 *.key
