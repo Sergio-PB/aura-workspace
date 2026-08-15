@@ -72,4 +72,12 @@ The app will be at `https://aura-backend.fly.dev`.
 - **Free tier:** Fly.io free allowance covers 3 shared-cpu-1x VMs with 256 MB RAM. Our Bun app uses ~50 MB at idle.
 - **Auto-stop:** `auto_stop_machines = true` means the VM sleeps when idle and wakes on request (cold start ~1-2s).
 - **PostgreSQL:** Uncomment the `[[postgres]]` block in fly.toml when ready for Fly Postgres. Currently using libSQL (file-based).
-- **Tigris (media storage):** Blocked on ADR-009 approval. Will add when decision is made.
+- **Tigris (media storage):** ADR-009 approved. `src/media.ts` + `routes/media.ts` implemented. To enable, create a Tigris bucket and set the S3 env vars (see `.env.example`):
+  ```bash
+  flyctl storage create          # creates a Tigris bucket, prints creds
+  flyctl secrets set AWS_ENDPOINT_URL_S3="https://fly.storage.tigris.dev" \
+    AWS_REGION="auto" \
+    AWS_ACCESS_KEY_ID="<tigris-access-key>" \
+    AWS_SECRET_ACCESS_KEY="<tigris-secret>" \
+    S3_BUCKET="aura-media"
+  ```
