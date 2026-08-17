@@ -8,7 +8,7 @@
     <array>
         <string>/bin/bash</string>
         <string>-c</string>
-        <string>cd /Users/sergio/aura-apps/apps/farm-capacitor &amp;&amp; exec npx vite --port 5173 --host</string>
+        <string>cd /Users/sergio/aura-apps/apps/farm-capacitor &amp;&amp; exec ./node_modules/.bin/vite --port 5173 --host</string>
     </array>
     <key>WorkingDirectory</key>
     <string>/Users/sergio/aura-apps/apps/farm-capacitor</string>
