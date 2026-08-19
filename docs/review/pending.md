@@ -9,6 +9,14 @@
 
 ## Active Reviews
 
+### 2026-08-19: Authenticate the P-16 Move Stream (WebSocket + Session Finalize)
+
+- **Status:** pending
+- **What:** The P-16 move stream (WS identify + move_tick + `POST /sessions/:id/end`) is entirely unauthenticated — anyone can award aura points to any user. Fix requires the Farm client to gain a keypair + login flow (currently absent), so it's a product decision, not a mechanical fix.
+- **ADR:** docs/adr/ADR-011-move-stream-auth.md
+
+---
+
 ### 2026-08-13: Legal Structure — Single-Member LLC
 
 - **Status:** pending
