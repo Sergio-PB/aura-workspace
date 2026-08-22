@@ -366,7 +366,7 @@ Launch a social reputation network at `ifarm.club` with two products: **The Farm
 - [x] **Simple user model** — `users` table: `id` (UUID), `displayName` (string). No auth, no passwords. Just identity. (Existing users table reused; public `/users` endpoint for carousel.)
 - [x] **User selector on Farm** — carousel or overlay on the camera view. User picks a target before/while recording. Sends `targetUserId` with every stream frame. (`UserCarousel.tsx`)
 - [x] **Move stream protocol** — Farm opens a WebSocket to backend. Sends JSON frames: `{ targetUserId, move, rate, timestamp }` at ~10 Hz while a move is active. (`useFarmWebSocket.ts`)
-- [x] **Server-side point calculator** — backend receives move stream, applies scoring formula: `points = rate × duration × moveMultiplier`. Accumulates per-user per-session. Persists to `attributions` table. (`calculator.ts`, `ws.ts`)
+- [x] **Server-side point calculator** — backend receives move stream, applies scoring formula: `points = rate × duration × moveMultiplier`. Accumulates per-user per-session. Persists to `sessions` table (not `attributions` — see note below). (`calculator.ts`, `ws.ts`)
 - [x] **Live leaderboard** — backend broadcasts point updates via WebSocket. Farm (or Card) renders a sorted list of users by total points, updating in real time. (`ws.ts` broadcast, `FeedScreen.tsx`)
 - [x] **Feed screen** — displays the leaderboard + recent attributions. Accessible from both Farm and Card. (`FeedScreen.tsx`)
 - [x] **Session lifecycle** — start session (select user), stream moves, end session (finalize points). Points are provisional until session ends. (`routes/sessions.ts`)
@@ -378,6 +378,8 @@ points = Σ (rate × duration_seconds × moveMultiplier)
   rate is 0..1 from the move detector
   duration is time the move was continuously active
 ```
+
+> **Note (2026-08-22):** the move-stream points persist to the `sessions` table, NOT `attributions`. The `sessions` table is only read by `GET /sessions/user/:userId` (session history) — it does NOT flow into the global leaderboard (`/leaderboard`), feed (`/feed`), or reputation export (`/reputation/export`), which all read `attributions`. So a user's move-stream points are visible in the *live* WS leaderboard and their own session history, but are NOT yet aggregated into their persistent cross-event reputation. This is a known gap, not a bug — the move stream (P-16) and the REST attribution path (`POST /attributions`) are two separate point-minting paths, and only the latter feeds the persistent reputation read paths. Reconciling them (e.g. materializing a session's points into an `attributions` row on finalize, or teaching the leaderboard/feed/reputation to also aggregate `sessions`) is a future product decision.
 
 **Depends on:** P-11 (tracking pipeline), P-5 (backend core), P-6 (E2E integration)
 
